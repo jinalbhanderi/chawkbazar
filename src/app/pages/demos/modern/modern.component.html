@@ -1,0 +1,380 @@
+<div class="mb-12 md:mb-14 xl:mb-16 px-2.5 grid grid-cols-2 sm:grid-cols-9 gap-2 md:gap-2.5 max-w-[1920px] mx-auto">
+  <div class="mx-auto col-span-full sm:col-span-5">
+    <a class="h-full group flex justify-center relative overflow-hidden" href="/collections/mens-collection"><span><img
+          alt="Men's Collection" src="../../../../assets/images/banner/masonry/banner-1.jpg" decoding="async"
+          data-nimg="intrinsic" class="bg-gray-300 object-cover w-full" /></span>
+    </a>
+  </div>
+  <div class="mx-auto col-span-1 sm:col-span-2">
+    <a class="h-full group flex justify-center relative overflow-hidden" href="/collections/new-sports"><span><span>
+        </span><img alt="New Sports" src="../../../../assets/images/banner/masonry/banner-2.jpg" decoding="async"
+          data-nimg="intrinsic" class="bg-gray-300 object-cover w-full" /></span>
+    </a>
+  </div>
+  <div class="mx-auto col-span-1 sm:col-span-2">
+    <a class="h-full group flex justify-center relative overflow-hidden" href="/collections/dress-women"><span><img
+          alt="Dress Women" src="../../../../assets/images/banner/masonry/banner-3.jpg" decoding="async"
+          data-nimg="intrinsic" class="bg-gray-300 object-cover w-full" /></span>
+    </a>
+  </div>
+  <div class="mx-auto col-span-1 sm:col-span-2">
+    <a class="h-full group flex justify-center relative overflow-hidden" href="/collections/exclusive-sunglasses"><span>
+        <img alt="Exclusive Sunglasses" src="../../../../assets/images/banner/masonry/banner-4.jpg" decoding="async"
+          data-nimg="intrinsic" class="bg-gray-300 object-cover w-full" /></span>
+    </a>
+  </div>
+  <div class="mx-auto col-span-1 sm:col-span-2">
+    <a class="h-full group flex justify-center relative overflow-hidden" href="/collections/product-coupons"><span>
+        <img alt="Product Coupons" src="../../../../assets/images/banner/masonry/banner-5.jpg" decoding="async"
+          data-nimg="intrinsic" class="bg-gray-300 object-cover w-full" /></span>
+    </a>
+  </div>
+  <div class="mx-auto col-span-full sm:col-span-5">
+    <a class="h-full group flex justify-center relative overflow-hidden" href="/collections/new-backpack"><span>
+        <img alt="New Backpack" src="../../../../assets/images/banner/masonry/banner-6.jpg" decoding="async"
+          data-nimg="intrinsic" class="bg-gray-300 object-cover w-full" /></span>
+    </a>
+  </div>
+</div>
+<div class="mx-auto max-w-[1920px] md:px-8 2xl:px-16">
+  <div
+    class="mb-12 md:mb-14 xl:mb-16 border border-gray-300 rounded-md pt-5 md:pt-6 lg:pt-7 pb-5 lg:pb-7 px-4 md:px-5 lg:px-7">
+    <div class="flex justify-between items-center flex-wrap mb-5 md:mb-6">
+      <div class="flex items-center justify-between -mt-2 mb-0">
+        <h3 class="text-lg md:text-xl lg:text-2xl 2xl:text-3xl xl:leading-10 font-bold text-heading">
+          Flash Sale
+        </h3>
+      </div>
+      <span>Time Over!</span>
+    </div>
+    <div
+      class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-x-3 md:gap-x-5 xl:gap-x-7 gap-y-4 lg:gap-y-5 xl:gap-y-6 2xl:gap-y-8">
+      <div *ngFor="let product of products"
+        class="group box-border overflow-hidden flex rounded-md cursor-pointer bg-white ltr:pr-0 rtl:pl-0 md:pb-1 flex-col items-start"
+        role="button" [title]="product.title">
+        <div class="flex mb-3 md:mb-3.5 pb-0">
+          <img [alt]="product.title" [src]="product.image" decoding="async" data-nimg="intrinsic"
+            class="bg-gray-300 object-cover rounded-s-md rounded-md transition duration-150 ease-linear transform group-hover:scale-105" />
+        </div>
+        <div class="w-full overflow-hidden p-2 ltr:pl-0 rtl:pr-0">
+          <h2
+            class="truncate mb-1 font-semibold md:mb-1.5 text-sm sm:text-base md:text-sm lg:text-base xl:text-lg text-heading">
+            {{ product.title }}
+          </h2>
+          <p class="text-body text-xs lg:text-sm leading-normal xl:leading-relaxed max-w-[250px] truncate">
+            {{ product.description }}
+          </p>
+          <div
+            class="font-semibold text-sm sm:text-base mt-1.5 flex flex-wrap gap-x-2 sm:text-xl md:text-base lg:text-xl md:mt-2.5 2xl:mt-3 text-heading">
+            <span class="inline-block">{{ product.price }}</span>
+            <del *ngIf="product.originalPrice" class="sm:text-base font-normal text-gray-800">{{
+              product.originalPrice }}</del>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mx-auto max-w-[1920px] md:px-8 2xl:px-16">
+  <div class="mb-12 md:mb-14 xl:mb-16">
+    <p-carousel [value]="slides2" [numVisible]="3" [numScroll]="5" [circular]="true" [showIndicators]="true"
+      [showNavigators]="false" [autoplayInterval]="4000">
+      <ng-template pTemplate="item" let-slide>
+        <div class="">
+          <img [src]="slide.src" [alt]="slide.title" class="mx-auto w-full px-4" loading="lazy" />
+
+        </div>
+      </ng-template>
+    </p-carousel>
+
+  </div>
+  <div class="mb-12 md:mb-14 xl:mb-16">
+    <div class="flex items-center justify-between -mt-2 lg:-mt-2.5 pb-0.5 mb-4 md:mb-5 lg:mb-6 2xl:mb-7 3xl:mb-8">
+      <h3 class="text-heading text-lg md:text-xl lg:text-2xl 2xl:text-3xl xl:leading-10 font-bold">Shop By Category</h3>
+    </div>
+    <p-carousel [value]="slides" [numVisible]="8" [numScroll]="5" [circular]="true" [showIndicators]="true"
+      [showNavigators]="true">
+      <ng-template pTemplate="item" let-slide>
+        <div class="">
+          <img [src]="slide.src" [alt]="slide.title" class="" loading="lazy" />
+          <div class="caption">
+            <h5>{{slide.title}}</h5>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>
+  <div class="mb-12 md:mb-14 xl:mb-16">
+    <div class="flex items-center justify-between -mt-2 pb-0.5 mb-4 md:mb-5 lg:mb-6 2xl:mb-7 3xl:mb-8">
+      <h3 class="text-lg md:text-xl lg:text-2xl 2xl:text-3xl xl:leading-10 font-bold text-heading">
+        Featured Products
+      </h3>
+    </div>
+    <div class="grid grid-cols-4 grid-rows-2 gap-3 md:gap-5 xl:gap-7">
+      <div *ngFor="let product of fProducts"
+        [ngClass]="{'col-span-full lg:col-span-2 row-span-full lg:row-span-2': product.name === 'Nike Bag'}"
+        class="cursor-pointer group flex flex-col bg-gray-200 rounded-md relative items-center justify-between overflow-hidden">
+        <div class="flex justify-center items-center p-4 h-full 3xl:min-h-[330px]" [title]="product.name">
+          <span><img [alt]="product.name" [src]="'assets/images/products/featured/' + product.image" decoding="async"
+              data-nimg="intrinsic"
+              class="transition duration-500 ease-in-out transform group-hover:scale-110" /></span>
+        </div>
+        <span *ngIf="product.discount"
+          class="absolute top-3.5 md:top-5 3xl:top-7 ltr:left-3.5 rtl:right-3.5 ltr:md:left-5 rtl:md:right-5 ltr:3xl:left-7 rtl:3xl:right-7 bg-heading text-white text-10px md:text-sm leading-5 rounded-md inline-block px-2 xl:px-3 pt-0.5 pb-1">
+          {{ product.discount }}
+        </span>
+        <div
+          class="flex flex-col w-full px-4 pb-4 md:flex-row lg:flex-col 2xl:flex-row md:justify-between md:items-center lg:items-start 2xl:items-center md:px-5 3xl:px-7 md:pb-5 3xl:pb-7"
+          [title]="product.name">
+          <div class="overflow-hidden ltr:md:pr-2 rtl:md:pl-2 ltr:lg:pr-0 rtl:lg:pl-0 ltr:2xl:pr-2 rtl:2xl:pl-2">
+            <h2 class="mb-1 text-sm font-semibold truncate text-heading md:text-base xl:text-lg">
+              {{ product.name }}
+            </h2>
+            <p class="text-body text-xs xl:text-sm leading-normal xl:leading-relaxed truncate max-w-[250px]">
+              {{ product.description }}
+            </p>
+          </div>
+          <div
+            class="flex-shrink-0 flex flex-row-reverse md:flex-col lg:flex-row-reverse 2xl:flex-col items-center md:items-end lg:items-start 2xl:items-end justify-end ltr:md:text-right rtl:md:text-left lg:ltr:text-left rtl:text-right ltr:xl:text-right rtl:xl:text-left mt-2 md:-mt-0.5 lg:mt-2 2xl:-mt-0.5">
+            <del *ngIf="product.oldPrice" class="text-sm md:text-base lg:text-sm xl:text-base 3xl:text-lg">{{
+              product.oldPrice }}</del>
+            <div
+              class="text-heading font-segoe font-semibold text-base md:text-xl lg:text-base xl:text-xl 3xl:text-2xl 3xl:mt-0.5 ltr:pr-2 rtl:pl-2 ltr:md:pr-0 rtl:md:pl-0 ltr:lg:pr-2 rtl:lg:pl-2 ltr:2xl:pr-0 rtl:2xl:pl-0">
+              {{ product.newPrice }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mx-auto mb-12 lg:mb-14 xl:mb-16 pb-0.5 lg:pb-1 xl:pb-0">
+    <a class="h-full group flex justify-center relative overflow-hidden"
+      href="/collections/winter-collection"><span><img alt="Winter Collection of Kid Items"
+          src="assets/images/banner/banner-3.jpg" decoding="async" data-nimg="intrinsic"
+          class="bg-gray-300 object-cover w-full rounded-md" /></span></a>
+  </div>
+  <div class="mb-12 md:mb-14 xl:mb-16">
+    <div class="flex items-center justify-between -mt-2 pb-0.5 mb-4 md:mb-5 lg:mb-6 2xl:mb-7 3xl:mb-8">
+      <h3 class="text-lg md:text-xl lg:text-2xl 2xl:text-3xl xl:leading-10 font-bold text-heading">
+        Top Brands
+      </h3>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 md:gap-3 lg:gap-5 xl:gap-7">
+      <a *ngFor="let brand of topBrand"
+        class="group flex justify-center text-center relative overflow-hidden rounded-md" [href]="brand.link">
+        <span>
+          <span>
+            <img [alt]="brand.name" aria-hidden="true" [src]="'/assets/images/brands/grid/' + brand.bgImage" />
+          </span>
+        </span>
+        <div
+          class="absolute top left bg-black w-full h-full opacity-50 transition-opacity duration-500 group-hover:opacity-80">
+        </div>
+        <div class="absolute top left h-full w-full flex items-center justify-center p-8 special-container">
+          <img [src]="'/assets/images/brands/grid/' + brand.logo" [alt]="brand.name" class="flex-shrink-0" />
+        </div>
+      </a>
+    </div>
+  </div>
+  <!-- product-list.component.html -->
+  <div class="mx-auto mb-12 lg:mb-14 xl:mb-16 pb-0.5 lg:pb-1 xl:pb-0">
+    <a class="h-full group flex justify-center relative overflow-hidden" href="/collections/offer-everything">
+      <img alt="Banner" src="/assets/images/banner/banner-4.jpg" />
+    </a>
+  </div>
+  <div class="mb-12 md:mb-14 xl:mb-16">
+    <div class="flex items-center justify-between -mt-2 pb-0.5 mb-4 md:mb-5 lg:mb-6 2xl:mb-7 3xl:mb-8">
+      <h3 class="text-lg md:text-xl lg:text-2xl 2xl:text-3xl xl:leading-10 font-bold text-heading">
+        On Selling Products
+      </h3>
+      <a class="text-xs lg:text-sm xl:text-base text-heading mt-0.5 lg:mt-1" href="/search">See All
+        Products</a>
+    </div>
+    <div class="grid grid-cols-4 gap-3 lg:gap-5 xl:gap-7">
+      <div class="mx-auto hidden 3xl:block">
+        <a class="h-full group flex justify-center relative overflow-hidden" href="/collections/sale-offer">
+          <img alt="Banner" src="/assets/images/banner/banner-sale-offer.jpg" />
+        </a>
+      </div>
+      <div class="col-span-full 3xl:col-span-3 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 md:gap-5 xl:gap-7">
+        <div *ngFor="let product of sellingProducts"
+          class="group box-border overflow-hidden flex rounded-md cursor-pointer items-center border border-gray-100 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:shadow-listProduct"
+          role="button" [title]="product.name">
+          <img [src]="product.image" [alt]="product.name" class="bg-gray-300 object-cover rounded-s-md" />
+          <div class="w-full overflow-hidden p-2 px-4 lg:px-5 2xl:px-4">
+            <h2 class="truncate mb-1 font-semibold text-sm sm:text-base md:mb-1.5 pb-0 text-heading">
+              {{ product.name }}
+            </h2>
+            <p class="text-body text-xs lg:text-sm leading-normal xl:leading-relaxed max-w-[250px] truncate">
+              {{ product.description }}
+            </p>
+            <div
+              class="font-semibold text-sm sm:text-base mt-1.5 flex flex-wrap gap-x-2 sm:text-xl md:text-base lg:text-xl md:mt-2.5 2xl:mt-3 text-heading">
+              <span class="inline-block false">{{ product.price }}</span><del
+                class="sm:text-base font-normal text-gray-800">{{
+                product.previousPrice
+                }}</del>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="rounded-md overflow-hidden lg:block mb-12 md:mb-14 xl:mb-16">
+    <div class="flex justify-between">
+      <div
+        class="group w-2/4 flex justify-between items-end relative transition duration-200 ease-in flex-row-reverse bg-gray-150">
+        <div
+          class="exclusiveImage relative z-10 flex transform transition duration-200 ease-in group-hover:scale-105 ltr:ml-auto rtl:mr-auto ltr:2xl:pr-24 rtl:2xl:pl-24 ltr:3xl:pr-40 rtl:3xl:pl-40">
+          <span><span>
+              <img alt="" aria-hidden="true" src="/assets/images/exclusive/women.png" /></span></span>
+        </div>
+        <a class="absolute z-10 bottom-3 sm:bottom-5 inline-block bg-white shadow-product rounded-md text-heading lowercase text-sm xl:text-xl 2xl:text-xl sm:uppercase px-3 sm:px-5 xl:px-6 2xl:px-8 py-2.5 sm:py-4 xl:py-5 2xl:py-7 transform transition duration-300 ease-in-out hover:bg-heading hover:text-white ltr:right-3 rtl:left-3 ltr:sm:right-5 rtl:sm:left-5 ltr:xl:right-7 rtl:xl:left-7 xl:bottom-7 xl:top-auto"
+          href="/search">#women exclusive</a>
+        <div
+          class="z-0 absolute top-10 xl:top-12 2xl:top-16 3xl:top-24 uppercase text-black opacity-10 text-xl xl:text-2xl 3xl:text-3xl tracking-widest leading-5 ltr:right-5 rtl:left-5 ltr:xl:right-7 rtl:xl:left-7">
+          New Year
+        </div>
+        <div
+          class="exclusiveYear absolute top-16 xl:top-20 2xl:top-24 3xl:top-32 ltr:left-0 rtl:right-0 z-10 text-black font-bold leading-none tracking-widest ltr:text-right rtl:text-left ltr:right-0 rtl:left-0">
+          20
+        </div>
+      </div>
+      <div
+        class="group w-2/4 flex justify-between items-end relative transition duration-200 ease-in flex-row-reverse bg-linenSecondary">
+        <div
+          class="exclusiveImage relative z-10 flex transform transition duration-200 ease-in group-hover:scale-105 ltr:ml-auto rtl:mr-auto ltr:2xl:pr-24 rtl:2xl:pl-24 ltr:3xl:pr-40 rtl:3xl:pl-40">
+          <span><img alt="button-men-exclusive" src="/assets/images/exclusive/men.png" decoding="async"
+              data-nimg="intrinsic" /></span>
+        </div>
+        <a class="absolute z-10 bottom-3 sm:bottom-5 inline-block bg-white shadow-product rounded-md text-heading lowercase text-sm xl:text-xl 2xl:text-xl sm:uppercase px-3 sm:px-5 xl:px-6 2xl:px-8 py-2.5 sm:py-4 xl:py-5 2xl:py-7 transform transition duration-300 ease-in-out hover:bg-heading hover:text-white ltr:left-3 rtl:right-3 ltr:sm:left-5 rtl:sm:right-5 ltr:xl:left-7 rtl:xl:right-7 xl:bottom-7 xl:top-auto"
+          href="/search">#men exclusive</a>
+        <div
+          class="z-0 absolute top-10 xl:top-12 2xl:top-16 3xl:top-24 uppercase text-black opacity-10 text-xl xl:text-2xl 3xl:text-3xl tracking-widest leading-5 ltr:left-5 rtl:right-5 ltr:xl:left-7 rtl:xl:right-7">
+          Exclusive
+        </div>
+        <div
+          class="exclusiveYear absolute top-16 xl:top-20 2xl:top-24 3xl:top-32 ltr:left-0 rtl:right-0 z-10 text-black font-bold leading-none tracking-widest ltr:text-left rtl:text-right pl-4 ltr:left-0 rtl:right-0">
+          21
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mb-9 md:mb-10 xl:mb-12">
+    <div class="flex items-center justify-between -mt-2 pb-0.5 mb-4 md:mb-5 lg:mb-6 2xl:mb-7 3xl:mb-8">
+      <h3 class="text-lg md:text-xl lg:text-2xl 2xl:text-3xl xl:leading-10 font-bold text-heading">
+        New Arrivals
+      </h3>
+    </div>
+    <div class="grid grid-cols-5 gap-y-6">
+      <div *ngFor="let product of Arrivalsproducts"
+        class="group box-border overflow-hidden flex rounded-md cursor-pointer ltr:pr-0 rtl:pl-0 pb-2 lg:pb-3 flex-col items-start transition duration-200 ease-in-out transform hover:-translate-y-1 md:hover:-translate-y-1.5 hover:shadow-product bg-white"
+        role="button" title="{{ product.name }}">
+        <div class="flex mb-3 md:mb-3.5">
+          <img alt="{{ product.name }}" [src]="product.image" decoding="async" data-nimg="intrinsic"
+            class="bg-gray-300 object-cover rounded-s-md w-full transition duration-200 ease-in rounded-md group-hover:rounded-b-none" />
+        </div>
+        <div class="w-full overflow-hidden p-2 md:px-2.5 xl:px-4">
+          <h2 class="truncate mb-1 text-sm md:text-base font-semibold text-heading">
+            {{ product.name }}
+          </h2>
+          <p class="text-body text-xs lg:text-sm leading-normal xl:leading-relaxed max-w-[250px] truncate">
+            {{ product.description }}
+          </p>
+          <div
+            class="font-semibold text-sm sm:text-base mt-1.5 flex flex-wrap gap-x-2 lg:text-lg lg:mt-2.5 text-heading">
+            <span class="inline-block">$ {{ product.price }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div
+    class="flex justify-between items-end rounded-lg bg-gray-200 pt-5 md:pt-8 lg:pt-10 xl:pt-14 px-6 md:px-12 lg:px-20 2xl:px-24 3xl:px-36">
+    <div
+      class="flex-shrink-0 w-full pb-5 sm:w-60 md:w-96 lg:w-auto lg:max-w-lg xl:max-w-xl lg:flex lg:items-center md:pb-8 lg:pb-12 xl:pb-16">
+      <div class="py-4 text-center md:py-6 xl:py-8 ltr:sm:text-left rtl:sm:text-right">
+        <h3
+          class="text-lg md:text-xl lg:text-2xl 2xl:text-3xl xl:leading-10 font-bold text-heading -mt-1 mb-2 md:mb-3 lg:mb-3.5 xl:mb-4">
+          The ChawkBazar App
+        </h3>
+        <h2
+          class="mb-6 font-normal leading-7 text-heading text-md sm:text-xl md:text-3xl xl:text-4xl 2xl:text-5xl sm:leading-8 md:leading-snug xl:leading-relaxed 2xl:leading-snug md:mb-8 lg:mb-9 xl:mb-12 2xl:mb-14 ltr:lg:pr-20 ltr:2xl:pr-0 rtl:lg:pl-20 rtl:2xl:pl-0">
+          <span>
+            Share Your <strong>Ideas</strong> &amp; Shop Endless
+            <strong>Inspiration</strong>
+          </span>
+        </h2>
+        <div class="flex justify-center px-6 sm:justify-start gap-x-2 md:gap-x-3 sm:px-0">
+          <a class="inline-flex transition duration-200 ease-in hover:box-shadow hover:opacity-80" href="/"><img
+              src="/assets/images/app-store.png" alt="App Store" class="w-36 lg:w-44 xl:w-auto rounded-md" width="209"
+              height="60" /></a><a class="inline-flex transition duration-200 ease-in hover:box-shadow hover:opacity-80"
+            href="/"><img src="/assets/images/play-store.png" alt="Play Store" class="w-36 lg:w-44 xl:w-auto rounded-md"
+              width="209" height="60" /></a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="hidden sm:flex items-end ltr:pl-4 rtl:pr-4 ltr:-mr-0.5 rtl:-ml-0.5 ltr:2xl:-mr-1.5 rtl:2xl:-ml-1.5 w-60 md:w-72 lg:w-96 xl:w-auto">
+      <span><img alt="App Thumbnail" src="/assets/images/app.png" decoding="async" data-nimg="intrinsic" /></span>
+    </div>
+  </div>
+  <div
+    class="my-8 md:my-12 lg:my-16 xl:my-20 3xl:my-24 pb-5 lg:pb-3.5 2xl:pb-5 pt-3 lg:pt-1.5 2xl:pt-2 3xl:pt-3 text-center">
+    <div class="max-w-md mx-auto mb-4 md:mb-5 xl:mb-8 2xl:mb-10 3xl:mb-12">
+      <h3
+        class="text-lg md:text-xl lg:text-2xl 2xl:text-3xl xl:leading-10 font-bold text-heading mb-2 md:mb-3 lg:mb-3.5">
+        Talk To A Real Person
+      </h3>
+      <p class="text-body text-xs md:text-sm leading-6 md:leading-7">
+        Are you on the fence? Have a question? Need a recommendation? Member
+        Services is always here to help. Send us a message.
+      </p>
+    </div>
+    <div class="mb-2.5 md:mb-0 xl:mb-2 2xl:mb-4 3xl:mb-6 md:px-20 lg:px-40 xl:px-0">
+      <span style="display: flex; justify-content: center;"><img alt="Support Thumbnail"
+          src="/assets/images/support.png" decoding="async" data-nimg="intrinsic" /></span>
+    </div>
+    <button data-variant="flat"
+      class="text-[13px] md:text-sm leading-4 inline-flex items-center cursor-pointer transition ease-in-out duration-300 font-semibold font-body text-center justify-center border-0 border-transparent placeholder-white focus-visible:outline-none focus:outline-none rounded-md bg-heading text-white px-5 md:px-6 lg:px-8 py-4 md:py-3.5 lg:py-4 hover:text-white hover:bg-gray-600 hover:shadow-cart">
+      Chat With Member Services<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+        class="ms-2 text-lg md:text-xl" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+        <path fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32"
+          d="M87.48 380c1.2-4.38-1.43-10.47-3.94-14.86a42.63 42.63 0 00-2.54-3.8 199.81 199.81 0 01-33-110C47.64 139.09 140.72 48 255.82 48 356.2 48 440 117.54 459.57 209.85a199 199 0 014.43 41.64c0 112.41-89.49 204.93-204.59 204.93-18.31 0-43-4.6-56.47-8.37s-26.92-8.77-30.39-10.11a31.14 31.14 0 00-11.13-2.07 30.7 30.7 0 00-12.08 2.43L81.5 462.78a15.92 15.92 0 01-4.66 1.22 9.61 9.61 0 01-9.58-9.74 15.85 15.85 0 01.6-3.29z">
+        </path>
+        <circle cx="160" cy="256" r="32"></circle>
+        <circle cx="256" cy="256" r="32"></circle>
+        <circle cx="352" cy="256" r="32"></circle>
+      </svg>
+    </button>
+  </div>
+  <div
+    class="px-5 py-12 bg-opacity-0 sm:px-16 xl:px-0 md:py-14 xl:py-16 flex flex-col xl:flex-row justify-center xl:justify-between items-center rounded-lg bg-gray-200 py-10 md:py-14 lg:py-16">
+    <div class="lg:-mt-2 xl:-mt-0.5 text-left ltr:xl:text-left rtl:xl:text-right mb-7 md:mb-8 lg:mb-9 xl:mb-0">
+      <h3
+        class="text-lg md:text-xl lg:text-2xl 2xl:text-3xl xl:leading-10 font-bold text-heading sm:mb-0 md:mb-2.5 lg:mb-3 xl:mb-3.5">
+        Get Expert Tips In Your Inbox
+      </h3>
+      <p class="text-body text-xs md:text-sm leading-6 md:leading-7">
+        Subscribe to our newsletter and stay updated.
+      </p>
+    </div>
+    <form class="flex-shrink-0 w-full sm:w-96 md:w-[545px]" novalidate="">
+      <div class="flex flex-col sm:flex-row items-start justify-end">
+        <div class="w-full mr-2">
+          <input id="subscription_email" name="subscription_email" type="email" placeholder="Write your email here"
+            class="py-2 px-4 md:px-5 w-full appearance-none transition duration-150 ease-in-out border text-input text-xs lg:text-sm font-body placeholder-body min-h-12 transition duration-200 ease-in-out bg-white border-gray-300 focus:outline-none focus:border-heading h-11 md:h-12 px-4 lg:px-7 h-12 lg:h-14 text-center ltr:sm:text-left rtl:sm:text-right bg-white rounded-md"
+            autocomplete="off" spellcheck="false" aria-invalid="false" />
+        </div>
+        <button data-variant="flat"
+          class="text-[13px] md:text-sm leading-4 inline-flex items-center cursor-pointer transition ease-in-out duration-300 font-semibold font-body text-center justify-center border-0 border-transparent placeholder-white focus-visible:outline-none focus:outline-none rounded-md bg-heading text-white px-5 md:px-6 lg:px-8 md:py-3.5 lg:py-4 hover:text-white hover:bg-gray-600 hover:shadow-cart  sm:mt-0 w-full sm:w-auto ltr:sm:ml-2 rtl:sm:ml-2 md:h-full flex-shrink-0">
+          <span class="lg:py-0.5">Subscribe</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="border-t border-gray-300 mb-0"></div>
+<div class="Toastify"></div>

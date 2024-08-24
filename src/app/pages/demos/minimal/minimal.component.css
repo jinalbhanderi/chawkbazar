@@ -1,0 +1,17 @@
+.bg-gray-200 {
+  background-color: rgb(249 249 249 / var(--tw-bg-opacity)) !important;
+}
+
+:is([dir="ltr"] .ltr\:2xl\:-mr-14) {
+  margin-right: -3.5rem;
+}
+.heightFull{
+  margin-left: 3.5rem;
+}
+.hidden{
+  margin-right: -4.5rem;
+
+}
+.overflow-hidden {
+    overflow: hidden;
+}

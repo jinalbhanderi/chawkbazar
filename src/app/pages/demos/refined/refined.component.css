@@ -1,0 +1,25 @@
+.bg-gray-200 {
+  background-color: rgb(249 249 249 / var(--tw-bg-opacity)) !important;
+}
+
+.carousel-container {
+    max-width: 600px;
+    margin: auto;
+}
+
+.slide-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.slide-content-wrapper img {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    margin-top: 20px;
+}

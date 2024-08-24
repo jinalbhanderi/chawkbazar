@@ -1,0 +1,34 @@
+.accordion-button,
+.accordion-body {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.25rem;
+  background-color: #f9f9f9;
+  border: none; /* Ensure no default border */
+  text-align: left;
+  font-weight: 600;
+  color: #1f2937;
+  outline: none;
+  transition: background-color 0.2s;
+  height: 72px;
+}
+
+.accordion-button:hover {
+  background-color: #d1d5db;
+}
+
+.accordion-content {
+  display: none;
+  padding: 1rem;
+}
+
+.accordion-content.show {
+  display: block;
+}
+.accordion-item {
+  border: none !important; /* Remove any default border */
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
