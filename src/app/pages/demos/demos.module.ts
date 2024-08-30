@@ -12,10 +12,12 @@ import { TrendyComponent } from './trendy/trendy.component';
 import { ElegantComponent } from './elegant/elegant.component';
 import { RefinedComponent } from './refined/refined.component';
 import { FashionComponent } from './fashion/fashion.component';
+import { ProductPopupComponent } from './product-popup/product-popup.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 
 @NgModule({
-  declarations: [ModernComponent, StandardComponent, MinimalComponent, VintageComponent, ClassicComponent, TrendyComponent, ElegantComponent, RefinedComponent, FashionComponent],
+  declarations: [ModernComponent, StandardComponent, MinimalComponent, VintageComponent, ClassicComponent, TrendyComponent, ElegantComponent, RefinedComponent, FashionComponent, ProductPopupComponent, ProductDetailComponent],
   imports: [CommonModule, DemosRoutingModule, CarouselModule],
 })
 export class DemosModule {}

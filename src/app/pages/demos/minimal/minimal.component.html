@@ -8,12 +8,12 @@
         [href]="category.link">
         <div class="flex items-center">
           <div class="inline-flex flex-shrink-0 2xl:w-12 2xl:h-12 3xl:w-auto 3xl:h-auto">
-            <img alt="{{category.name}}" loading="lazy" width="60" height="60" decoding="async" data-nimg="1"
+            <img alt="{{category.productName}}" loading="lazy" width="60" height="60" decoding="async" data-nimg="1"
               class="object-cover bg-gray-300 rounded-full" [src]="category.imageUrl" style="color: transparent;">
           </div>
           <h3
             class="text-sm md:text-base 2xl:text-sm 3xl:text-base text-heading capitalize ltr:pl-2.5 ltr:md:pl-4 ltr:2xl:pl-3 ltr:3xl:pl-4 rtl:pr-2.5 rtl:md:pr-4 rtl:2xl:pr-3 rtl:3xl:pr-4">
-            {{ category.name }}
+            {{ category.productName }}
           </h3>
         </div>
         <div class="flex items-center">
@@ -56,10 +56,10 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-5 xl:gap-7 xl:-mt-1.5 2xl:mt-0">
         <div *ngFor="let product of products"
           class="group box-border overflow-hidden flex rounded-md cursor-pointer flex-row items-center transition-transform ease-linear bg-gray-200 ltr:pr-2 ltr:lg:pr-3 ltr:2xl:pr-4 rtl:pl-2 rtl:lg:pl-3 rtl:2xl:pl-4"
-          [title]="product.title">
+          [title]="product.productName" (click)="openPopup(product)">
           <div
-            class="flex relative ltr:rounded-l-md rtl:rounded-r-md aspect-square flex-shrink-0 w-32 sm:w-44 md:w-40 lg:w-52 2xl:w-56 3xl:w-64">
-            <img [alt]="product.title" loading="lazy" decoding="async" data-nimg="fill"
+            class="flex relative ltr:rounded-l-md rtl:rounded-r-md aspect-square flex-shrink-0 w-32 sm:w-44 md:w-40 lg:w-52 2xl:w-56 3xl:w-64"  >
+            <img [alt]="product.productName" loading="lazy" decoding="async" data-nimg="fill"
               class="bg-gray-300 object-cover ltr:rounded-l-md rtl:rounded-r-md transition duration-200 ease-linear transform group-hover:scale-105"
               sizes="(max-width: 768px) 100vw" [src]="product.imageUrl"
               style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
@@ -68,7 +68,7 @@
             class="ps-4 w-full overflow-hidden ltr:pl-3.5 ltr:sm:pl-5 ltr:md:pl-4 ltr:xl:pl-5 ltr:2xl:pl-6 ltr:3xl:pl-10 rtl:pr-3.5 rtl:sm:pr-5 rtl:md:pr-4 rtl:xl:pr-5 rtl:2xl:pr-6 rtl:3xl:pr-10">
             <h2
               class="text-heading font-semibold truncate mb-1 text-sm sm:text-base md:text-sm lg:text-base xl:text-lg md:mb-1.5">
-              {{ product.title }}</h2>
+              {{ product.productName }}</h2>
             <div *ngIf="product.priceRange; else singlePrice"
               class="text-heading font-semibold text-sm sm:text-base mt-1.5 space-x-1 rtl:space-x-reverse sm:text-lg md:text-base 3xl:text-xl md:mt-2.5 2xl:mt-3">
               <span class="inline-block">${{ product.priceRange[0].toFixed(2) }}</span><span> - </span><span
@@ -241,18 +241,17 @@
       class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-x-3 md:gap-x-5 xl:gap-x-7 gap-y-3 xl:gap-y-5 2xl:gap-y-8">
       <div *ngFor="let item of items"
         class="group box-border overflow-hidden flex rounded-md cursor-pointer ltr:pr-0 rtl:pl-0 pb-2 lg:pb-3 flex-col items-start bg-white transition duration-200 ease-in-out transform hover:-translate-y-1 hover:md:-translate-y-1.5 hover:shadow-product"
-        [attr.title]="item.title">
+        [attr.title]="item.productName" (click)="openPopup(item)">
         <div class="flex relative ltr:rounded-l-md rtl:rounded-r-md mb-3 md:mb-3.5 w-full aspect-[17/22]">
-          <img alt="{{ item.title }}" loading="lazy" decoding="async"
+          <img alt="{{ item.productName }}" loading="lazy" decoding="async"
             class="bg-gray-300 object-cover rounded-md transition duration-200 ease-in group-hover:rounded-b-none"
-            [src]="item.image"
-            [srcset]="item.image + '?w=640 640w, ' + item.image + '?w=750 750w, ' + item.image + '?w=828 828w, ' + item.image + '?w=1080 1080w, ' + item.image + '?w=1200 1200w, ' + item.image + '?w=1920 1920w, ' + item.image + '?w=2048 2048w, ' + item.image + '?w=3840 3840w'"
+            [src]="item.imageUrl"
             sizes="(max-width: 768px) 100vw"
             style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
         </div>
         <div
           class="w-full overflow-hidden ltr:pl-0 rtl:pr-0 ltr:lg:pl-2.5 ltr:xl:pl-4 rtl:lg:pr-2.5 rtl:xl:pr-4 ltr:pr-2.5 ltr:xl:pr-4 rtl:pl-2.5 rtl:xl:pl-4">
-          <h2 class="text-heading font-semibold truncate mb-1 text-sm md:text-base">{{ item.title }}</h2>
+          <h2 class="text-heading font-semibold truncate mb-1 text-sm md:text-base">{{ item.productName }}</h2>
           <div
             class="text-heading font-semibold text-sm sm:text-base mt-1.5 space-x-1 rtl:space-x-reverse 3xl:text-lg lg:mt-2.5">
             <span class="inline-block">{{ item.price }}</span>
@@ -276,18 +275,17 @@
       class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-x-3 md:gap-x-5 xl:gap-x-7 gap-y-3 xl:gap-y-5 2xl:gap-y-8">
       <div *ngFor="let item of items"
         class="group box-border overflow-hidden flex rounded-md cursor-pointer ltr:pr-0 rtl:pl-0 pb-2 lg:pb-3 flex-col items-start bg-white transition duration-200 ease-in-out transform hover:-translate-y-1 hover:md:-translate-y-1.5 hover:shadow-product"
-        [attr.title]="item.title">
+        [attr.title]="item.productName" (click)="openPopup(item)">
         <div class="flex relative ltr:rounded-l-md rtl:rounded-r-md mb-3 md:mb-3.5 w-full aspect-[17/22]">
-          <img alt="{{ item.title }}" loading="lazy" decoding="async"
+          <img alt="{{ item.productName }}" loading="lazy" decoding="async"
             class="bg-gray-300 object-cover rounded-md transition duration-200 ease-in group-hover:rounded-b-none"
-            [src]="item.image"
-            [srcset]="item.image + '?w=640 640w, ' + item.image + '?w=750 750w, ' + item.image + '?w=828 828w, ' + item.image + '?w=1080 1080w, ' + item.image + '?w=1200 1200w, ' + item.image + '?w=1920 1920w, ' + item.image + '?w=2048 2048w, ' + item.image + '?w=3840 3840w'"
+            [src]="item.imageUrl"
             sizes="(max-width: 768px) 100vw"
             style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
         </div>
         <div
           class="w-full overflow-hidden ltr:pl-0 rtl:pr-0 ltr:lg:pl-2.5 ltr:xl:pl-4 rtl:lg:pr-2.5 rtl:xl:pr-4 ltr:pr-2.5 ltr:xl:pr-4 rtl:pl-2.5 rtl:xl:pl-4">
-          <h2 class="text-heading font-semibold truncate mb-1 text-sm md:text-base">{{ item.title }}</h2>
+          <h2 class="text-heading font-semibold truncate mb-1 text-sm md:text-base">{{ item.productName }}</h2>
           <div
             class="text-heading font-semibold text-sm sm:text-base mt-1.5 space-x-1 rtl:space-x-reverse 3xl:text-lg lg:mt-2.5">
             <span class="inline-block">{{ item.price }}</span>
@@ -431,7 +429,7 @@
       <div class="pt-3.5 lg:pt-4 xl:pt-5 3xl:pt-7 px-4 sm:px-0">
         <h3
           class="text-lg md:text-xl lg:text-2xl 2xl:text-3xl xl:leading-10 font-bold text-heading mb-1.5 lg:mb-2.5 2xl:mb-3 3xl:mb-3.5">
-          {{ item.title }}
+          {{ item.productName }}
         </h3>
         <p class="text-body text-[13px] md:text-sm leading-6 md:leading-7 xl:px-10 3xl:px-20">
           {{ item.description }}
@@ -625,3 +623,8 @@
     </form>
   </div>
 </div>
+<app-product-detail [isOpen]="showPopup" [title]="selectedProduct?.productName"
+  [description]="selectedProduct?.description" [newPrice]="selectedProduct?.newprice"
+  [oldprice]="selectedProduct?.oldprice" [imageSrc]="selectedProduct?.imageUrl" [colors]="selectedProduct?.colors"
+  (close)="closePopup()">
+</app-product-detail>

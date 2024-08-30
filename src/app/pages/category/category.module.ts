@@ -13,7 +13,7 @@ import { CatBagsComponent } from './cat-bags/cat-bags.component';
 
 
 @NgModule({
-  declarations: [CatMenComponent, CategoryComponent, CatWomenComponent, CatSneakersComponent, CatSportsComponent, CatWatchComponent, CatBagsComponent],
+  declarations: [CatMenComponent, CategoryComponent, CatWomenComponent, CatSneakersComponent, CatSportsComponent, CatWatchComponent, CatBagsComponent,],
   imports: [
     CommonModule,
     CategoryRoutingModule,

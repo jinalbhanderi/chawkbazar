@@ -9,6 +9,7 @@ import { TrendyComponent } from './trendy/trendy.component';
 import { ElegantComponent } from './elegant/elegant.component';
 import { RefinedComponent } from './refined/refined.component';
 import { FashionComponent } from './fashion/fashion.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'elegant', component: ElegantComponent },
   { path: 'refined', component: RefinedComponent },
   { path: 'fashion', component: FashionComponent },
+  { path: 'product-detail', component: ProductDetailComponent },
 ];
 
 @NgModule({

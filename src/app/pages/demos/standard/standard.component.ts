@@ -192,14 +192,32 @@ export class StandardComponent {
   ];
 
   slides: any[] = [
-    { src: '/assets/images/hero/banner-1.jpg' },
-    { src: '/assets/images/hero/banner-2.jpg' },
-    { src: '/assets/images/hero/banner-3.jpg' },
+    {
+      src: '/assets/images/hero/banner-1.jpg',
+      link: '/collections/winter-collection',
+    },
+    {
+      src: '/assets/images/hero/banner-2.jpg',
+      link: '/collections/gift-collection',
+    },
+    {
+      src: '/assets/images/hero/banner-3.jpg',
+      link: '/collections/gift-collection',
+    },
   ];
   slides2: any[] = [
-    { src: '/assets/images/banner/small/banner-1.jpg' },
-    { src: '/assets/images/banner/small/banner-2.jpg' },
-    { src: '/assets/images/banner/small/banner-3.jpg' },
+    {
+      src: '/assets/images/banner/small/banner-1.jpg',
+      link: 'collections/mens-collection',
+    },
+    {
+      src: '/assets/images/banner/small/banner-2.jpg',
+      link: 'collections/womens-collection',
+    },
+    {
+      src: '/assets/images/banner/small/banner-3.jpg',
+      link: 'collections/kids-collection',
+    },
   ];
   slides3: any[] = [
     { src: '/assets/images/brands/fusion.png' },
@@ -261,4 +279,15 @@ export class StandardComponent {
       image: '/assets/images/feature/product.svg',
     },
   ];
+  selectedProduct: any = null;
+  showPopup = false;
+  closePopup(): void {
+    this.showPopup = false;
+    this.selectedProduct = null;
+  }
+  openPopup(product: any): void {
+    debugger;
+    this.selectedProduct = product;
+    this.showPopup = true;
+  }
 }

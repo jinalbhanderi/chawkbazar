@@ -8,55 +8,55 @@ import { Component } from '@angular/core';
 export class MinimalComponent {
   categories = [
     {
-      name: 'Women',
+      productName: 'Women',
       imageUrl: '/assets/images/aaa.png',
       link: '/category/women',
       count: 27,
     },
     {
-      name: 'Watch',
+      productName: 'Watch',
       imageUrl:
         'https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F32%2Fwatch.png&w=64&q=75',
       link: '/category/watch',
       count: 7,
     },
     {
-      name: 'Sunglass',
+      productName: 'Sunglass',
       imageUrl:
         'https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F31%2Fsunglass.png&w=64&q=75',
       link: '/category/sunglass',
       count: 6,
     },
     {
-      name: 'Sports',
+      productName: 'Sports',
       imageUrl:
         'https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F30%2Fsports.png&w=64&q=75',
       link: '/category/sports',
       count: 14,
     },
     {
-      name: 'Sneakers',
+      productName: 'Sneakers',
       imageUrl:
         'https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F29%2Fsneekers.png&w=64&q=75',
       link: '/category/sneakers',
       count: 5,
     },
     {
-      name: 'Men',
+      productName: 'Men',
       imageUrl:
         'https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F28%2Fmen.png&w=64&q=75',
       link: '/category/men',
       count: 6,
     },
     {
-      name: 'Kids',
+      productName: 'Kids',
       imageUrl:
         'https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F27%2Fkids.png&w=64&q=75',
       link: '/category/kids',
       count: 6,
     },
     {
-      name: 'Bags',
+      productName: 'Bags',
       imageUrl:
         'https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F26%2Fbags.png&w=64&q=75',
       link: '/category/bags',
@@ -82,28 +82,27 @@ export class MinimalComponent {
   ];
   products = [
     {
-      title: 'Zara Monte Carlo',
+      productName: 'Zara Monte Carlo',
       imageUrl:
         'https://chawkbazarlaravel.s3.ap-southeast-1.amazonaws.com/236/kids-1.jpg',
       priceRange: [80, 100],
     },
     {
-      title: 'Zara Miss Chase',
+      productName: 'Zara Miss Chase',
       imageUrl:
         'https://chawkbazarlaravel.s3.ap-southeast-1.amazonaws.com/234/Chawkbazar1.png',
       price: 90,
       oldPrice: 100,
     },
     {
-      title: 'White Oxford Shirt',
+      productName: 'White Oxford Shirt',
       imageUrl:
         'https://chawkbazarlaravel.s3.ap-southeast-1.amazonaws.com/232/Casual-Wear-1-1.jpg',
       priceRange: [10, 40],
     },
     {
-      title: 'The Horse Original',
-      imageUrl:
-        'assets/images/category/watch/1.webp',
+      productName: 'The Horse Original',
+      imageUrl: 'assets/images/category/watch/1.webp',
       price: 190,
       oldPrice: 200,
     },
@@ -111,63 +110,60 @@ export class MinimalComponent {
 
   items = [
     {
-      title: 'Zara Monte Carlo',
-      image:
+      productName: 'Zara Monte Carlo',
+      imageUrl:
         'https://chawkbazarlaravel.s3.ap-southeast-1.amazonaws.com/236/kids-1.jpg',
       price: '$80.00 - $100.00',
     },
     {
-      title: 'Zara Miss Chase',
-      image:
+      productName: 'Zara Miss Chase',
+      imageUrl:
         'https://chawkbazarlaravel.s3.ap-southeast-1.amazonaws.com/234/Chawkbazar1.png',
       price: '$90.00 - $100.00',
     },
     {
-      title: 'White Oxford Shirt',
-      image:
+      productName: 'White Oxford Shirt',
+      imageUrl:
         'https://chawkbazarlaravel.s3.ap-southeast-1.amazonaws.com/232/Casual-Wear-1-1.jpg',
       price: '$10.00 - $40.00',
     },
     {
-      title: 'The Horse Original',
-      image:
-        'assets/images/category/watch/1.webp',
+      productName: 'The Horse Original',
+      imageUrl: 'assets/images/category/watch/1.webp',
       price: '$190.00 - $200.00',
     },
     {
-      title: 'Roadster Women Round Neck',
-      image:
+      productName: 'Roadster Women Round Neck',
+      imageUrl:
         'https://chawkbazarlaravel.s3.ap-southeast-1.amazonaws.com/228/Chawkbazar22.png',
       price: '$30.00 - $50.00',
     },
     {
-      title: 'Reyban Havana Phantos Sunglasses',
-      image:
+      productName: 'Reyban Havana Phantos Sunglasses',
+      imageUrl:
         'https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F226%2FSunglasess-2-1.jpg&w=1920&q=100',
       price: '$80.00 - $100.00',
     },
     {
-      title: 'Philip Lim Leather Shoulder Bag',
-      image:
-        'assets/images/category/bags/1.webp',
+      productName: 'Philip Lim Leather Shoulder Bag',
+      imageUrl: 'assets/images/category/bags/1.webp',
       price: '$250.00 - $260.00',
     },
     {
-      title: 'Nike Pro Mesh Top with Leggins',
-      image:
+      productName: 'Nike Pro Mesh Top with Leggins',
+      imageUrl:
         'https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F223%2FCasual-Wear-4-1.jpg&w=1920&q=100',
       price: '$30.00 - $35.00',
     },
     {
-      title: 'Nike Comfy Vapor Maxpro',
-      image:
+      productName: 'Nike Comfy Vapor Maxpro',
+      imageUrl:
         'https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F321%2FFootwear-1.png&w=1920&q=100',
       price: '$220.00 - $250.00',
     },
     {
-      title: 'Nike Car Wheel Watch',
-      image:
-        'assets/images/category/watch/2.webp',
+      productName: 'Nike Car Wheel Watch',
+      imageUrl: 'assets/images/category/watch/2.webp',
       price: '$230.00 - $250.00',
     },
   ];
@@ -184,13 +180,13 @@ export class MinimalComponent {
   slides4: any[] = [
     {
       src: 'assets/images/products/featured/1.png',
-      title: 'New Spring Knits',
+      productName: 'New Spring Knits',
       price: 250,
       originalPrice: 260,
     },
     {
       src: 'assets/images/products/featured/1.png',
-      title: 'Zara Army Bag',
+      productName: 'Zara Army Bag',
       price: 260.0, // Ensure this is a number, not a string
       originalPrice: 300.0, // Ensure this is a number, not a string
     },
@@ -198,25 +194,38 @@ export class MinimalComponent {
 
   collectionItems = [
     {
-      title: 'New Spring Knits',
+      productName: 'New Spring Knits',
       description:
         'Endlessly versatile new styles that say yes to spring. The season’s looking bright.',
       image: '/assets/images/collection/1.jpg',
       link: '/search',
     },
     {
-      title: 'Down To The Core',
+      productName: 'Down To The Core',
       description:
         'Endlessly versatile new styles that say yes to spring. The season’s looking bright.',
       image: '/assets/images/collection/2.jpg',
       link: '/search',
     },
     {
-      title: 'New Winter Knits',
+      productName: 'New Winter Knits',
       description:
         'Endlessly versatile new styles that say yes to spring. The season’s looking bright.',
       image: '/assets/images/collection/3.jpg',
       link: '/search',
     },
   ];
+
+  selectedProduct: any = null;
+  showPopup = false;
+
+  closePopup(): void {
+    this.showPopup = false;
+    this.selectedProduct = null;
+  }
+  openPopup(product: any): void {
+    debugger;
+    this.selectedProduct = product;
+    this.showPopup = true;
+  }
 }

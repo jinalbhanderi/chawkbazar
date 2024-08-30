@@ -9,11 +9,11 @@
           [href]="category.link">
           <div class="flex items-center">
             <div class="w-12 h-12 rounded-full overflow-hidden">
-              <img alt="{{category.name}}" loading="lazy" width="60" height="60" decoding="async"
+              <img alt="{{category.productName}}" loading="lazy" width="60" height="60" decoding="async"
                 class="object-cover bg-gray-300" [src]="category.imageUrl">
             </div>
             <h3 class="text-base text-heading capitalize pl-4">
-              {{ category.name }}
+              {{ category.productName }}
             </h3>
           </div>
           <div class="flex items-center">
@@ -35,7 +35,7 @@
           <ng-template pTemplate="item" let-image>
             <div class="image-container">
               <a [href]="image.link">
-                <img [src]="image.src" [alt]="image.alt" class="image" />
+                <img [src]="image.imageUrl" [alt]="image.alt" class="image" />
               </a>
             </div>
           </ng-template>
@@ -51,7 +51,7 @@
         [showNavigators]="true">
         <ng-template pTemplate="item" let-slide>
           <div class="">
-            <img [src]="slide.src" [alt]="slide.title" class="" loading="lazy" />
+            <img [src]="slide.imageUrl" [alt]="slide.title" class="" loading="lazy" />
             <div class="carousel-caption">
               <h3>{{slide.title}}</h3>
             </div>
@@ -59,110 +59,53 @@
         </ng-template>
       </p-carousel>
     </div>
+    <!-- product-list.component.html -->
     <div class="mb-12 md:mb-14 xl:mb-16">
       <div class="flex items-center justify-between -mt-2 lg:-mt-2.5 pb-0.5 mb-4 md:mb-5 lg:mb-6 2xl:mb-7 3xl:mb-8">
         <h3 class="text-heading text-lg md:text-xl lg:text-2xl 2xl:text-3xl xl:leading-10 font-bold">On Selling Products
-        </h3><a class="text-xs lg:text-sm xl:text-base text-heading mt-0.5 lg:mt-1" href="/search">See All Product</a>
+        </h3>
+        <a class="text-xs lg:text-sm xl:text-base text-heading mt-0.5 lg:mt-1" href="/search">See All Product</a>
       </div>
       <div class="grid grid-cols-1 2xl:grid-cols-4 2xl:grid-rows-2 md:grid-cols-2 gap-3 md:gap-6 lg:gap-5 xl:gap-7">
-        <div class="mx-auto w-full order-2 md:col-span-full 2xl:col-span-2 2xl:row-span-2"><a
-            class="group flex justify-center relative overflow-hidden w-full aspect-[2.28/1]"
-            href="/collections/sale-offer"><img alt="Sale Offer" fetchpriority="high" decoding="async" data-nimg="fill"
+        <div class="mx-auto w-full order-2 md:col-span-full 2xl:col-span-2 2xl:row-span-2">
+          <a class="group flex justify-center relative overflow-hidden w-full aspect-[2.28/1]"
+            href="/collections/sale-offer">
+            <img alt="Sale Offer" fetchpriority="high" decoding="async" data-nimg="fill"
               class="bg-gray-300 object-cover w-full hidden sm:block rounded-md" sizes="(max-width: 768px) 100vw"
               src="/assets/images/banner/banner-sale-offer-half.jpg"
               style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
             <div
               class="absolute top-0 block w-1/2 h-full transform -skew-x-12 -left-full z-5 bg-gradient-to-r from-transparent to-white opacity-40 group-hover:animate-shine">
             </div>
-          </a></div>
-        <div class="2xl:order-0">
-          <div
-            class="group box-border overflow-hidden flex rounded-md cursor-pointer items-center bg-transparent border border-gray-100 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:shadow-listProduct"
-            title="Hermes Galaxy Watch 3">
-            <div
-              class="flex relative ltr:rounded-l-md rtl:rounded-r-md  flex-shrink-0 w-32 sm:w-44 md:w-36 lg:w-44 lg:h-44 aspect-square">
-              <img alt="Hermes Galaxy Watch 3" loading="lazy" decoding="async" data-nimg="fill"
-                class="bg-gray-300 object-cover" sizes="(max-width: 768px) 100vw"
-                src="/assets/images/products/sel-product/1.webp"
-                style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
-            </div>
-            <div class="w-full overflow-hidden px-4 lg:px-5 2xl:px-4">
-              <h2 class="text-heading font-semibold truncate mb-1 text-sm sm:text-base md:mb-1.5 pb-0">Hermes Galaxy
-                Watch 3</h2>
-              <div
-                class="text-heading font-semibold text-sm sm:text-base mt-1.5 space-x-1 rtl:space-x-reverse sm:text-lg md:text-base 3xl:text-xl md:mt-2.5 2xl:mt-3">
-                <span class="inline-block">$2,996.00</span><del
-                  class="font-normal text-gray-800 sm:text-base ltr:pl-1 rtl:pr-1">$3,200.00</del>
-              </div>
-            </div>
-          </div>
+          </a>
         </div>
-        <div class="2xl:order-2">
+        <div *ngFor="let product of products" class="2xl:order-2" (click)="openPopup(product)">
           <div
             class="group box-border overflow-hidden flex rounded-md cursor-pointer items-center bg-transparent border border-gray-100 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:shadow-listProduct"
-            title="Hermes Carlton London">
+            [attr.title]="product.name">
             <div
-              class="flex relative ltr:rounded-l-md rtl:rounded-r-md  flex-shrink-0 w-32 sm:w-44 md:w-36 lg:w-44 lg:h-44 aspect-square">
-              <img alt="Hermes Carlton London" loading="lazy" decoding="async" data-nimg="fill"
-                class="bg-gray-300 object-cover" sizes="(max-width: 768px) 100vw"
-                src="/assets/images/products/sel-product/2.webp"
+              class="flex relative ltr:rounded-l-md rtl:rounded-r-md flex-shrink-0 w-32 sm:w-44 md:w-36 lg:w-44 lg:h-44 aspect-square">
+              <img [alt]="product.name" loading="lazy" decoding="async" data-nimg="fill" class="bg-gray-300 object-cover"
+                sizes="(max-width: 768px) 100vw" [src]="product.imageUrl"
                 style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
             </div>
             <div class="w-full overflow-hidden px-4 lg:px-5 2xl:px-4">
-              <h2 class="text-heading font-semibold truncate mb-1 text-sm sm:text-base md:mb-1.5 pb-0">Hermes Carlton
-                London</h2>
-              <div
-                class="text-heading font-semibold text-sm sm:text-base mt-1.5 space-x-1 rtl:space-x-reverse sm:text-lg md:text-base 3xl:text-xl md:mt-2.5 2xl:mt-3">
-                <span class="inline-block">$300.00</span><span> - </span><span class="inline-block">$650.00</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="2xl:order-2">
-          <div
-            class="group box-border overflow-hidden flex rounded-md cursor-pointer items-center bg-transparent border border-gray-100 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:shadow-listProduct"
-            title="H&amp;M Boys Top">
-            <div
-              class="flex relative ltr:rounded-l-md rtl:rounded-r-md  flex-shrink-0 w-32 sm:w-44 md:w-36 lg:w-44 lg:h-44 aspect-square">
-              <img alt="H&amp;M Boys Top" loading="lazy" decoding="async" data-nimg="fill"
-                class="bg-gray-300 object-cover" sizes="(max-width: 768px) 100vw"
-                src="/assets/images/products/sel-product/3.webp"
-                style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
-            </div>
-            <div class="w-full overflow-hidden px-4 lg:px-5 2xl:px-4">
-              <h2 class="text-heading font-semibold truncate mb-1 text-sm sm:text-base md:mb-1.5 pb-0">H&amp;M Boys Top
+              <h2 class="text-heading font-semibold truncate mb-1 text-sm sm:text-base md:mb-1.5 pb-0">{{ product.name }}
               </h2>
               <div
                 class="text-heading font-semibold text-sm sm:text-base mt-1.5 space-x-1 rtl:space-x-reverse sm:text-lg md:text-base 3xl:text-xl md:mt-2.5 2xl:mt-3">
-                <span class="inline-block">$350.00</span><span> - </span><span class="inline-block">$1,000.00</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="2xl:order-2">
-          <div
-            class="group box-border overflow-hidden flex rounded-md cursor-pointer items-center bg-transparent border border-gray-100 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:shadow-listProduct"
-            title="H &amp; Dri-FIT Fleece">
-            <div
-              class="flex relative ltr:rounded-l-md rtl:rounded-r-md  flex-shrink-0 w-32 sm:w-44 md:w-36 lg:w-44 lg:h-44 aspect-square">
-              <img alt="H &amp; Dri-FIT Fleece" loading="lazy" decoding="async" data-nimg="fill"
-                class="bg-gray-300 object-cover" sizes="(max-width: 768px) 100vw"
-                src="/assets/images/products/sel-product/4.webp"
-                style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
-            </div>
-            <div class="w-full overflow-hidden px-4 lg:px-5 2xl:px-4">
-              <h2 class="text-heading font-semibold truncate mb-1 text-sm sm:text-base md:mb-1.5 pb-0">H &amp; Dri-FIT
-                Fleece</h2>
-              <div
-                class="text-heading font-semibold text-sm sm:text-base mt-1.5 space-x-1 rtl:space-x-reverse sm:text-lg md:text-base 3xl:text-xl md:mt-2.5 2xl:mt-3">
-                <span class="inline-block">$550.00</span><del
-                  class="font-normal text-gray-800 sm:text-base ltr:pl-1 rtl:pr-1">$650.00</del>
+                <span class="inline-block">${{ product.discountedPrice.toFixed(2) }}</span>
+                <ng-container *ngIf="product.originalPrice">
+                  <del class="font-normal text-gray-800 sm:text-base ltr:pl-1 rtl:pr-1">${{ product.originalPrice.toFixed(2)
+                    }}</del>
+                </ng-container>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
     <div class="mb-12 md:mb-14 xl:mb-16">
       <div class="flex items-center justify-between -mt-2 lg:-mt-2.5 pb-0.5 mb-4 md:mb-5 lg:mb-6 2xl:mb-7 3xl:mb-8">
         <h3 class="text-heading text-lg md:text-xl lg:text-2xl 2xl:text-3xl xl:leading-10 font-bold">Featured Products
@@ -170,19 +113,19 @@
       </div>
       <!-- component.html -->
       <div class="grid grid-cols-2 md:grid-cols-4 md:grid-rows-2 gap-3 md:gap-5 xl:gap-7">
-        <div *ngFor="let image of fimages"
+        <div *ngFor="let image of fimages" (click)="openPopup(image)"
           class="col-span-2 lg:col-span-1 cursor-pointer group flex flex-col bg-gray-200 rounded-md relative items-center justify-between overflow-hidden">
 
-          <div class="flex justify-center items-center p-4 h-full w-full 3xl:min-h-[330px]" [title]="image.title">
+          <div class="flex justify-center items-center p-4 h-full w-full 3xl:min-h-[330px]" [title]="image.productName">
             <div class="relative w-[260px] aspect-square">
-              <img [src]="image.url" [alt]="image.title" loading="lazy" decoding="async"
+              <img [src]="image.imageUrl" [alt]="image.productName" loading="lazy" decoding="async"
                 class="object-cover transition duration-500 ease-in-out transform group-hover:scale-110" />
             </div>
           </div>
 
           <div class="flex flex-col w-full px-4 md:px-5 3xl:px-7 pb-4 md:pb-5 3xl:pb-7">
             <div class="overflow-hidden max-w-full">
-              <h2 class="mb-1 text-sm font-semibold truncate text-heading md:text-base xl:text-lg">{{ image.title }}
+              <h2 class="mb-1 text-sm font-semibold truncate text-heading md:text-base xl:text-lg">{{ image.productName }}
               </h2>
             </div>
             <div class="text-heading font-segoe font-semibold text-base xl:text-xl">{{ image.price }}</div>
@@ -232,10 +175,10 @@
       </div>
       <div class="flex relative ">
         <p-carousel [value]="slides2" [numVisible]="8" [numScroll]="1" [circular]="true" [showIndicators]="true"
-          [showNavigators]="true" [autoplayInterval]="4000">
-          <ng-template pTemplate="item" let-slide>
+          [showNavigators]="true" [autoplayInterval]="4000" >
+          <ng-template pTemplate="item" let-slide >
             <div class="relative group">
-              <img [src]="slide.src" [alt]="slide.title" class=" rounded-full object-cover bg-gray-300"
+              <img [src]="slide.imageUrl" [alt]="slide.title" class=" rounded-full object-cover bg-gray-300"
                 loading="lazy" />
             </div>
           </ng-template>
@@ -248,20 +191,19 @@
       </div>
       <div
         class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-x-3 md:gap-x-5 xl:gap-x-7 gap-y-3 xl:gap-y-5 2xl:gap-y-8">
-        <div *ngFor="let item of items"
+        <div *ngFor="let item of items" (click)="openPopup(item)"
           class="group box-border overflow-hidden flex rounded-md cursor-pointer ltr:pr-0 rtl:pl-0 pb-2 lg:pb-3 flex-col items-start bg-white transition duration-200 ease-in-out transform hover:-translate-y-1 hover:md:-translate-y-1.5 hover:shadow-product"
-          [attr.title]="item.title">
+          [attr.title]="item.productName">
           <div class="flex relative ltr:rounded-l-md rtl:rounded-r-md mb-3 md:mb-3.5 w-full aspect-[17/22]">
-            <img alt="{{ item.title }}" loading="lazy" decoding="async"
+            <img alt="{{ item.productName }}" loading="lazy" decoding="async"
               class="bg-gray-300 object-cover rounded-md transition duration-200 ease-in group-hover:rounded-b-none"
-              [src]="item.image"
-              [srcset]="item.image + '?w=640 640w, ' + item.image + '?w=750 750w, ' + item.image + '?w=828 828w, ' + item.image + '?w=1080 1080w, ' + item.image + '?w=1200 1200w, ' + item.image + '?w=1920 1920w, ' + item.image + '?w=2048 2048w, ' + item.image + '?w=3840 3840w'"
+              [src]="item.imageUrl"
               sizes="(max-width: 768px) 100vw"
               style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
           </div>
           <div
             class="w-full overflow-hidden ltr:pl-0 rtl:pr-0 ltr:lg:pl-2.5 ltr:xl:pl-4 rtl:lg:pr-2.5 rtl:xl:pr-4 ltr:pr-2.5 ltr:xl:pr-4 rtl:pl-2.5 rtl:xl:pl-4">
-            <h2 class="text-heading font-semibold truncate mb-1 text-sm md:text-base">{{ item.title }}</h2>
+            <h2 class="text-heading font-semibold truncate mb-1 text-sm md:text-base">{{ item.productName }}</h2>
             <div
               class="text-heading font-semibold text-sm sm:text-base mt-1.5 space-x-1 rtl:space-x-reverse 3xl:text-lg lg:mt-2.5">
               <span class="inline-block">{{ item.price }}</span>
@@ -286,8 +228,8 @@
         <p-carousel [value]="slides" [numVisible]="5" [circular]="true" [autoplayInterval]="3000"
           [showIndicators]="true" [showNavigators]="true">
           <ng-template pTemplate="item" let-slide>
-            <div class="p-2">
-              <img [src]="slide.image" [alt]="slide.title" class="bg-gray-100 " loading="lazy"
+            <div class="p-2" (click)="openPopup(slide)">
+              <img [src]="slide.imageUrl" [alt]="slide.title" class="bg-gray-100 " loading="lazy"
                 style="height: 315px; width: 315px;" />
               <div class="carousel-caption">
                 <h3>{{slide.title}}</h3>
@@ -302,20 +244,20 @@
         <h3 class="text-heading text-lg md:text-xl lg:text-2xl 2xl:text-3xl xl:leading-10 font-bold">Top Products</h3>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 md:gap-5 xl:gap-7 xl:-mt-1.5 2xl:mt-0">
-        <div *ngFor="let product of topProducts"
+        <div *ngFor="let product of topProducts" (click)="openPopup(product)"
           class="group box-border overflow-hidden flex rounded-md cursor-pointer flex-row items-center transition-transform ease-linear bg-gray-200 ltr:pr-2 ltr:lg:pr-3 ltr:2xl:pr-4 rtl:pl-2 rtl:lg:pl-3 rtl:2xl:pl-4"
-          [attr.title]="product.title">
+          [attr.title]="product.productName">
           <div
             class="flex relative ltr:rounded-l-md rtl:rounded-r-md aspect-square flex-shrink-0 w-32 sm:w-44 md:w-40 lg:w-52 2xl:w-56 3xl:w-64">
-            <img [alt]="product.title" loading="lazy" decoding="async" data-nimg="fill"
+            <img [alt]="product.productName" loading="lazy" decoding="async" data-nimg="fill"
               class="bg-gray-300 object-cover ltr:rounded-l-md rtl:rounded-r-md transition duration-200 ease-linear transform group-hover:scale-105"
-              [src]="product.image" sizes="(max-width: 768px) 100vw">
+              [src]="product.imageUrl" sizes="(max-width: 768px) 100vw">
           </div>
           <div
             class="w-full overflow-hidden ltr:pl-3.5 ltr:sm:pl-5 ltr:md:pl-4 ltr:xl:pl-5 ltr:2xl:pl-6 ltr:3xl:pl-10 rtl:pr-3.5 rtl:sm:pr-5 rtl:md:pr-4 rtl:xl:pr-5 rtl:2xl:pr-6 rtl:3xl:pr-10">
             <h2
               class="text-heading font-semibold truncate mb-1 text-sm sm:text-base md:text-sm lg:text-base xl:text-lg md:mb-1.5">
-              {{ product.title }}
+              {{ product.productName }}
             </h2>
             <div
               class="text-heading font-semibold text-sm sm:text-base mt-1.5 space-x-1 rtl:space-x-reverse sm:text-lg md:text-base 3xl:text-xl md:mt-2.5 2xl:mt-3">
@@ -426,3 +368,9 @@
     </div>
   </div>
 </main>
+
+<app-product-detail [isOpen]="showPopup" [title]="selectedProduct?.productName"
+  [description]="selectedProduct?.description" [newPrice]="selectedProduct?.newprice"
+  [oldprice]="selectedProduct?.oldprice" [imageSrc]="selectedProduct?.imageUrl" [colors]="selectedProduct?.colors"
+  (close)="closePopup()">
+</app-product-detail>

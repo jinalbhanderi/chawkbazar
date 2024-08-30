@@ -3,23 +3,26 @@
 }
 
 .carousel-container {
-    max-width: 600px;
-    margin: auto;
+  max-width: 600px;
+  margin: auto;
 }
 
 .slide-content-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .slide-content-wrapper img {
-    width: 200px;
-    margin-bottom: 20px;
+  width: 200px;
+  margin-bottom: 20px;
 }
 
 .btn {
-    margin-top: 20px;
+  margin-top: 20px;
+}
+.ltr\:xl\:pr-4{
+  padding-left: 1rem;
 }

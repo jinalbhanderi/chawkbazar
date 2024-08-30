@@ -10,11 +10,11 @@
             [href]="category.link">
             <div class="flex items-center">
               <div class="w-12 h-12 rounded-full overflow-hidden">
-                <img alt="{{category.name}}" loading="lazy" width="60" height="60" decoding="async"
+                <img alt="{{category.productName}}" loading="lazy" width="60" height="60" decoding="async"
                   class="object-cover bg-gray-300" [src]="category.imageUrl">
               </div>
               <h3 class="text-base text-heading capitalize pl-4">
-                {{ category.name }}
+                {{ category.productName }}
               </h3>
             </div>
             <div class="flex items-center">
@@ -94,7 +94,9 @@
       [showNavigators]="false" [autoplayInterval]="4000">
       <ng-template pTemplate="item" let-slide>
         <div class="">
-          <img [src]="slide.src" [alt]="slide.title" class="mx-auto w-full" loading="lazy" />
+          <a [routerLink]="slide.link">
+            <img [src]="slide.imageUrl" [alt]="slide.title" class="mx-auto w-full" loading="lazy" />
+          </a>
         </div>
       </ng-template>
     </p-carousel>
@@ -111,13 +113,14 @@
             [showNavigators]="true" [autoplayInterval]="4000">
             <ng-template pTemplate="item" let-slide>
               <div class="relative group">
-                <img [src]="slide.src" [alt]="slide.title" class=" rounded-full object-cover bg-gray-300"
-                  loading="lazy" />
+                <a [routerLink]="slide.link">
+                  <img [src]="slide.imageUrl" [alt]="slide.title" class=" rounded-full object-cover bg-gray-300"
+                    loading="lazy" />
+                </a>
               </div>
             </ng-template>
           </p-carousel>
         </div>
-
     </div>
     <div class="mb-12 md:mb-14 xl:mb-16">
       <div class="flex items-center justify-between -mt-2 lg:-mt-2.5 pb-0.5 mb-4 md:mb-5 lg:mb-6 2xl:mb-7 3xl:mb-8">
@@ -140,15 +143,15 @@
           class="col-span-full 3xl:col-span-3 xl:grid-cols-3 grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-5 xl:gap-7 row-span-full">
           <div *ngFor="let image of images"
             class="group box-border overflow-hidden flex rounded-md cursor-pointer items-center bg-transparent border border-gray-100 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:shadow-listProduct"
-            [attr.title]="image.title">
+            [attr.title]="image.productName" (click)="openPopup(image)">
             <div
               class="flex relative ltr:rounded-l-md rtl:rounded-r-md flex-shrink-0 w-32 sm:w-44 md:w-36 lg:w-44 lg:h-44 aspect-square">
               <img [alt]="image.alt" loading="lazy" decoding="async" class="bg-gray-300 object-cover"
                 style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
-                [src]="image.src">
+                [src]="image.imageUrl">
             </div>
             <div class="w-full overflow-hidden px-4 lg:px-5 2xl:px-4">
-              <h2 class="text-heading font-semibold truncate mb-1 text-sm sm:text-base md:mb-1.5 pb-0">{{ image.title }}
+              <h2 class="text-heading font-semibold truncate mb-1 text-sm sm:text-base md:mb-1.5 pb-0">{{ image.productName }}
               </h2>
               <div
                 class="text-heading font-semibold text-sm sm:text-base mt-1.5 space-x-1 rtl:space-x-reverse sm:text-lg md:text-base 3xl:text-xl md:mt-2.5 2xl:mt-3">
@@ -180,18 +183,18 @@
           [ngClass]="{
             'col-span-2 lg:col-span-1': product.colSpan === 1,
             'row-span-full lg:row-span-2 col-span-full lg:col-span-2': product.rowSpan === 2
-          }">
-          <div class="flex justify-center items-center p-4 h-full w-full" [title]="product.title">
+          }" (click)="openPopup(product)">
+          <div class="flex justify-center items-center p-4 h-full w-full" [title]="product.productName">
             <div class="relative w-[260px] aspect-square" [ngStyle]="{ 'width': product.colSpan === 2 ? '620px' : '' }">
-              <img [alt]="product.title" [src]="product.imageUrl"
+              <img [alt]="product.productName" [src]="product.imageUrl"
                 class="object-cover transition duration-500 ease-in-out transform group-hover:scale-110" />
             </div>
           </div>
           <div
             class="flex flex-col w-full px-4 md:px-5 3xl:px-7 pb-4 md:pb-5 3xl:pb-7 md:justify-between md:items-center md:flex-row 2xl:flex-row lg:items-start 2xl:items-center lg:flex-col"
-            [title]="product.title">
+            [title]="product.productName">
             <div class="overflow-hidden max-w-full">
-              <h2 class="mb-1 text-sm font-semibold truncate text-heading md:text-base xl:text-lg">{{ product.title }}
+              <h2 class="mb-1 text-sm font-semibold truncate text-heading md:text-base xl:text-lg">{{ product.productName }}
               </h2>
             </div>
             <div class="text-heading font-segoe font-semibold text-base xl:text-xl">
@@ -220,18 +223,18 @@
       class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-x-3 md:gap-x-5 xl:gap-x-7 gap-y-4 lg:gap-y-5 xl:lg:gap-y-6 2xl:gap-y-8">
       <div *ngFor="let product of flashSale"
         class="group box-border overflow-hidden flex rounded-md cursor-pointer ltr:pr-0 rtl:pl-0 md:pb-1 flex-col items-start bg-white"
-        [title]="product.title">
+        [title]="product.productName" (click)="openPopup(product)">
         <div
           class="flex relative ltr:rounded-l-md rtl:rounded-r-md mb-3 md:mb-3.5 pb-0 aspect-square w-full rounded-md overflow-hidden">
-          <img [alt]="product.title" loading="lazy" decoding="async" data-nimg="fill"
+          <img [alt]="product.productName" loading="lazy" decoding="async" data-nimg="fill"
             class="bg-gray-300 object-cover transition duration-150 ease-linear transform group-hover:scale-105"
             style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
-            sizes="(max-width: 768px) 100vw" [src]="product.image">
+            sizes="(max-width: 768px) 100vw" [src]="product.imageUrl">
         </div>
         <div class="w-full overflow-hidden ltr:pl-0 rtl:pr-0">
           <h2
             class="text-heading font-semibold truncate mb-1 md:mb-1.5 text-sm sm:text-base md:text-sm lg:text-base xl:text-lg">
-            {{ product.title }}</h2>
+            {{ product.productName }}</h2>
           <div
             class="text-heading font-semibold text-sm sm:text-base mt-1.5 space-x-1 rtl:space-x-reverse sm:text-lg md:text-base 3xl:text-xl md:mt-2.5 2xl:mt-3">
             <span class="inline-block">{{ product.price }}</span>
@@ -292,18 +295,17 @@
         class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-x-3 md:gap-x-5 xl:gap-x-7 gap-y-3 xl:gap-y-5 2xl:gap-y-8">
         <div *ngFor="let item of items"
           class="group box-border overflow-hidden flex rounded-md cursor-pointer ltr:pr-0 rtl:pl-0 pb-2 lg:pb-3 flex-col items-start bg-white transition duration-200 ease-in-out transform hover:-translate-y-1 hover:md:-translate-y-1.5 hover:shadow-product"
-          [attr.title]="item.title">
+          [attr.title]="item.productName" (click)="openPopup(item)">
           <div class="flex relative ltr:rounded-l-md rtl:rounded-r-md mb-3 md:mb-3.5 w-full aspect-[17/22]">
-            <img alt="{{ item.title }}" loading="lazy" decoding="async"
+            <img alt="{{ item.productName }}" loading="lazy" decoding="async"
               class="bg-gray-300 object-cover rounded-md transition duration-200 ease-in group-hover:rounded-b-none"
-              [src]="item.image"
-              [srcset]="item.image + '?w=640 640w, ' + item.image + '?w=750 750w, ' + item.image + '?w=828 828w, ' + item.image + '?w=1080 1080w, ' + item.image + '?w=1200 1200w, ' + item.image + '?w=1920 1920w, ' + item.image + '?w=2048 2048w, ' + item.image + '?w=3840 3840w'"
+              [src]="item.imageUrl"
               sizes="(max-width: 768px) 100vw"
               style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
           </div>
           <div
             class="w-full overflow-hidden ltr:pl-0 rtl:pr-0 ltr:lg:pl-2.5 ltr:xl:pl-4 rtl:lg:pr-2.5 rtl:xl:pr-4 ltr:pr-2.5 ltr:xl:pr-4 rtl:pl-2.5 rtl:xl:pl-4">
-            <h2 class="text-heading font-semibold truncate mb-1 text-sm md:text-base">{{ item.title }}</h2>
+            <h2 class="text-heading font-semibold truncate mb-1 text-sm md:text-base">{{ item.productName }}</h2>
             <div
               class="text-heading font-semibold text-sm sm:text-base mt-1.5 space-x-1 rtl:space-x-reverse 3xl:text-lg lg:mt-2.5">
               <span class="inline-block">{{ item.price }}</span>
@@ -326,7 +328,7 @@
         </h3>
       </div>
       <div class="relative block lg:hidden">
-        <div class="carouselWrapper relative  ">
+        <div class="carouselWrapper relative">
           <div class="swiper swiper-initialized swiper-horizontal" dir="ltr">
             <div class="swiper-wrapper" style="transition-duration: 300ms;">
               <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="0">
@@ -554,7 +556,7 @@
     </button>
   </div>
   <div
-    class="px-5 bg-linen sm:px-8 md:px-16 2xl:px-24 flex flex-col xl:flex-row justify-center xl:justify-between items-center rounded-lg bg-gray-200 py-10 md:py-14 lg:py-16">
+    class="px-5  sm:px-8 md:px-16 2xl:px-24 flex flex-col xl:flex-row justify-center xl:justify-between items-center py-10 md:py-14 lg:py-16">
     <div class="lg:-mt-2 xl:-mt-0.5 text-left ltr:xl:text-left rtl:xl:text-right mb-7 md:mb-8 lg:mb-9 xl:mb-0">
       <h3
         class="text-lg md:text-xl lg:text-2xl 2xl:text-3xl xl:leading-10 font-bold text-heading sm:mb-0 md:mb-2.5 lg:mb-3 xl:mb-3.5">
@@ -582,3 +584,10 @@
 
   <div class="border-t border-gray-300 mb-0"></div>
 </main>
+
+<app-product-detail [isOpen]="showPopup" [title]="selectedProduct?.productName"
+  [description]="selectedProduct?.description" [newPrice]="selectedProduct?.newprice"
+  [oldprice]="selectedProduct?.oldprice" [imageSrc]="selectedProduct?.imageUrl" [colors]="selectedProduct?.colors"
+  (close)="closePopup()">
+</app-product-detail>
+
