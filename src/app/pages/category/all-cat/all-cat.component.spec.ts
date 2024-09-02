@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CatSportsComponent } from './cat-sports.component';
+import { AllCatComponent } from './all-cat.component';
 
-describe('CatSportsComponent', () => {
-  let component: CatSportsComponent;
-  let fixture: ComponentFixture<CatSportsComponent>;
+describe('AllCatComponent', () => {
+  let component: AllCatComponent;
+  let fixture: ComponentFixture<AllCatComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CatSportsComponent]
+      declarations: [AllCatComponent]
     });
-    fixture = TestBed.createComponent(CatSportsComponent);
+    fixture = TestBed.createComponent(AllCatComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
