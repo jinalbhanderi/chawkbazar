@@ -100,13 +100,13 @@ export class ClassicComponent {
       price: '$300.00',
       originalPrice: '$650.00',
     },
-    {
-    imageUrl: '/assets/images/products/sel-product/3.webp',
-      alt: 'H&M Boys Top',
-    productName: 'H&M Boys Top',
-      price: '$350.00',
-      originalPrice: '$1,000.00',
-    },
+      {
+      imageUrl: '/assets/images/products/sel-product/3.webp',
+        alt: 'H&M Boys Top',
+      productName: 'H&M Boys Top',
+        price: '$350.00',
+        originalPrice: '$1,000.00',
+      },
     {
     imageUrl: '/assets/images/products/sel-product/4.webp',
       alt: 'H & Dri-FIT Fleece',
@@ -339,7 +339,7 @@ export class ClassicComponent {
     {
     productName: 'Reyban Havana Phantos Sunglasses',
     imageUrl:
-        'https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F226%2FSunglasess-2-1.jpg&w=1920&q=100',
+        'assets/images/category/sunglass/1.webp',
       price: '$80.00 - $100.00',
     },
     {

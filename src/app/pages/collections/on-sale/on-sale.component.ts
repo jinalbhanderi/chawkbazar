@@ -37,8 +37,7 @@ export class OnSaleComponent {
         oldprice: '$250.00',
       },
       {
-        imageUrl:
-          'https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F204%2FSunglasess-15-1.jpg&w=1920&q=100',
+        imageUrl: 'assets/images/category/sunglass/3.webp',
         productName: 'Hermes179S Sunglasses',
         newprice: '$220.00',
         oldprice: '$250',
@@ -84,8 +83,7 @@ export class OnSaleComponent {
     'exclusive-sunglasses': [
       {
         productName: 'Reyban Havana Phantos Sunglasses',
-        imageUrl:
-          'https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F226%2FSunglasess-2-1.jpg&w=1920&q=100',
+        imageUrl: 'assets/images/category/sunglass/1.webp',
         newprice: '$80.00',
         oldprice: '$100',
       },
@@ -641,8 +639,7 @@ export class OnSaleComponent {
         oldprice: '$1000.00',
       },
       {
-        imageUrl:
-          'https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F204%2FSunglasess-15-1.jpg&w=1920&q=100',
+        imageUrl: 'assets/images/category/sunglass/3.webp',
         productName: 'Hermes179S Sunglasses',
         newprice: '$220.00',
         oldprice: '$250.00',

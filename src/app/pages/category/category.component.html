@@ -38,20 +38,32 @@
           </div>
           <div class="block border-b border-gray-300 pb-7 mb-7">
             <h3 class="text-heading text-sm md:text-base font-semibold mb-7">Category</h3>
-            <div class="mt-2 flex flex-col space-y-4"><label
-                class="group flex items-center text-heading text-sm cursor-pointer"><input type="checkbox"
-                  class="form-checkbox w-5 h-5 border border-gray-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 text-heading hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading"
-                  name="bags" value="bags"><span class="ms-3">Bags</span></label><label
-                class="group flex items-center text-heading text-sm cursor-pointer"><input type="checkbox"
-                  class="form-checkbox w-5 h-5 border border-gray-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 text-heading hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading"
-                  name="kids" value="kids"><span class="ms-3">Kids</span></label><label
-                class="group flex items-center text-heading text-sm cursor-pointer"><input type="checkbox"
-                  class="form-checkbox w-5 h-5 border border-gray-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 text-heading hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading"
-                  name="men" value="men"><span class="ms-3">Men</span></label><label
-                class="group flex items-center text-heading text-sm cursor-pointer"><input type="checkbox"
+            <div class="mt-2 flex flex-col space-y-4">
+            <label class="group flex items-center text-heading text-sm cursor-pointer">
+              <input type="checkbox" (change)="data($event, 'bags')"
+                class="form-checkbox w-5 h-5 border border-gray-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 text-heading hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading"
+                name="bags" value="bags">
+              <span class="ms-3">Bags</span>
+            </label>
+
+            <label class="group flex items-center text-heading text-sm cursor-pointer">
+              <input type="checkbox" (change)="data($event, 'kids')"
+                class="form-checkbox w-5 h-5 border border-gray-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 text-heading hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading"
+                name="kids" value="kids">
+              <span class="ms-3">Kids</span>
+            </label>
+
+            <label class="group flex items-center text-heading text-sm cursor-pointer">
+              <input type="checkbox" (change)="data($event, 'men')"
+                class="form-checkbox w-5 h-5 border border-gray-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 text-heading hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading"
+                name="men" value="men">
+              <span class="ms-3">Men</span>
+            </label>
+<label
+                class="group flex items-center text-heading text-sm cursor-pointer"><input type="checkbox" (change)="data($event,'sneakers')"
                   class="form-checkbox w-5 h-5 border border-gray-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 text-heading hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading"
                   name="sneakers" value="sneakers"><span class="ms-3">Sneakers</span></label><label
-                class="group flex items-center text-heading text-sm cursor-pointer"><input type="checkbox"
+                class="group flex items-center text-heading text-sm cursor-pointer"><input type="checkbox" (change)="data($event,'sports')"
                   class="form-checkbox w-5 h-5 border border-gray-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 text-heading hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading"
                   name="sports" value="sports"><span class="ms-3">Sports</span></label>
               <div class="w-full"><button data-variant="custom"

@@ -1,13 +1,15 @@
+import { CategoriesModule } from './../pages/categories/categories.module';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './layout.component';
 import { CheckoutComponent } from '../pages/all-pages/checkout/checkout.component';
 import { ShposComponent } from '../pages/shpos/shpos.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { NotFoundComponent } from '../pages/not-found/not-found.component';
 
 const routes: Routes = [
   { path: 'checkout', component: CheckoutComponent },
-  { path: 'checkout', component: ShoppingCartComponent },
+  // { path: 'checkout', component: ShoppingCartComponent },
 
   {
     path: '',
@@ -19,10 +21,17 @@ const routes: Routes = [
           import('./../pages/demos/demos.module').then((m) => m.DemosModule),
       },
       {
-        path: 'category',
+        path: 'search',
         loadChildren: () =>
           import('./../pages/category/category.module').then(
             (m) => m.CategoryModule
+          ),
+      },
+      {
+        path: 'category',
+        loadChildren: () =>
+          import('./../pages/categories/categories.module').then(
+            (m) => m.CategoriesModule
           ),
       },
       {
@@ -42,6 +51,7 @@ const routes: Routes = [
       { path: 'shops', component: ShposComponent },
     ],
   },
+  { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({

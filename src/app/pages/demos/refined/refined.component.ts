@@ -200,7 +200,7 @@ export class RefinedComponent {
     {
       productName: 'Reyban Havana Phantos Sunglasses',
       imageUrl:
-        'https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F226%2FSunglasess-2-1.jpg&w=1920&q=100',
+        'assets/images/category/sunglass/1.webp',
       price: '$80.00 - $100.00',
     },
     {
@@ -312,7 +312,7 @@ export class RefinedComponent {
     {
       productName: 'Reyban Havana Phantos Sunglasses',
       imageUrl:
-        'https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F226%2FSunglasess-2-1.jpg&w=1920&q=100',
+        'assets/images/category/sunglass/1.webp',
       price: '$80.00 - $100.00',
     },
   ];
