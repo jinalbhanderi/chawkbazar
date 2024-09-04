@@ -18,9 +18,8 @@
     <div class="mb-12 md:mb-14 xl:mb-16 px-2.5 grid grid-cols-2 sm:grid-cols-9 gap-2 md:gap-2.5 max-w-[1920px] mx-auto">
       <div class="mx-auto w-full col-span-full sm:col-span-5 "><a
           class="group flex justify-center relative overflow-hidden w-full aspect-[2.3/1] sm:aspect-[5.075/2] "
-          href="/collections/mens-collection"><img
-            alt="Men's Collection" fetchpriority="high" decoding="async" data-nimg="fill"
-            class="bg-gray-300 object-cover w-full hidden sm:block" sizes="(max-width: 768px) 100vw"
+          href="/collections/mens-collection"><img alt="Men's Collection" fetchpriority="high" decoding="async"
+            data-nimg="fill" class="bg-gray-300 object-cover w-full hidden sm:block" sizes="(max-width: 768px) 100vw"
             src="/assets/images/banner/masonry/banner-7.jpg"
             style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
           <div
@@ -29,8 +28,7 @@
         </a></div>
       <div class="mx-auto w-full col-span-1 sm:col-span-2"><a
           class="group flex justify-center relative overflow-hidden w-full aspect-square h-full"
-          href="/collections/new-kid's"><img alt="New Kid's"
-            fetchpriority="high" decoding="async" data-nimg="fill"
+          href="/collections/new-kid's"><img alt="New Kid's" fetchpriority="high" decoding="async" data-nimg="fill"
             class="bg-gray-300 object-cover w-full hidden sm:block" sizes="(max-width: 768px) 100vw"
             src="/assets/images/banner/masonry/banner-8.jpg"
             style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
@@ -40,8 +38,7 @@
         </a></div>
       <div class="mx-auto w-full col-span-1 sm:col-span-2"><a
           class="group flex justify-center relative overflow-hidden w-full aspect-square h-full"
-          href="/collections/dress-women"><img
-            alt="Dress Women" fetchpriority="high" decoding="async" data-nimg="fill"
+          href="/collections/dress-women"><img alt="Dress Women" fetchpriority="high" decoding="async" data-nimg="fill"
             class="bg-gray-300 object-cover w-full hidden sm:block" sizes="(max-width: 768px) 100vw"
             src="/assets/images/banner/masonry/banner-9.jpg"
             style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
@@ -86,8 +83,8 @@
       </div>
       <div class="grid grid-cols-2 md:grid-cols-4 md:grid-rows-2 gap-3 md:gap-5 xl:gap-7">
         <div *ngFor="let product of products"
-          class="cursor-pointer group flex flex-col bg-gray-200 rounded-md relative items-center justify-between overflow-hidden" (click)="openPopup(product)"
-          [ngClass]="{
+          class="cursor-pointer group flex flex-col bg-gray-200 rounded-md relative items-center justify-between overflow-hidden"
+          (click)="openPopup(product)" [ngClass]="{
                      'col-span-2': product.colSpan === 2,
                      'col-span-1': product.colSpan === 1,
                      'row-span-2': product.rowSpan === 2,
@@ -105,8 +102,9 @@
                 {{ product.productName }}
               </h2>
             </div>
-            <div class="text-heading font-segoe font-semibold text-base xl:text-xl">
-              {{ product.priceRange }}
+            <div class="text-heading font-segoe font-semibold text-base xl:text-xl"><span class="inline-block">{{
+                product.newPrice }}</span>
+              <del class="font-normal text-gray-800 pl-1">{{ product.oldPrice}}</del>
             </div>
           </div>
         </div>
@@ -124,8 +122,17 @@
           <div class="p-2" (click)="openPopup(slide)">
             <img [src]="slide.imageUrl" [alt]="slide.title" class="bg-gray-100 " loading="lazy"
               style="height: 315px; width: 315px;" />
-            <div class="carousel-caption">
-              <h3>{{slide.title}}</h3>
+            <div
+              class="w-full overflow-hidden ltr:pl-3.5 ltr:sm:pl-5 ltr:md:pl-4 ltr:xl:pl-5 ltr:2xl:pl-6 ltr:3xl:pl-10 rtl:pr-3.5 rtl:sm:pr-5 rtl:md:pr-4 rtl:xl:pr-5 rtl:2xl:pr-6 rtl:3xl:pr-10">
+              <h2
+                class="text-heading font-semibold truncate mb-1 text-sm sm:text-base md:text-sm lg:text-base xl:text-lg md:mb-1.5">
+                {{ slide.productName }}
+              </h2>
+              <div
+                class="text-heading font-semibold text-sm sm:text-base mt-1.5 space-x-1 rtl:space-x-reverse sm:text-lg md:text-base 3xl:text-xl md:mt-2.5 2xl:mt-3">
+                <span class="inline-block">{{ slide.newPrice }}</span>
+                <del class="font-normal text-gray-800 pl-1">{{ slide.oldPrice}}</del>
+              </div>
             </div>
           </div>
         </ng-template>
@@ -133,21 +140,21 @@
     </div>
     <div class="mx-auto w-full mb-12 md:mb-14 xl:mb-16 pb-0.5 md:pb-0 lg:pb-1 xl:pb-0 md:-mt-2.5"><a
         class="group flex justify-center relative overflow-hidden w-full md:aspect-[2.9/1] aspect-[2/1]"
-        href="/collections/winter-collection"><img
-          alt="Winter Collection of Kid Items" fetchpriority="high" decoding="async" data-nimg="fill"
-          class="bg-gray-300 object-cover w-full hidden sm:block rounded-md" sizes="(max-width: 768px) 100vw"
-          src="/assets/images/banner/banner-8.jpg"
+        href="/collections/winter-collection"><img alt="Winter Collection of Kid Items" fetchpriority="high"
+          decoding="async" data-nimg="fill" class="bg-gray-300 object-cover w-full hidden sm:block rounded-md"
+          sizes="(max-width: 768px) 100vw" src="/assets/images/banner/banner-8.jpg"
           style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"></a></div>
     <div class="mb-12 md:mb-14 xl:mb-16">
       <div class="flex items-center justify-between -mt-2 lg:-mt-2.5 pb-0.5 mb-4 md:mb-5 lg:mb-6 2xl:mb-7 3xl:mb-8">
         <h3 class="text-heading text-lg md:text-xl lg:text-2xl 2xl:text-3xl xl:leading-10 font-bold">Top Brands</h3>
       </div>
       <div class="grid grid-cols-2 sm:grid-cols-4 2xl:grid-cols-6 gap-2.5 md:gap-3 lg:gap-5 xl:gap-7">
-        <a *ngFor="let brand of topBrand" class="group flex justify-center text-center relative overflow-hidden rounded-md"
-          [href]="brand.link">
+        <a *ngFor="let brand of topBrand"
+          class="group flex justify-center text-center relative overflow-hidden rounded-md" [href]="brand.link">
           <span>
             <span>
-              <img [alt]="brand.productName" aria-hidden="true" [src]="'/assets/images/brands/grid/' + brand.imageUrl" />
+              <img [alt]="brand.productName" aria-hidden="true"
+                [src]="'/assets/images/brands/grid/' + brand.imageUrl" />
             </span>
           </span>
           <div
@@ -164,36 +171,38 @@
         <h3 class="text-heading text-lg md:text-xl lg:text-2xl 2xl:text-3xl xl:leading-10 font-bold">Top Products</h3>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 md:gap-5 xl:gap-7 xl:-mt-1.5 2xl:mt-0">
-      <div *ngFor="let product of topProducts" (click)="openPopup(product)"
-        class="group box-border overflow-hidden flex rounded-md cursor-pointer flex-row items-center transition-transform ease-linear bg-gray-200 ltr:pr-2 ltr:lg:pr-3 ltr:2xl:pr-4 rtl:pl-2 rtl:lg:pl-3 rtl:2xl:pl-4"
-        [attr.title]="product.productName">
-        <div
-          class="flex relative ltr:rounded-l-md rtl:rounded-r-md aspect-square flex-shrink-0 w-32 sm:w-44 md:w-40 lg:w-52 2xl:w-56 3xl:w-64">
-          <img [alt]="product.productName" loading="lazy" decoding="async" data-nimg="fill"
-            class="bg-gray-300 object-cover ltr:rounded-l-md rtl:rounded-r-md transition duration-200 ease-linear transform group-hover:scale-105"
-            [src]="product.imageUrl" sizes="(max-width: 768px) 100vw">
-        </div>
-        <div
-          class="w-full overflow-hidden ltr:pl-3.5 ltr:sm:pl-5 ltr:md:pl-4 ltr:xl:pl-5 ltr:2xl:pl-6 ltr:3xl:pl-10 rtl:pr-3.5 rtl:sm:pr-5 rtl:md:pr-4 rtl:xl:pr-5 rtl:2xl:pr-6 rtl:3xl:pr-10">
-          <h2
-            class="text-heading font-semibold truncate mb-1 text-sm sm:text-base md:text-sm lg:text-base xl:text-lg md:mb-1.5">
-            {{ product.productName }}
-          </h2>
+        <div *ngFor="let product of topProducts" (click)="openPopup(product)"
+          class="group box-border overflow-hidden flex rounded-md cursor-pointer flex-row items-center transition-transform ease-linear bg-gray-200 ltr:pr-2 ltr:lg:pr-3 ltr:2xl:pr-4 rtl:pl-2 rtl:lg:pl-3 rtl:2xl:pl-4"
+          [attr.title]="product.productName">
           <div
-            class="text-heading font-semibold text-sm sm:text-base mt-1.5 space-x-1 rtl:space-x-reverse sm:text-lg md:text-base 3xl:text-xl md:mt-2.5 2xl:mt-3">
-            <span class="inline-block">{{ product.price }}</span>
+            class="flex relative ltr:rounded-l-md rtl:rounded-r-md aspect-square flex-shrink-0 w-32 sm:w-44 md:w-40 lg:w-52 2xl:w-56 3xl:w-64">
+            <img [alt]="product.productName" loading="lazy" decoding="async" data-nimg="fill"
+              class="bg-gray-300 object-cover ltr:rounded-l-md rtl:rounded-r-md transition duration-200 ease-linear transform group-hover:scale-105"
+              [src]="product.imageUrl" sizes="(max-width: 768px) 100vw">
+          </div>
+          <div
+            class="w-full overflow-hidden ltr:pl-3.5 ltr:sm:pl-5 ltr:md:pl-4 ltr:xl:pl-5 ltr:2xl:pl-6 ltr:3xl:pl-10 rtl:pr-3.5 rtl:sm:pr-5 rtl:md:pr-4 rtl:xl:pr-5 rtl:2xl:pr-6 rtl:3xl:pr-10">
+            <h2
+              class="text-heading font-semibold truncate mb-1 text-sm sm:text-base md:text-sm lg:text-base xl:text-lg md:mb-1.5">
+              {{ product.productName }}
+            </h2>
+            <div
+              class="text-heading font-semibold text-sm sm:text-base mt-1.5 space-x-1 rtl:space-x-reverse sm:text-lg md:text-base 3xl:text-xl md:mt-2.5 2xl:mt-3">
+              <span class="inline-block">{{ product.newPrice }}</span>
+              <del class="font-normal text-gray-800 pl-1">{{ product.oldPrice}}</del>
+            </div>
           </div>
         </div>
-      </div>
 
       </div>
     </div>
     <div class="rounded-md overflow-hidden lg:block mb-12 md:mb-14 xl:mb-16">
       <div class="flex justify-between">
         <div class="group w-2/4 flex justify-between items-end relative transition duration-200 ease-in bg-gray-150">
-          <div class="relative z-10 flex transition duration-200 ease-in transform exclusiveImage group-hover:scale-105">
-            <img alt="button-women-exclusive" fetchpriority="high" width="600" height="600" decoding="async" data-nimg="1"
-              src="/assets/images/exclusive/women.png" style="color: transparent;">
+          <div
+            class="relative z-10 flex transition duration-200 ease-in transform exclusiveImage group-hover:scale-105">
+            <img alt="button-women-exclusive" fetchpriority="high" width="600" height="600" decoding="async"
+              data-nimg="1" src="/assets/images/exclusive/women.png" style="color: transparent;">
           </div><a
             class="absolute z-10 bottom-3 sm:bottom-5 xl:bottom-7 inline-block bg-white shadow-product rounded-md text-heading lowercase text-sm xl:text-xl 2xl:text-xl sm:uppercase px-3 sm:px-5 xl:px-6 2xl:px-8 py-2.5 sm:py-4 xl:py-5 2xl:py-7  transform transition duration-300 ease-in-out hover:bg-heading hover:text-white ltr:right-3 ltr:sm:right-5 ltr:xl:right-7 rtl:left-3 rtl:sm:left-5 rtl:xl:left-7"
             href="/collections/womens-collection">#women exclusive</a>
@@ -206,7 +215,8 @@
         </div>
         <div
           class="group w-2/4 flex justify-between items-end relative transition duration-200 ease-in flex-row-reverse bg-linenSecondary">
-          <div class="relative z-10 flex transition duration-200 ease-in transform exclusiveImage group-hover:scale-105">
+          <div
+            class="relative z-10 flex transition duration-200 ease-in transform exclusiveImage group-hover:scale-105">
             <img alt="button-men-exclusive" fetchpriority="high" width="600" height="600" decoding="async" data-nimg="1"
               src="/assets/images/exclusive/men.png" style="color: transparent;">
           </div><a
@@ -233,8 +243,7 @@
           <div class="flex relative ltr:rounded-l-md rtl:rounded-r-md mb-3 md:mb-3.5 w-full aspect-[17/22]">
             <img alt="{{ item.productName }}" loading="lazy" decoding="async"
               class="bg-gray-300 object-cover rounded-md transition duration-200 ease-in group-hover:rounded-b-none"
-              [src]="item.imageUrl"
-              sizes="(max-width: 768px) 100vw"
+              [src]="item.imageUrl" sizes="(max-width: 768px) 100vw"
               style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
           </div>
           <div
@@ -242,7 +251,8 @@
             <h2 class="text-heading font-semibold truncate mb-1 text-sm md:text-base">{{ item.productName }}</h2>
             <div
               class="text-heading font-semibold text-sm sm:text-base mt-1.5 space-x-1 rtl:space-x-reverse 3xl:text-lg lg:mt-2.5">
-              <span class="inline-block">{{ item.price }}</span>
+              <span class="inline-block">{{ item.newPrice }}</span>
+                                        <del class="font-normal text-gray-800 pl-1">{{ item.oldPrice}}</del>
             </div>
           </div>
         </div>
@@ -256,8 +266,7 @@
         <div class="flex mx-auto flex-col relative">
           <div class="flex"><img alt="title" loading="lazy" width="580" height="580" decoding="async" data-nimg="1"
               class="bg-gray-300 object-cover sm:rounded-md transition duration-200 ease-in-out group-hover:opacity-90"
-              src="/assets/images/collection/4.jpg"
-              style="color: transparent;"></div>
+              src="/assets/images/collection/4.jpg" style="color: transparent;"></div>
           <div
             class="overflow-hidden absolute bottom-3.5 lg:bottom-5 ltr:right-3.5 ltr:lg:right-5 rtl:left-3.5 rtl:lg:left-5 p-2">
             <span
@@ -278,8 +287,7 @@
         <div class="flex mx-auto flex-col relative">
           <div class="flex"><img alt="title" loading="lazy" width="580" height="580" decoding="async" data-nimg="1"
               class="bg-gray-300 object-cover sm:rounded-md transition duration-200 ease-in-out group-hover:opacity-90"
-              src="/assets/images/collection/5.jpg"
-              style="color: transparent;"></div>
+              src="/assets/images/collection/5.jpg" style="color: transparent;"></div>
           <div
             class="overflow-hidden absolute bottom-3.5 lg:bottom-5 ltr:right-3.5 ltr:lg:right-5 rtl:left-3.5 rtl:lg:left-5 p-2">
             <span
@@ -300,8 +308,7 @@
         <div class="flex mx-auto flex-col relative">
           <div class="flex"><img alt="title" loading="lazy" width="580" height="580" decoding="async" data-nimg="1"
               class="bg-gray-300 object-cover sm:rounded-md transition duration-200 ease-in-out group-hover:opacity-90"
-              src="/assets/images/collection/6.jpg"
-              style="color: transparent;"></div>
+              src="/assets/images/collection/6.jpg" style="color: transparent;"></div>
           <div
             class="overflow-hidden absolute bottom-3.5 lg:bottom-5 ltr:right-3.5 ltr:lg:right-5 rtl:left-3.5 rtl:lg:left-5 p-2">
             <span
@@ -350,7 +357,7 @@
   </div>
 </main>
 <app-product-detail [isOpen]="showPopup" [title]="selectedProduct?.productName"
-  [description]="selectedProduct?.description" [newPrice]="selectedProduct?.newprice"
-  [oldprice]="selectedProduct?.oldprice" [imageSrc]="selectedProduct?.imageUrl" [colors]="selectedProduct?.colors"
+  [description]="selectedProduct?.description" [newPrice]="selectedProduct?.newPrice"
+  [oldprice]="selectedProduct?.oldPrice" [imageSrc]="selectedProduct?.imageUrl" [colors]="selectedProduct?.colors"
   (close)="closePopup()">
 </app-product-detail>

@@ -75,8 +75,8 @@
             product.description }}</p>
           <div
             class="font-semibold text-sm sm:text-base mt-1.5 flex flex-wrap gap-x-2 lg:text-lg lg:mt-2.5 text-heading">
-            <span class="inline-block false">{{ product.price }}</span><del
-              class="sm:text-base font-normal text-gray-800">{{ product.previousPrice }}</del>
+            <span class="inline-block false">{{ product.newPrice }}</span><del
+              class="sm:text-base font-normal text-gray-800">{{ product.oldPrice }}</del>
           </div>
         </div>
       </div>
@@ -111,8 +111,8 @@
             product.description }}</p>
           <div
             class="font-semibold text-sm sm:text-base mt-1.5 flex flex-wrap gap-x-2 lg:text-lg lg:mt-2.5 text-heading">
-            <span class="inline-block false">{{ product.price }}</span><del
-              class="sm:text-base font-normal text-gray-800">{{ product.previousPrice }}</del>
+            <span class="inline-block false">{{ product.newPrice }}</span><del
+              class="sm:text-base font-normal text-gray-800">{{ product.oldPrice }}</del>
           </div>
         </div>
       </div>
@@ -439,7 +439,7 @@
 </div>
 <div class="Toastify"></div>
 <app-product-detail [isOpen]="showPopup" [title]="selectedProduct?.productName"
-  [description]="selectedProduct?.description" [newPrice]="selectedProduct?.newprice"
-  [oldprice]="selectedProduct?.oldprice" [imageSrc]="selectedProduct?.imageUrl" [colors]="selectedProduct?.colors"
+  [description]="selectedProduct?.description" [newPrice]="selectedProduct?.newPrice"
+  [oldprice]="selectedProduct?.oldPrice" [imageSrc]="selectedProduct?.imageUrl" [colors]="selectedProduct?.colors"
   (close)="closePopup()">
 </app-product-detail>

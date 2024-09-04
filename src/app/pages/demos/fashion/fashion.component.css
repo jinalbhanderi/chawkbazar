@@ -1,0 +1,41 @@
+.p-2 {
+  position: relative;
+}
+
+.bg-gray-100 {
+  position: relative;
+}
+
+.icon-overlay {
+  position: absolute;
+
+  height: 222px;
+  width:260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  background: rgba(178, 178, 178, 0.7);
+  z-index: 2;
+}
+
+.icon {
+  color: white;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.bg-gray-100:hover .icon-overlay {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  right: 0;
+  color: white;
+  text-align: center;
+  z-index: 3;
+}

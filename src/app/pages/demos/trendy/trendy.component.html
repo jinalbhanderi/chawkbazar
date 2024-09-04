@@ -76,9 +76,8 @@
              'col-span-1': product.colSpan === 1,
              'row-span-2': product.rowSpan === 2,
              'row-span-1': product.rowSpan === 1
-           }"  (click)="openPopup(product)">
-          <div class="flex justify-center items-center p-4 h-full w-full" [title]="product.productName"
-           >
+           }" (click)="openPopup(product)">
+          <div class="flex justify-center items-center p-4 h-full w-full" [title]="product.productName">
             <div class="relative w-full" [ngStyle]="{ 'width': product.colSpan === 2 ? '100%' : '' }">
               <img [alt]="product.productName" [src]="product.imageUrl"
                 class="object-cover transition duration-500 ease-in-out transform group-hover:scale-110" />
@@ -120,7 +119,8 @@
                 {{slide.title}}</h2>
               <div
                 class="text-heading font-semibold text-sm sm:text-base mt-1.5 space-x-1 rtl:space-x-reverse sm:text-lg md:text-base 3xl:text-xl md:mt-2.5 2xl:mt-3">
-                <span class="inline-block">{{slide.price}}</span>
+                <span class="inline-block">{{slide.newPrice}}</span>
+                <del class="font-normal text-gray-800 pl-1">{{ slide.oldPrice}}</del>
               </div>
             </div>
           </div>
@@ -146,8 +146,7 @@
           <div class="flex relative ltr:rounded-l-md rtl:rounded-r-md mb-3 md:mb-3.5 w-full aspect-[17/22]">
             <img alt="{{ item.productName }}" loading="lazy" decoding="async"
               class="bg-gray-300 object-cover rounded-md transition duration-200 ease-in group-hover:rounded-b-none"
-              [src]="item.imageUrl"
-              sizes="(max-width: 768px) 100vw"
+              [src]="item.imageUrl" sizes="(max-width: 768px) 100vw"
               style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
           </div>
           <div
@@ -155,60 +154,60 @@
             <h2 class="text-heading font-semibold truncate mb-1 text-sm md:text-base">{{ item.productName }}</h2>
             <div
               class="text-heading font-semibold text-sm sm:text-base mt-1.5 space-x-1 rtl:space-x-reverse 3xl:text-lg lg:mt-2.5">
-              <span class="inline-block">{{ item.price }}</span>
+              <span class="inline-block">{{ item.newPrice }}</span>
+              <del class="font-normal text-gray-800 pl-1">${{ item.oldPrice
+                }}</del>
             </div>
           </div>
         </div>
       </div>
     </div>
-  <div class="mb-12 md:mb-14 xl:mb-16">
-    <div class="flex items-center justify-between -mt-2 lg:-mt-2.5 pb-0.5 mb-4 md:mb-5 lg:mb-6 2xl:mb-7 3xl:mb-8">
-      <h3 class="text-heading text-lg md:text-xl lg:text-2xl 2xl:text-3xl xl:leading-10 font-bold">On Selling Products
-      </h3>
-      <a class="text-xs lg:text-sm xl:text-base text-heading mt-0.5 lg:mt-1" href="/search">See All Products</a>
-    </div>
+    <div class="mb-12 md:mb-14 xl:mb-16">
+      <div class="flex items-center justify-between -mt-2 lg:-mt-2.5 pb-0.5 mb-4 md:mb-5 lg:mb-6 2xl:mb-7 3xl:mb-8">
+        <h3 class="text-heading text-lg md:text-xl lg:text-2xl 2xl:text-3xl xl:leading-10 font-bold">On Selling Products
+        </h3>
+        <a class="text-xs lg:text-sm xl:text-base text-heading mt-0.5 lg:mt-1" href="/search">See All Products</a>
+      </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-3 lg:gap-x-5 xl:gap-x-7">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-3 lg:gap-x-5 xl:gap-x-7">
 
-      <!-- Featured Banner Image -->
-      <div class="hidden 3xl:block 3xl:col-span-2 3xl:row-span-2 mx-auto w-full">
-        <a href="/collections/winter-collection"
-          class="group flex justify-center relative overflow-hidden w-full aspect-[2.3/1] h-full">
-          <img src="/assets/images/banner/banner-sale-offer-half.jpg" alt="We picked every item with care you must try"
-            fetchpriority="high" decoding="async" class="bg-gray-300 object-cover w-full hidden sm:block rounded-md"
-            style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+        <!-- Featured Banner Image -->
+        <div class="hidden 3xl:block 3xl:col-span-2 3xl:row-span-2 mx-auto w-full">
+          <a href="/collections/winter-collection"
+            class="group flex justify-center relative overflow-hidden w-full aspect-[2.3/1] h-full">
+            <img src="/assets/images/banner/banner-sale-offer-half.jpg"
+              alt="We picked every item with care you must try" fetchpriority="high" decoding="async"
+              class="bg-gray-300 object-cover w-full hidden sm:block rounded-md"
+              style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+            <div
+              class="absolute top-0 block w-1/2 h-full transform -skew-x-12 -left-full z-5 bg-gradient-to-r from-transparent to-white opacity-40 group-hover:animate-shine">
+            </div>
+          </a>
+        </div>
+
+        <!-- Dynamic Product List -->
+        <div *ngFor="let product of sellingProduct" (click)="openPopup(product)"
+          class="group box-border overflow-hidden flex rounded-md cursor-pointer items-center bg-transparent border border-gray-100 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:shadow-listProduct">
           <div
-            class="absolute top-0 block w-1/2 h-full transform -skew-x-12 -left-full z-5 bg-gradient-to-r from-transparent to-white opacity-40 group-hover:animate-shine">
+            class="relative ltr:rounded-l-md rtl:rounded-r-md flex-shrink-0 w-32 sm:w-44 md:w-36 lg:w-44 lg:h-44 aspect-square">
+            <img [src]="product.imageUrl" [alt]="product.productName" class="bg-gray-300 object-cover"
+              style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
           </div>
-        </a>
-      </div>
-
-      <!-- Dynamic Product List -->
-      <div *ngFor="let product of sellingProduct" (click)="openPopup(product)"
-        class="group box-border overflow-hidden flex rounded-md cursor-pointer items-center bg-transparent border border-gray-100 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:shadow-listProduct">
-        <div
-          class="relative ltr:rounded-l-md rtl:rounded-r-md flex-shrink-0 w-32 sm:w-44 md:w-36 lg:w-44 lg:h-44 aspect-square">
-          <img [src]="product.imageUrl" [alt]="product.productName" class="bg-gray-300 object-cover"
-            style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
-        </div>
-        <div class="w-full overflow-hidden px-4 lg:px-5 2xl:px-4">
-          <h2 class="text-heading font-semibold truncate mb-1 text-sm sm:text-base md:mb-1.5 pb-0">{{ product.productName }}
-          </h2>
-          <div *ngIf="product.price"
-            class="text-heading font-semibold text-sm sm:text-base mt-1.5 space-x-1 rtl:space-x-reverse sm:text-lg md:text-base 3xl:text-xl md:mt-2.5 2xl:mt-3">
-            <span class="inline-block">{{ product.price }}</span>
-            <del *ngIf="product.originalPrice" class="font-normal text-gray-800 sm:text-base ltr:pl-1 rtl:pr-1">{{
-              product.originalPrice }}</del>
-          </div>
-          <div *ngIf="product.priceRange"
-            class="text-heading font-semibold text-sm sm:text-base mt-1.5 space-x-1 rtl:space-x-reverse sm:text-lg md:text-base 3xl:text-xl md:mt-2.5 2xl:mt-3">
-            <span class="inline-block">{{ product.priceRange }}</span>
+          <div class="w-full overflow-hidden px-4 lg:px-5 2xl:px-4">
+            <h2 class="text-heading font-semibold truncate mb-1 text-sm sm:text-base md:mb-1.5 pb-0">{{
+              product.productName }}
+            </h2>
+            <div
+              class="text-heading font-semibold text-sm sm:text-base mt-1.5 space-x-1 rtl:space-x-reverse sm:text-lg md:text-base 3xl:text-xl md:mt-2.5 2xl:mt-3">
+              <span class="inline-block">{{ product.newPrice }}</span>
+              <del class="font-normal text-gray-800 sm:text-base ltr:pl-1 rtl:pr-1">{{
+                product.oldPrice }}</del>
+            </div>
           </div>
         </div>
-      </div>
 
+      </div>
     </div>
-  </div>
 
     <div class="mb-12 md:mb-14 xl:mb-16">
       <div class="flex items-center justify-between -mt-2 lg:-mt-2.5 pb-0.5 mb-4 md:mb-5 lg:mb-6 2xl:mb-7 3xl:mb-8">
@@ -219,7 +218,8 @@
           class="group flex justify-center text-center relative overflow-hidden rounded-md" [href]="brand.link">
           <span>
             <span>
-              <img [alt]="brand.productName" aria-hidden="true" [src]="'/assets/images/brands/grid/' + brand.imageUrl" />
+              <img [alt]="brand.productName" aria-hidden="true"
+                [src]="'/assets/images/brands/grid/' + brand.imageUrl" />
             </span>
           </span>
           <div
@@ -264,7 +264,7 @@
   </div>
 </main>
 <app-product-detail [isOpen]="showPopup" [title]="selectedProduct?.productName"
-  [description]="selectedProduct?.description" [newPrice]="selectedProduct?.newprice"
-  [oldprice]="selectedProduct?.oldprice" [imageSrc]="selectedProduct?.imageUrl" [colors]="selectedProduct?.colors"
+  [description]="selectedProduct?.description" [newPrice]="selectedProduct?.newPrice"
+  [oldprice]="selectedProduct?.oldPrice" [imageSrc]="selectedProduct?.imageUrl" [colors]="selectedProduct?.colors"
   (close)="closePopup()">
 </app-product-detail>

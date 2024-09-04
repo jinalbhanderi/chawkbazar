@@ -1,0 +1,349 @@
+{
+  "categories": [
+    {
+      "productName": "Women",
+      "imageUrl": "/assets/images/aaa.png",
+      "link": "/category/women",
+      "count": 27
+    },
+    {
+      "productName": "Watch",
+      "imageUrl": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F32%2Fwatch.png&w=64&q=75",
+      "link": "/category/watch",
+      "count": 7
+    },
+    {
+      "productName": "Sunglass",
+      "imageUrl": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F31%2Fsunglass.png&w=64&q=75",
+      "link": "/category/sunglass",
+      "count": 6
+    },
+    {
+      "productName": "Sports",
+      "imageUrl": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F30%2Fsports.png&w=64&q=75",
+      "link": "/category/sports",
+      "count": 14
+    },
+    {
+      "productName": "Sneakers",
+      "imageUrl": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F29%2Fsneekers.png&w=64&q=75",
+      "link": "/category/sneakers",
+      "count": 5
+    },
+    {
+      "productName": "Men",
+      "imageUrl": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F28%2Fmen.png&w=64&q=75",
+      "link": "/category/men",
+      "count": 6
+    },
+    {
+      "productName": "Kids",
+      "imageUrl": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F27%2Fkids.png&w=64&q=75",
+      "link": "/category/kids",
+      "count": 6
+    },
+    {
+      "productName": "Bags",
+      "imageUrl": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F26%2Fbags.png&w=64&q=75",
+      "link": "/category/bags",
+      "count": 6
+    }
+  ],
+  "slides4": [
+    {
+      "imageUrl": "assets/images/category/watch/2.webp",
+      "productName": "New Spring Knits",
+      "newPrice": 250,
+      "oldPrice": 260
+    },
+    {
+      "imageUrl": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F236%2Fkids-1.jpg&w=1920&q=100",
+      "productName": "Zara Army Bag",
+      "newPrice": 260.0,
+      "oldPrice": 300.0
+    }
+  ],
+  "slides2": [
+    {
+      "imageUrl": "/assets/images/banner/slider/banner-1.jpg",
+      "link": "/collections/winter-collection"
+    },
+    {
+      "imageUrl": "/assets/images/banner/slider/banner-2.png",
+      "link": "/collections/gift-collection"
+    },
+    {
+      "imageUrl": "/assets/images/banner/slider/banner-3.jpg",
+      "link": "/collections/gift-collection"
+    }
+  ],
+  "slides3": [
+    {
+      "imageUrl": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F29%2Fsneekers.png&w=1920&q=100",
+      "link": "/category/sneakers"
+    },
+    {
+      "imageUrl": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F32%2Fwatch.png&w=1920&q=100",
+      "link": "/category/watch"
+    },
+    {
+      "imageUrl": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F31%2Fsunglass.png&w=1920&q=100",
+      "link": "/category/sunglass"
+    },
+    {
+      "imageUrl": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F30%2Fsports.png&w=1920&q=100",
+      "link": "/category/sports"
+    },
+    {
+      "imageUrl": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F28%2Fmen.png&w=1920&q=100",
+      "link": "/category/men"
+    },
+    {
+      "imageUrl": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F27%2Fkids.png&w=1920&q=100",
+      "link": "/category/kids"
+    },
+    {
+      "imageUrl": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F26%2Fbags.png&w=1920&q=100",
+      "link": "/category/bags"
+    },
+    {
+      "imageUrl": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F33%2Fwomen.png&w=1920&q=100",
+      "link": "/category/women"
+    }
+  ],
+
+  "items": [
+    {
+      "productName": "Zara Monte Carlo",
+      "imageUrl": "https://chawkbazarlaravel.s3.ap-southeast-1.amazonaws.com/236/kids-1.jpg",
+      "newPrice": "$80.00",
+      "oldPrice": "$100.00"
+    },
+    {
+      "productName": "Zara Miss Chase",
+      "imageUrl": "https://chawkbazarlaravel.s3.ap-southeast-1.amazonaws.com/234/Chawkbazar1.png",
+      "newPrice": "$90.00",
+      "oldPrice": "$100.00"
+    },
+    {
+      "productName": "White Oxford Shirt",
+      "imageUrl": "https://chawkbazarlaravel.s3.ap-southeast-1.amazonaws.com/232/Casual-Wear-1-1.jpg",
+      "newPrice": "$10.00",
+      "oldPrice": "$40.00"
+    },
+    {
+      "productName": "The Horse Original",
+      "imageUrl": "assets/images/category/watch/1.webp",
+      "newPrice": "$190.00",
+      "oldPrice": "$200.00"
+    },
+    {
+      "productName": "Roadster Women Round Neck",
+      "imageUrl": "https://chawkbazarlaravel.s3.ap-southeast-1.amazonaws.com/228/Chawkbazar22.png",
+      "newPrice": "$30.00",
+      "oldPrice": "$50.00"
+    },
+    {
+      "productName": "Reyban Havana Phantos Sunglasses",
+      "imageUrl": "assets/images/category/sunglass/1.webp",
+      "newPrice": "$80.00",
+      "oldPrice": "$100.00"
+    },
+    {
+      "productName": "Philip Lim Leather Shoulder Bag",
+      "imageUrl": "assets/images/category/bags/1.webp",
+      "newPrice": "$250.00",
+      "oldPrice": "$260.00"
+    },
+    {
+      "productName": "Nike Pro Mesh Top with Leggins",
+      "imageUrl": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F223%2FCasual-Wear-4-1.jpg&w=1920&q=100",
+      "newPrice": "$30.00",
+      "oldPrice": "$35.00"
+    },
+    {
+      "productName": "Nike Comfy Vapor Maxpro",
+      "imageUrl": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F321%2FFootwear-1.png&w=1920&q=100",
+      "newPrice": "$220.00",
+      "oldPrice": "$250.00"
+    },
+    {
+      "productName": "Nike Car Wheel Watch",
+      "imageUrl": "assets/images/category/watch/2.webp",
+      "newPrice": "$230.00",
+      "oldPrice": "$250.00"
+    }
+  ]
+,
+  "images": [
+    {
+      "imageUrl": "/assets/images/products/sel-product/1.webp",
+      "alt": "Hermes Galaxy Watch 3",
+      "productName": "Hermes Galaxy Watch 3",
+      "newPrice": "$2,996.00",
+      "oldPrice": "$3,200.00"
+    },
+    {
+      "imageUrl": "/assets/images/products/sel-product/2.webp",
+      "alt": "Hermes Carlton London",
+      "productName": "Hermes Carlton London",
+      "newPrice": "$300.00",
+      "oldPrice": "$650.00"
+    },
+    {
+      "imageUrl": "/assets/images/products/sel-product/3.webp",
+      "alt": "H&M Boys Top",
+      "productName": "H&M Boys Top",
+      "newPrice": "$350.00",
+      "oldPrice": "$1,000.00"
+    },
+    {
+      "imageUrl": "/assets/images/products/sel-product/4.webp",
+      "alt": "H & Dri-FIT Fleece",
+      "productName": "H & Dri-FIT Fleece",
+      "newPrice": "$550.00",
+      "oldPrice": "$750.00"
+    },
+    {
+      "imageUrl": "/assets/images/products/sel-product/5.webp",
+      "alt": "Gucci Challenger",
+      "productName": "Gucci Challenger",
+      "newPrice": "$899.00",
+      "oldPrice": "$1,000.00"
+    },
+    {
+      "imageUrl": "/assets/images/products/sel-product/6.webp",
+      "alt": "Givenchy Shoulder Bag",
+      "productName": "Givenchy Shoulder Bag",
+      "newPrice": "$1,450.00",
+      "oldPrice": "$1,500.00"
+    },
+    {
+      "imageUrl": "/assets/images/products/sel-product/7.webp",
+      "alt": "Converse Blazing Black",
+      "productName": "Converse Blazing Black",
+      "newPrice": "$1,800.00",
+      "oldPrice": "$5,000.00"
+    },
+    {
+      "imageUrl": "/assets/images/products/sel-product/8.webp",
+      "alt": "Chanel Shoulder Bag",
+      "productName": "Chanel Shoulder Bag",
+      "newPrice": "$1,300.00",
+      "oldPrice": "$1,500.00"
+    },
+    {
+      "imageUrl": "/assets/images/products/sel-product/9.webp",
+      "alt": "Armani Checked Shirt",
+      "productName": "Armani Checked Shirt",
+      "newPrice": "$500.00",
+      "oldPrice": "$900.00"
+    }
+  ],
+  "products": [
+    {
+      "productName": "Nike Comfy Vapor Maxpro",
+      "imageUrl": "assets/images/products/featured/1.png",
+      "newPrice": "$220.00",
+      "oldPrice": "$250.00",
+      "colSpan": 2,
+      "rowSpan": 1
+    },
+    {
+      "productName": "Addidas FuelCell Propel V2 Running Shoes",
+      "imageUrl": "assets/images/products/featured/2.png",
+      "newPrice": "$45.00",
+      "oldPrice": "$50.00",
+      "colSpan": 2,
+      "rowSpan": 2
+    },
+    {
+      "productName": "Tuma Grey",
+      "imageUrl": "assets/images/products/featured/3.png",
+      "newPrice": "$120.00",
+      "oldPrice": "$150.00",
+      "colSpan": 2,
+      "rowSpan": 1
+    },
+    {
+      "productName": "New Balance Running Shoes",
+      "imageUrl": "assets/images/products/featured/4.png",
+      "newPrice": "$90.00",
+      "oldPrice": "$120.00",
+      "colSpan": 1,
+      "rowSpan": 1
+    },
+    {
+      "productName": "Puma Sportswear",
+      "imageUrl": "assets/images/products/featured/5.png",
+      "newPrice": "$60.00",
+      "oldPrice": "$80.00",
+      "colSpan": 1,
+      "rowSpan": 1
+    }
+  ],
+
+  "flashSale": [
+    {
+      "productName": "Tuma Kidsa bag",
+      "imageUrl": "assets/images/products/flash-sale/1.webp",
+      "newPrice": "$40.00",
+      "oldPrice": "$50.00"
+    },
+    {
+      "productName": "Zara Army Bag",
+      "imageUrl": "assets/images/products/flash-sale/2.webp",
+      "newPrice": "$260.00",
+      "oldPrice": "$300.00"
+    },
+    {
+      "productName": "Tay Ben Aviator",
+      "imageUrl": "assets/images/products/flash-sale/3.webp",
+      "newPrice": "$1,350.00",
+      "oldPrice": "$1,500.00"
+    },
+    {
+      "productName": "Tuma Style Cap",
+      "imageUrl": "assets/images/products/flash-sale/4.webp",
+      "newPrice": "$150.00",
+      "oldPrice": "$170.00"
+    },
+    {
+      "productName": "Pior Womes Bangles",
+      "imageUrl": "assets/images/products/flash-sale/5.webp",
+      "newPrice": "$1,150.00",
+      "oldPrice": "$1,200.00"
+    },
+    {
+      "productName": "Pior Womes Bangles",
+      "imageUrl": "assets/images/products/flash-sale/6.webp",
+      "newPrice": "$1,150.00",
+      "oldPrice": "$1,200.00"
+    },
+    {
+      "productName": "Pior Womes Bangles",
+      "imageUrl": "assets/images/products/flash-sale/7.webp",
+      "newPrice": "$1,150.00",
+      "oldPrice": "$1,200.00"
+    },
+    {
+      "productName": "Pior Womes Bangles",
+      "imageUrl": "assets/images/products/flash-sale/8.webp",
+      "newPrice": "$1,150.00",
+      "oldPrice": "$1,200.00"
+    },
+    {
+      "productName": "Pior Womes Bangles",
+      "imageUrl": "assets/images/products/flash-sale/9.webp",
+      "newPrice": "$1,150.00",
+      "oldPrice": "$1,200.00"
+    },
+    {
+      "productName": "Pior Womes Bangles",
+      "imageUrl": "assets/images/products/flash-sale/10.webp",
+      "newPrice": "$1,150.00",
+      "oldPrice": "$1,200.00"
+    }
+  ]
+
+}

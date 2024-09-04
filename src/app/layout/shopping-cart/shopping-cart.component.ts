@@ -19,7 +19,6 @@ export class ShoppingCartComponent {
     this.cartService.cartItems$.subscribe((items) => {
       this.cartItems = items;
       this.isLoading = false;
-      console.log('Fetched cart items:', this.cartItems);
     });
   }
 
@@ -43,18 +42,24 @@ export class ShoppingCartComponent {
   }
 
   calculateTotalPrice(item: any): number {
-    console.log('Calculating total price for item:', item);
 
     const price = this.parsePrice(item.price);
     const quantity = Number(item.quantity) || 0;
 
-    console.log(`Price: ${price}, Quantity: ${quantity}`);
 
     return price * quantity;
   }
 
-  parsePrice(priceString: string): number {
-    return parseFloat(priceString.replace(/[^0-9.-]+/g, '')) || 0;
+  parsePrice(priceString: any): number {
+    if (typeof priceString === 'string') {
+      return parseFloat(priceString.replace(/[^0-9.-]+/g, '')) || 0;
+    } else {
+      console.warn(
+        'Expected priceString to be a string, but got:',
+        priceString
+      );
+      return 0;
+    }
   }
 
   formatPrice(price: number): string {

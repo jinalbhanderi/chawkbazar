@@ -5,6 +5,7 @@ import { MyAccountComponent } from './pages/all-pages/user/my-account/my-account
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 const routes: Routes = [
+  { path: 'my-account', component: MyAccountComponent },
   {
     path: '',
     loadChildren: () =>
@@ -18,7 +19,6 @@ const routes: Routes = [
       ),
   },
   { path: 'checkout', component: CheckoutComponent },
-  { path: 'my-account', component: MyAccountComponent },
   { path: '**', component: NotFoundComponent },
 ];
 

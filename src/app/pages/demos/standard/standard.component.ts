@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ModernService } from 'src/app/service/modern.service';
 
 @Component({
   selector: 'app-standard',
@@ -6,287 +7,37 @@ import { Component } from '@angular/core';
   styleUrls: ['./standard.component.css'],
 })
 export class StandardComponent {
-  // slides = [
-  //   {
-  //     image: '/assets/images/hero/banner-1.jpg',
-  //     alt: 'Slide 1',
-  //     title: 'Title 1',
-  //     description: 'Description 1',
-  //   },
-  //   {
-  //     image: '/assets/images/hero/banner-2.jpg',
-  //     alt: 'Slide 2',
-  //     title: 'Title 2',
-  //     description: 'Description 2',
-  //   },
-  //   {
-  //     image: '/assets/images/hero/banner-3.jpg',
-  //     alt: 'Slide 3',
-  //     title: 'Title 3',
-  //     description: 'Description 3',
-  //   },
-  // ];
-  products: any[] = [
-    {
-      name: 'Nike Black',
-      description:
-        'Casual wear (casual attire or clothing) may be a Western code that’s relaxed, occasional, spontaneous and fitted to everyday use.',
-      price: '$11.00',
-      previousPrice: '$15.00',
-      imageUrl: '/assets/images/products/p-1.png',
-    },
-    {
-      name: 'Hermes Carlton London',
-      description:
-        'Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem',
-      price: '$12.30',
-      previousPrice: '$16.38',
-      imageUrl: '/assets/images/products/p-2.png',
-    },
-    {
-      name: 'Hermes Carlton London',
-      description:
-        'Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem',
-      price: '$12.30',
-      previousPrice: '$16.38',
-      imageUrl: '/assets/images/products/p-3.png',
-    },
-    {
-      name: 'Hermes Carlton London',
-      description:
-        'Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem',
-      price: '$12.30',
-      previousPrice: '$16.38',
-      imageUrl: '/assets/images/products/p-4.png',
-    },
-    {
-      name: 'Hermes Carlton London',
-      description:
-        'Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem',
-      price: '$12.30',
-      previousPrice: '$16.38',
-      imageUrl: '/assets/images/products/p-5.png',
-    },
-    {
-      name: 'Hermes Carlton London',
-      description:
-        'Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem',
-      price: '$12.30',
-      previousPrice: '$16.38',
-      imageUrl: '/assets/images/products/p-6.png',
-    },
-    {
-      name: 'Hermes Carlton London',
-      description:
-        'Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem',
-      price: '$12.30',
-      previousPrice: '$16.38',
-      imageUrl: '/assets/images/products/p-7.png',
-    },
-    {
-      name: 'Hermes Carlton London',
-      description:
-        'Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem',
-      price: '$12.30',
-      previousPrice: '$16.38',
-      imageUrl: '/assets/images/products/p-8.png',
-    },
-    {
-      name: 'Hermes Carlton London',
-      description:
-        'Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem',
-      price: '$12.30',
-      previousPrice: '$16.38',
-      imageUrl: '/assets/images/products/p-9.png',
-    },
-    {
-      name: 'Hermes Carlton London',
-      description:
-        'Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem',
-      price: '$12.30',
-      previousPrice: '$16.38',
-      imageUrl: '/assets/images/products/p-10.png',
-    },
-  ];
-  arrivalsProducts: any[] = [
-    {
-      name: 'Nike Black',
-      description:
-        'Casual wear (casual attire or clothing) may be a Western code that’s relaxed, occasional, spontaneous and fitted to everyday use.',
-      price: '$11.00',
-      previousPrice: '$15.00',
-      imageUrl: '/assets/images/products/p-1.png',
-    },
-    {
-      name: 'Hermes Carlton London',
-      description:
-        'Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem',
-      price: '$12.30',
-      previousPrice: '$16.38',
-      imageUrl: '/assets/images/products/p-2.png',
-    },
-    {
-      name: 'Hermes Carlton London',
-      description:
-        'Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem',
-      price: '$12.30',
-      previousPrice: '$16.38',
-      imageUrl: '/assets/images/products/p-3.png',
-    },
-    {
-      name: 'Hermes Carlton London',
-      description:
-        'Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem',
-      price: '$12.30',
-      previousPrice: '$16.38',
-      imageUrl: '/assets/images/products/p-4.png',
-    },
-    {
-      name: 'Hermes Carlton London',
-      description:
-        'Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem',
-      price: '$12.30',
-      previousPrice: '$16.38',
-      imageUrl: '/assets/images/products/p-5.png',
-    },
-    {
-      name: 'Hermes Carlton London',
-      description:
-        'Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem',
-      price: '$12.30',
-      previousPrice: '$16.38',
-      imageUrl: '/assets/images/products/p-6.png',
-    },
-    {
-      name: 'Hermes Carlton London',
-      description:
-        'Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem',
-      price: '$12.30',
-      previousPrice: '$16.38',
-      imageUrl: '/assets/images/products/p-7.png',
-    },
-    {
-      name: 'Hermes Carlton London',
-      description:
-        'Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem',
-      price: '$12.30',
-      previousPrice: '$16.38',
-      imageUrl: '/assets/images/products/p-8.png',
-    },
-    {
-      name: 'Hermes Carlton London',
-      description:
-        'Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem',
-      price: '$12.30',
-      previousPrice: '$16.38',
-      imageUrl: '/assets/images/products/p-9.png',
-    },
-    {
-      name: 'Hermes Carlton London',
-      description:
-        'Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem',
-      price: '$12.30',
-      previousPrice: '$16.38',
-      imageUrl: '/assets/images/products/p-10.png',
-    },
-  ];
+  products: any[] = [];
+  arrivalsProducts: any[] = [];
+  slides: any[] = [];
+  slides2: any[] = [];
+  slides3: any[] = [];
+  collectionItems: any[] = [];
+  featureItems: any[] = [];
 
-  slides: any[] = [
-    {
-      src: '/assets/images/hero/banner-1.jpg',
-      link: '/collections/winter-collection',
-    },
-    {
-      src: '/assets/images/hero/banner-2.jpg',
-      link: '/collections/gift-collection',
-    },
-    {
-      src: '/assets/images/hero/banner-3.jpg',
-      link: '/collections/gift-collection',
-    },
-  ];
-  slides2: any[] = [
-    {
-      src: '/assets/images/banner/small/banner-1.jpg',
-      link: 'collections/mens-collection',
-    },
-    {
-      src: '/assets/images/banner/small/banner-2.jpg',
-      link: 'collections/womens-collection',
-    },
-    {
-      src: '/assets/images/banner/small/banner-3.jpg',
-      link: 'collections/kids-collection',
-    },
-  ];
-  slides3: any[] = [
-    { src: '/assets/images/brands/fusion.png' },
-    { src: '/assets/images/brands/blaze-fashion.png' },
-    { src: '/assets/images/brands/club-shoes.png' },
-    { src: '/assets/images/brands/elegance.png' },
-    { src: '/assets/images/brands/fashadil.png' },
-    { src: '/assets/images/brands/hoppister.png' },
-    { src: '/assets/images/brands/hunter-shoes.png' },
-    { src: '/assets/images/brands/shovia.png' },
-  ];
-
-  collectionItems = [
-    {
-      title: 'New Spring Knits',
-      description:
-        'Endlessly versatile new styles that say yes to spring. The season’s looking bright.',
-      image: '/assets/images/collection/1.jpg',
-      link: '/search',
-    },
-    {
-      title: 'Down To The Core',
-      description:
-        'Endlessly versatile new styles that say yes to spring. The season’s looking bright.',
-      image: '/assets/images/collection/2.jpg',
-      link: '/search',
-    },
-    {
-      title: 'New Winter Knits',
-      description:
-        'Endlessly versatile new styles that say yes to spring. The season’s looking bright.',
-      image: '/assets/images/collection/3.jpg',
-      link: '/search',
-    },
-  ];
-  featureItems = [
-    {
-      title: 'Guaranteed Savings',
-      description:
-        'If you don’t make your membership fee in savings, we’ll refund the difference',
-      image: '/assets/images/feature/saving.svg',
-    },
-    {
-      title: 'Try it risk-free',
-      description:
-        'If you don’t make your membership fee in savings, we’ll refund the difference',
-      image: '/assets/images/feature/risk-free.svg',
-    },
-    {
-      title: 'Super Fast Delivery',
-      description:
-        'If you don’t make your membership fee in savings, we’ll refund the difference',
-      image: '/assets/images/feature/delivery.svg',
-    },
-    {
-      title: '1000+ products priced at cost',
-      description:
-        'If you don’t make your membership fee in savings, we’ll refund the difference',
-      image: '/assets/images/feature/product.svg',
-    },
-  ];
   selectedProduct: any = null;
   showPopup = false;
+
+  constructor(private dataService: ModernService) {}
+
+  ngOnInit(): void {
+    this.dataService.getStandardProducts().subscribe((data) => {
+      this.products = data.products;
+      this.arrivalsProducts = data.arrivalsProducts;
+      this.slides = data.slides;
+      this.slides2 = data.slides2;
+      this.slides3 = data.slides3;
+      this.collectionItems = data.collectionItems;
+      this.featureItems = data.featureItems;
+    });
+  }
+
   closePopup(): void {
     this.showPopup = false;
     this.selectedProduct = null;
   }
+
   openPopup(product: any): void {
-    debugger;
     this.selectedProduct = product;
     this.showPopup = true;
   }

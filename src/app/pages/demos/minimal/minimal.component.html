@@ -58,7 +58,7 @@
           class="group box-border overflow-hidden flex rounded-md cursor-pointer flex-row items-center transition-transform ease-linear bg-gray-200 ltr:pr-2 ltr:lg:pr-3 ltr:2xl:pr-4 rtl:pl-2 rtl:lg:pl-3 rtl:2xl:pl-4"
           [title]="product.productName" (click)="openPopup(product)">
           <div
-            class="flex relative ltr:rounded-l-md rtl:rounded-r-md aspect-square flex-shrink-0 w-32 sm:w-44 md:w-40 lg:w-52 2xl:w-56 3xl:w-64"  >
+            class="flex relative ltr:rounded-l-md rtl:rounded-r-md aspect-square flex-shrink-0 w-32 sm:w-44 md:w-40 lg:w-52 2xl:w-56 3xl:w-64">
             <img [alt]="product.productName" loading="lazy" decoding="async" data-nimg="fill"
               class="bg-gray-300 object-cover ltr:rounded-l-md rtl:rounded-r-md transition duration-200 ease-linear transform group-hover:scale-105"
               sizes="(max-width: 768px) 100vw" [src]="product.imageUrl"
@@ -69,19 +69,13 @@
             <h2
               class="text-heading font-semibold truncate mb-1 text-sm sm:text-base md:text-sm lg:text-base xl:text-lg md:mb-1.5">
               {{ product.productName }}</h2>
-            <div *ngIf="product.priceRange; else singlePrice"
+
+            <div
               class="text-heading font-semibold text-sm sm:text-base mt-1.5 space-x-1 rtl:space-x-reverse sm:text-lg md:text-base 3xl:text-xl md:mt-2.5 2xl:mt-3">
-              <span class="inline-block">${{ product.priceRange[0].toFixed(2) }}</span><span> - </span><span
-                class="inline-block">${{ product.priceRange[1].toFixed(2) }}</span>
+              <span class="inline-block">${{ product.newPrice }}</span>
+              <del *ngIf="product.oldPrice"
+                class="font-normal text-gray-800 sm:text-base ltr:pl-1 rtl:pr-1">${{product.oldPrice}}</del>
             </div>
-            <ng-template #singlePrice>
-              <div
-                class="text-heading font-semibold text-sm sm:text-base mt-1.5 space-x-1 rtl:space-x-reverse sm:text-lg md:text-base 3xl:text-xl md:mt-2.5 2xl:mt-3">
-                <span class="inline-block">${{ product.price }}</span>
-                <del *ngIf="product.oldPrice" class="font-normal text-gray-800 sm:text-base ltr:pl-1 rtl:pr-1">${{
-                  product.oldPrice.toFixed(2) }}</del>
-              </div>
-            </ng-template>
           </div>
         </div>
       </div>
@@ -103,17 +97,19 @@
               <div class="bg-gray-300">
                 <img [src]="slide.src" [alt]="slide.title"
                   class="w-full h-64 object-cover transition-transform duration-150 ease-linear transform group-hover:scale-105"
-                  loading="lazy" style="height: 315px;"/>
+                  loading="lazy" style="height: 315px;" />
               </div>
               <h2 class="mt-4 text-lg font-semibold text-gray-800">{{ slide.title }}</h2>
-              <div class="text-heading font-semibold text-sm sm:text-base mt-1.5 space-x-1 rtl:space-x-reverse sm:text-lg md:text-base 3xl:text-xl md:mt-2.5 2xl:mt-3">
+              <div
+                class="text-heading font-semibold text-sm sm:text-base mt-1.5 space-x-1 rtl:space-x-reverse sm:text-lg md:text-base 3xl:text-xl md:mt-2.5 2xl:mt-3">
                 <span class="inline-block">${{ slide.price }}</span><del
                   class="font-normal text-gray-800 sm:text-base ltr:pl-1 rtl:pr-1">${{ slide.originalPrice }}</del>
               </div>
             </div>
             <div>
               <div class="flex justify-between items-center mb-2.5 md:mb-3 xl:mb-2.5 2xl:mb-4">
-                <div class="text-body text-xs md:text-sm leading-6 md:leading-7">Sold :&nbsp;<span class="text-heading">0</span>
+                <div class="text-body text-xs md:text-sm leading-6 md:leading-7">Sold :&nbsp;<span
+                    class="text-heading">0</span>
                 </div>
                 <div class="text-body text-xs md:text-sm leading-6 md:leading-7">Available :&nbsp;<span
                     class="text-heading">500</span></div>
@@ -245,8 +241,7 @@
         <div class="flex relative ltr:rounded-l-md rtl:rounded-r-md mb-3 md:mb-3.5 w-full aspect-[17/22]">
           <img alt="{{ item.productName }}" loading="lazy" decoding="async"
             class="bg-gray-300 object-cover rounded-md transition duration-200 ease-in group-hover:rounded-b-none"
-            [src]="item.imageUrl"
-            sizes="(max-width: 768px) 100vw"
+            [src]="item.imageUrl" sizes="(max-width: 768px) 100vw"
             style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
         </div>
         <div
@@ -254,7 +249,9 @@
           <h2 class="text-heading font-semibold truncate mb-1 text-sm md:text-base">{{ item.productName }}</h2>
           <div
             class="text-heading font-semibold text-sm sm:text-base mt-1.5 space-x-1 rtl:space-x-reverse 3xl:text-lg lg:mt-2.5">
-            <span class="inline-block">{{ item.price }}</span>
+            <span class="inline-block">{{ item.newPrice }}</span>
+            <del class="sm:text-base font-normal text-gray-800">{{
+              item.oldPrice }}</del>
           </div>
         </div>
       </div>
@@ -279,8 +276,7 @@
         <div class="flex relative ltr:rounded-l-md rtl:rounded-r-md mb-3 md:mb-3.5 w-full aspect-[17/22]">
           <img alt="{{ item.productName }}" loading="lazy" decoding="async"
             class="bg-gray-300 object-cover rounded-md transition duration-200 ease-in group-hover:rounded-b-none"
-            [src]="item.imageUrl"
-            sizes="(max-width: 768px) 100vw"
+            [src]="item.imageUrl" sizes="(max-width: 768px) 100vw"
             style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
         </div>
         <div
@@ -288,7 +284,9 @@
           <h2 class="text-heading font-semibold truncate mb-1 text-sm md:text-base">{{ item.productName }}</h2>
           <div
             class="text-heading font-semibold text-sm sm:text-base mt-1.5 space-x-1 rtl:space-x-reverse 3xl:text-lg lg:mt-2.5">
-            <span class="inline-block">{{ item.price }}</span>
+            <span class="inline-block">{{ item.newPrice }}</span>
+            <del class="sm:text-base font-normal text-gray-800">{{
+              item.oldPrice }}</del>
           </div>
         </div>
       </div>
@@ -624,7 +622,7 @@
   </div>
 </div>
 <app-product-detail [isOpen]="showPopup" [title]="selectedProduct?.productName"
-  [description]="selectedProduct?.description" [newPrice]="selectedProduct?.newprice"
-  [oldprice]="selectedProduct?.oldprice" [imageSrc]="selectedProduct?.imageUrl" [colors]="selectedProduct?.colors"
+  [description]="selectedProduct?.description" [newPrice]="selectedProduct?.newPrice"
+  [oldprice]="selectedProduct?.oldPrice" [imageSrc]="selectedProduct?.imageUrl" [colors]="selectedProduct?.colors"
   (close)="closePopup()">
 </app-product-detail>

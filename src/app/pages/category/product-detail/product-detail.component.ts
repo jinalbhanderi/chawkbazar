@@ -32,23 +32,13 @@ export class ProductDetailComponent {
       };
 
       this.cartService.addToCart(item);
-      console.log(item, 'ssssss');
     } else {
       console.error('Product data is missing');
     }
   }
 
-  // decrementItem(item: any) {
-  //   if (item.quantity > 1) {
-  //     item.quantity -= 1;
-  //   }
-  // }
-
-  // incrementItem(item: any) {
-  //   item.quantity += 1;
-  // }
   quantity: number = 1;
-  maxQuantity: number = 10; // Set a maximum quantity if needed
+  maxQuantity: number = 10;
   increment() {
     debugger;
     if (this.quantity < this.maxQuantity) {

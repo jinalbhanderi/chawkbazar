@@ -77,8 +77,9 @@
               </h2>
             </div>
             <div class="text-heading font-segoe font-semibold text-base xl:text-xl">
-              {{ product.priceRange }}
-            </div>
+              {{ product.newPrice }}
+            </div><del class="font-normal text-gray-800 pl-1">${{ product.oldPrice
+              }}</del>
           </div>
         </div>
       </div>
@@ -153,10 +154,8 @@
               </h2>
               <div
                 class="text-heading font-semibold text-sm sm:text-base mt-1.5 space-x-1 rtl:space-x-reverse sm:text-lg md:text-base 3xl:text-xl md:mt-2.5 2xl:mt-3">
-                <span class="inline-block">{{ image.price }}</span>
-                <ng-container *ngIf="image.originalPrice">
-                  <del class="font-normal text-gray-800 sm:text-base ltr:pl-1 rtl:pr-1">{{ image.originalPrice }}</del>
-                </ng-container>
+                <span class="inline-block">{{ image.newPrice }}</span>
+                  <del class="font-normal text-gray-800 sm:text-base ltr:pl-1 rtl:pr-1">{{ image.oldPrice }}</del>
               </div>
             </div>
           </div>
@@ -169,7 +168,7 @@
       [showNavigators]="false" [autoplayInterval]="4000">
       <ng-template pTemplate="item" let-slide>
         <div class="">
-          <img [src]="slide.src" [alt]="slide.title" class="mx-auto w-full px-4" loading="lazy" />
+          <img [src]="slide.imageUrl" [alt]="slide.title" class="mx-auto w-full px-4" loading="lazy" />
 
         </div>
       </ng-template>
@@ -201,7 +200,9 @@
             {{ product.productName }}</h2>
           <div
             class="text-heading font-semibold text-sm sm:text-base mt-1.5 space-x-1 rtl:space-x-reverse sm:text-lg md:text-base 3xl:text-xl md:mt-2.5 2xl:mt-3">
-            <span class="inline-block">{{ product.price }}</span>
+            <span class="inline-block">{{ product.newPrice }}</span>
+            <del class="font-normal text-gray-800 pl-1">{{ product.oldPrice
+              }}</del>
           </div>
         </div>
       </div>
@@ -297,7 +298,8 @@
             <h2 class="text-heading font-semibold truncate mb-1 text-sm md:text-base">{{ item.productName }}</h2>
             <div
               class="text-heading font-semibold text-sm sm:text-base mt-1.5 space-x-1 rtl:space-x-reverse 3xl:text-lg lg:mt-2.5">
-              <span class="inline-block">{{ item.price }}</span>
+              <span class="inline-block">{{ item.newPrice }}</span>
+              <del class="font-normal text-gray-800 pl-1">{{ item.oldPrice}}</del>
             </div>
           </div>
         </div>
@@ -390,7 +392,7 @@
   <div class="border-t border-gray-300 mb-0"></div>
 </main>
 <app-product-detail [isOpen]="showPopup" [title]="selectedProduct?.productName"
-  [description]="selectedProduct?.description" [newPrice]="selectedProduct?.newprice"
-  [oldprice]="selectedProduct?.oldprice" [imageSrc]="selectedProduct?.imageUrl" [colors]="selectedProduct?.colors"
+  [description]="selectedProduct?.description" [newPrice]="selectedProduct?.newPrice"
+  [oldprice]="selectedProduct?.oldPrice" [imageSrc]="selectedProduct?.imageUrl" [colors]="selectedProduct?.colors"
   (close)="closePopup()">
 </app-product-detail>

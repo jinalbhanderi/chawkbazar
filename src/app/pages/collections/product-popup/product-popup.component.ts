@@ -32,7 +32,6 @@ export class ProductPopupComponent {
       };
 
       this.cartService.addToCart(item);
-      console.log(item, 'ssssss');
     } else {
       console.error('Product data is missing');
     }

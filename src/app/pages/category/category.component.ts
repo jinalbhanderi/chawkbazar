@@ -24,10 +24,8 @@ export class CategoryComponent {
 
   private navigateWithSelectedValues(): void {
     const categoriesArray = Array.from(this.selectedValues);
-    console.log('Selected Categories:', categoriesArray);
 
     const categories = categoriesArray.join(',');
-    console.log('Categories String:', categories);
 
     const route = categories ? `search/${categories}` : 'search';
     this.router.navigate([route]).catch((err) => {

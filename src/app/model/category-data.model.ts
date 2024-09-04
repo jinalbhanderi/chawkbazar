@@ -10,3 +10,13 @@ export interface CategoryData {
 export interface Categories {
   [key: string]: CategoryData;
 }
+export interface Product {
+  imageUrl: string;
+  productName: string;
+  newPrice: string;
+  oldPrice: string;
+}
+
+export interface ProductData {
+  [key: string]: Product[];
+}
