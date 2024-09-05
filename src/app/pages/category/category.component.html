@@ -1,5 +1,5 @@
 <div class="border-t border-gray-300 mb-2"></div>
-<div class="mx-auto max-w-[1920px]   md:px-8 2xl:px-16">
+<div class="mx-auto max-w-[1920px] md:px-8 2xl:px-16">
   <div class="flex pt-8 pb-16 lg:pb-20">
     <div class="flex-shrink-0 hidden ltr:pr-24 rtl:pl-24 lg:block w-96">
       <div style="position: sticky; top: 50px;">
@@ -7,8 +7,8 @@
           <div class="flex items-center chawkbazarBreadcrumb">
             <ol class="flex items-center w-full overflow-hidden m-0 p-0">
               <li
-                class=" text-sm text-body px-2.5 transition duration-200 ease-in ltr:first:pl-0 rtl:first:pr-0 ltr:last:pr-0 rtl:last:pl-0 hover:text-heading">
-                <a class="" href="/">Home</a>
+                class="text-sm text-body px-2.5 transition duration-200 ease-in ltr:first:pl-0 rtl:first:pr-0 ltr:last:pr-0 rtl:last:pl-0 hover:text-heading">
+                <a href="/">Home</a>
               </li>
               <li class="text-base text-body mt-0.5">/</li>
               <li
@@ -21,190 +21,92 @@
         <div class="pt-1">
           <div class="block border-b border-gray-300 pb-7 mb-7">
             <div class="flex items-center justify-between mb-2.5">
-              <h2 class="font-semibold text-heading text-xl md:text-2xl">Filters</h2><button
-                class="flex-shrink text-xs mt-0.5 transition duration-150 ease-in focus:outline-none hover:text-heading" aria-label="Clear All" style="padding-right: 6rem;">Clear All</button>
+              <h2 class="font-semibold text-heading text-xl md:text-2xl">Filters</h2>
+              <button
+                class="flex-shrink text-xs mt-0.5 transition duration-150 ease-in focus:outline-none hover:text-heading"
+                aria-label="Clear All" style="padding-right: 6rem;">
+                Clear All
+              </button>
             </div>
             <div class="flex flex-wrap -m-1.5 pt-2">
-              <div
+              <div *ngFor="let category of categories"
                 class="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading">
-                men<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                {{ category }}
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
                   class="text-sm text-body ltr:ml-2 rtl:mr-2 flex-shrink-0 ltr:-mr-0.5 rtl:-ml-0.5 mt-0.5 transition duration-200 ease-in-out group-hover:text-heading"
                   height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M289.94 256l95-95A24 24 0 00351 127l-95 95-95-95a24 24 0 00-34 34l95 95-95 95a24 24 0 1034 34l95-95 95 95a24 24 0 0034-34z">
                   </path>
-                </svg></div>
+                </svg>
+              </div>
             </div>
           </div>
           <div class="block border-b border-gray-300 pb-7 mb-7">
             <h3 class="text-heading text-sm md:text-base font-semibold mb-7">Category</h3>
             <div class="mt-2 flex flex-col space-y-4">
-            <label class="group flex items-center text-heading text-sm cursor-pointer">
-              <input type="checkbox" (change)="data($event, 'bags')"
-                class="form-checkbox w-5 h-5 border border-gray-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 text-heading hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading"
-                name="bags" value="bags">
-              <span class="ms-3">Bags</span>
-            </label>
-
-            <label class="group flex items-center text-heading text-sm cursor-pointer">
-              <input type="checkbox" (change)="data($event, 'kids')"
-                class="form-checkbox w-5 h-5 border border-gray-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 text-heading hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading"
-                name="kids" value="kids">
-              <span class="ms-3">Kids</span>
-            </label>
-
-            <label class="group flex items-center text-heading text-sm cursor-pointer">
-              <input type="checkbox" (change)="data($event, 'men')"
-                class="form-checkbox w-5 h-5 border border-gray-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 text-heading hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading"
-                name="men" value="men">
-              <span class="ms-3">Men</span>
-            </label>
-<label
-                class="group flex items-center text-heading text-sm cursor-pointer"><input type="checkbox" (change)="data($event,'sneakers')"
+              <label *ngFor="let category of categories"
+                class="group flex items-center text-heading text-sm cursor-pointer">
+                <input type="checkbox" (change)="data($event, category)"
                   class="form-checkbox w-5 h-5 border border-gray-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 text-heading hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading"
-                  name="sneakers" value="sneakers"><span class="ms-3">Sneakers</span></label><label
-                class="group flex items-center text-heading text-sm cursor-pointer"><input type="checkbox" (change)="data($event,'sports')"
-                  class="form-checkbox w-5 h-5 border border-gray-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 text-heading hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading"
-                  name="sports" value="sports"><span class="ms-3">Sports</span></label>
-              <div class="w-full"><button data-variant="custom"
-                  class="md:text-sm inline-flex items-center cursor-pointer transition ease-in-out duration-300 font-semibold font-body text-center justify-center border-0 border-transparent rounded-md placeholder-white focus-visible:outline-none focus:outline-none focus:bg-opacity-80 text-sm text-heading ltr:pl-9 rtl:pr-9 pt-1">Load
-                  More</button></div>
+                  [name]="category" [value]="category">
+                <span class="ms-3">{{ category | titlecase }}</span>
+              </label>
+              <div class="w-full">
+                <button data-variant="custom"
+                  class="md:text-sm inline-flex items-center cursor-pointer transition ease-in-out duration-300 font-semibold font-body text-center justify-center border-0 border-transparent rounded-md placeholder-white focus-visible:outline-none focus:outline-none focus:bg-opacity-80 text-sm text-heading ltr:pl-9 rtl:pr-9 pt-1">
+                  Load More
+                </button>
+              </div>
             </div>
           </div>
           <div class="block border-b border-gray-300 pb-7 mb-7">
             <h3 class="text-heading text-sm md:text-base font-semibold mb-7">Brands</h3>
-            <div class="mt-2 flex flex-col space-y-4"><label
-                class="group flex items-center text-heading text-sm cursor-pointer"><input type="checkbox"
+            <div class="mt-2 flex flex-col space-y-4">
+              <label *ngFor="let brand of brands" class="group flex items-center text-heading text-sm cursor-pointer">
+                <input type="checkbox" (change)="data($event, brand)"
                   class="form-checkbox w-5 h-5 border border-gray-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 text-heading hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading"
-                  name="fusion" value="fusion"><span class="ms-3">Fusion</span></label><label
-                class="group flex items-center text-heading text-sm cursor-pointer"><input type="checkbox"
-                  class="form-checkbox w-5 h-5 border border-gray-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 text-heading hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading"
-                  name="vintgae" value="vintgae"><span class="ms-3">Vintgae</span></label><label
-                class="group flex items-center text-heading text-sm cursor-pointer"><input type="checkbox"
-                  class="form-checkbox w-5 h-5 border border-gray-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 text-heading hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading"
-                  name="masteriod" value="masteriod"><span class="ms-3">Masteriod</span></label><label
-                class="group flex items-center text-heading text-sm cursor-pointer"><input type="checkbox"
-                  class="form-checkbox w-5 h-5 border border-gray-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 text-heading hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading"
-                  name="hoppister" value="hoppister"><span class="ms-3">Hoppister</span></label><label
-                class="group flex items-center text-heading text-sm cursor-pointer"><input type="checkbox"
-                  class="form-checkbox w-5 h-5 border border-gray-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 text-heading hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading"
-                  name="klien shoes" value="klien-shoes"><span class="ms-3">Klien Shoes</span></label>
-              <div class="w-full"></div>
+                  [name]="brand" [value]="brand">
+                <span class="ms-3">{{ brand | titlecase }}</span>
+              </label>
             </div>
           </div>
           <div class="block border-b border-gray-300 pb-7 mb-7">
             <h3 class="text-heading text-sm md:text-base font-semibold mb-7">Price</h3>
-            <div class="mt-2 flex flex-col space-y-4"><label
-                class="group flex items-center text-heading text-sm cursor-pointer"><input type="checkbox"
+            <div class="mt-2 flex flex-col space-y-4">
+              <label *ngFor="let price of prices" class="group flex items-center text-heading text-sm cursor-pointer">
+                <input type="checkbox" (change)="data($event, price.value)"
                   class="form-checkbox w-5 h-5 border border-gray-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 text-heading hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading"
-                  name="under $50" value="0-50"><span class="ms-3">Under
-                  $50</span></label><label class="group flex items-center text-heading text-sm cursor-pointer"><input
-                  type="checkbox"
-                  class="form-checkbox w-5 h-5 border border-gray-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 text-heading hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading"
-                  name="$50 to $100" value="50-100"><span class="ms-3">$50 to
-                  $100</span></label><label class="group flex items-center text-heading text-sm cursor-pointer"><input
-                  type="checkbox"
-                  class="form-checkbox w-5 h-5 border border-gray-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 text-heading hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading"
-                  name="$100 to $150" value="100-150"><span class="ms-3">$100
-                  to $150</span></label><label
-                class="group flex items-center text-heading text-sm cursor-pointer"><input type="checkbox"
-                  class="form-checkbox w-5 h-5 border border-gray-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 text-heading hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading"
-                  name="$150 to $200" value="150-200"><span class="ms-3">$150
-                  to $200</span></label><label
-                class="group flex items-center text-heading text-sm cursor-pointer"><input type="checkbox"
-                  class="form-checkbox w-5 h-5 border border-gray-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 text-heading hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading"
-                  name="$200 to $300" value="200-300"><span class="ms-3">$200
-                  to $300</span></label><label
-                class="group flex items-center text-heading text-sm cursor-pointer"><input type="checkbox"
-                  class="form-checkbox w-5 h-5 border border-gray-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 text-heading hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading"
-                  name="$300 to $500" value="300-500"><span class="ms-3">$300
-                  to $500</span></label><label
-                class="group flex items-center text-heading text-sm cursor-pointer"><input type="checkbox"
-                  class="form-checkbox w-5 h-5 border border-gray-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 text-heading hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading"
-                  name="$500 to $1000" value="500-1000"><span class="ms-3">$500 to
-                  $1000</span></label><label class="group flex items-center text-heading text-sm cursor-pointer"><input
-                  type="checkbox"
-                  class="form-checkbox w-5 h-5 border border-gray-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 text-heading hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading"
-                  name="over $1000" value="1000+"><span class="ms-3">Over
-                  $1000</span></label></div>
+                  [name]="price.name" [value]="price.value">
+                <span class="ms-3">{{ price.name }}</span>
+              </label>
+            </div>
           </div>
           <div class="block border-b border-gray-300 pb-7 mb-7">
             <h3 class="text-heading text-sm md:text-base font-semibold mb-7">Size</h3>
-            <div class="mt-2 flex flex-col space-y-4"><label
-                class="group flex items-center text-heading text-sm cursor-pointer"><input type="checkbox"
+            <div class="mt-2 flex flex-col space-y-4">
+              <label *ngFor="let size of sizes" class="group flex items-center text-heading text-sm cursor-pointer">
+                <input type="checkbox" (change)="data($event, size)"
                   class="form-checkbox w-5 h-5 border border-gray-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 text-heading hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading"
-                  name="small" value="Small"><span class="ms-3">Small</span></label><label
-                class="group flex items-center text-heading text-sm cursor-pointer"><input type="checkbox"
-                  class="form-checkbox w-5 h-5 border border-gray-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 text-heading hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading"
-                  name="medium" value="Medium"><span class="ms-3">Medium</span></label><label
-                class="group flex items-center text-heading text-sm cursor-pointer"><input type="checkbox"
-                  class="form-checkbox w-5 h-5 border border-gray-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 text-heading hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading"
-                  name="large" value="Large"><span class="ms-3">Large</span></label><label
-                class="group flex items-center text-heading text-sm cursor-pointer"><input type="checkbox"
-                  class="form-checkbox w-5 h-5 border border-gray-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 text-heading hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading"
-                  name="7" value="7"><span class="ms-3">7</span></label><label
-                class="group flex items-center text-heading text-sm cursor-pointer"><input type="checkbox"
-                  class="form-checkbox w-5 h-5 border border-gray-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 text-heading hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading"
-                  name="8" value="8"><span class="ms-3">8</span></label><label
-                class="group flex items-center text-heading text-sm cursor-pointer"><input type="checkbox"
-                  class="form-checkbox w-5 h-5 border border-gray-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 text-heading hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading"
-                  name="9" value="9"><span class="ms-3">9</span></label><label
-                class="group flex items-center text-heading text-sm cursor-pointer"><input type="checkbox"
-                  class="form-checkbox w-5 h-5 border border-gray-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 text-heading hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading"
-                  name="10" value="10"><span class="ms-3">10</span></label>
+                  [name]="size" [value]="size">
+                <span class="ms-3">{{ size }}</span>
+              </label>
             </div>
           </div>
           <div class="block border-b border-gray-300 pb-7 mb-7">
-            <h3 class="text-heading text-sm md:text-base font-semibold mb-7">Colors</h3>
-            <div class="mt-2 flex flex-col space-y-4"><label
-                class="group flex items-center text-heading text-sm cursor-pointer"><input type="checkbox"
+            <h3 class="text-heading text-sm md:text-base font-semibold mb-7">Color</h3>
+            <div class="mt-2 flex flex-col space-y-4">
+              <label *ngFor="let color of colors" class="group flex items-center text-heading text-sm cursor-pointer">
+                <input type="checkbox" (change)="data($event, color.colorCode)"
                   class="form-checkbox w-5 h-5 border border-gray-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 text-heading hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading"
-                  name="red" value="Red"><span class="ms-3"><span class="flex items-center"><span
-                      class="w-5 h-5 rounded-full block ltr:mr-3 rtl:ml-3 mt-0.5 border border-black border-opacity-20"
-                      style="background-color: rgb(255, 0, 0);"></span>Red</span></span></label><label
-                class="group flex items-center text-heading text-sm cursor-pointer"><input type="checkbox"
-                  class="form-checkbox w-5 h-5 border border-gray-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 text-heading hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading"
-                  name="blue" value="Blue"><span class="ms-3"><span class="flex items-center"><span
-                      class="w-5 h-5 rounded-full block ltr:mr-3 rtl:ml-3 mt-0.5 border border-black border-opacity-20"
-                      style="background-color: rgb(0, 0, 255);"></span>Blue</span></span></label><label
-                class="group flex items-center text-heading text-sm cursor-pointer"><input type="checkbox"
-                  class="form-checkbox w-5 h-5 border border-gray-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 text-heading hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading"
-                  name="yellow" value="Yellow"><span class="ms-3"><span class="flex items-center"><span
-                      class="w-5 h-5 rounded-full block ltr:mr-3 rtl:ml-3 mt-0.5 border border-black border-opacity-20"
-                      style="background-color: rgb(255, 255, 0);"></span>Yellow</span></span></label>
+                  [name]="color.name" [value]="color.colorCode">
+                <span class="ms-3">{{ color.name }}</span>
+              </label>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="w-full ltr:lg:-ml-9 rtl:lg:-mr-9">
-      <router-outlet></router-outlet>
-      <div class="pt-8 text-center xl:pt-14"></div>
-    </div>
-  </div>
-  <div
-    class="sm:px-8 md:px-16 2xl:px-24 flex flex-col justify-center xl:justify-between items-center rounded-lg bg-gray-200 py-10 md:py-14 lg:py-16 xl:flex-row">
-    <div class="-mt-1.5 lg:-mt-2 xl:-mt-0.5 text-left ltr:xl:text-left rtl:xl:text-right mb-7 md:mb-8 lg:mb-9 xl:mb-0">
-      <h3
-        class="text-heading text-lg md:text-xl lg:text-2xl 2xl:text-3xl xl:leading-10 font-bold md:mb-2.5 lg:mb-3 xl:mb-3.5">
-        Get Expert Tips In Your Inbox
-      </h3>
-      <p class="text-body text-xs md:text-sm leading-6 md:leading-7">
-        Subscribe to our newsletter and stay updated.
-      </p>
-    </div>
-    <form class="flex-shrink-0 w-full sm:w-96 md:w-[545px]" novalidate="">
-      <div class="flex flex-col sm:flex-row items-start justify-end">
-        <div class="w-full mr-2">
-          <input id="subscription_email" name="subscription_email" type="email" placeholder="Write your email here"
-            class="py-2 px-4 md:px-5 w-full appearance-none transition duration-150 ease-in-out border text-input text-xs lg:text-sm font-body placeholder-body min-h-12 transition duration-200 ease-in-out bg-white border-gray-300 focus:outline-none focus:border-heading h-11 md:h-12 px-4 lg:px-7 h-12 lg:h-14 text-center ltr:sm:text-left rtl:sm:text-right bg-white rounded-md"
-            autocomplete="off" spellcheck="false" aria-invalid="false" />
-        </div>
-        <button data-variant="flat"
-          class="text-[13px] md:text-sm leading-4 inline-flex items-center cursor-pointer transition ease-in-out duration-300 font-semibold font-body text-center justify-center border-0 border-transparent placeholder-white focus-visible:outline-none focus:outline-none rounded-md bg-heading text-white px-5 md:px-6 lg:px-8 md:py-3.5 lg:py-4 hover:text-white hover:bg-gray-600 hover:shadow-cart sm:mt-0 w-full sm:w-auto ltr:sm:ml-2 rtl:sm:ml-2 md:h-full flex-shrink-0">
-          <span class="lg:py-0.5">Subscribe</span>
-        </button>
-      </div>
-    </form>
+     <router-outlet></router-outlet>
   </div>
 </div>

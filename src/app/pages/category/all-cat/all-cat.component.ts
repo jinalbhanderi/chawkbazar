@@ -20,12 +20,21 @@ export class AllCatComponent {
   ) {}
 
   ngOnInit(): void {
-    this.route.data.subscribe((data) => {
-      const category = data['category'] as keyof ProductData;
-      this.productDataService.getProducts().subscribe((productData) => {
-        this.products = productData[category] || [];
-        this.title = data['title'];
-      });
+    this.route.queryParams.subscribe((params) => {
+      const categories = params['category']
+        ? params['category'].split(',')
+        : [];
+      if (categories.length) {
+        this.productDataService.getProducts().subscribe((productData) => {
+          this.products = categories.flatMap(
+            (category: string | number) => productData[category] || []
+          );
+          this.title = 'Products';
+        });
+      } else {
+        this.products = [];
+        this.title = 'No Products';
+      }
     });
   }
 

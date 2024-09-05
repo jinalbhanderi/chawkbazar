@@ -9,35 +9,9 @@ const routes: Routes = [
     component: CategoryComponent,
     children: [
       {
-        path: 'men',
+        path: '',
         component: AllCatComponent,
-        data: { category: 'men', title: 'Men' },
-      },
-      {
-        path: 'women',
-        component: AllCatComponent,
-        data: { category: 'women', title: 'Women' },
-      },
-      {
-        path: 'sneakers',
-        component: AllCatComponent,
-        data: { category: 'sneakers', title: 'Sneakers' },
-      },
-      {
-        path: 'sports',
-        component: AllCatComponent,
-        data: { category: 'sports', title: 'Sports' },
-      },
-      {
-        path: 'watch',
-        component: AllCatComponent,
-        data: { category: 'watch', title: 'Watch' },
-      },
-      {
-        path: 'bags',
-        component: AllCatComponent,
-        data: { category: 'bags', title: 'Bags' },
-      },
+      }
     ],
   },
 ];

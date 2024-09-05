@@ -1,16 +1,12 @@
-import { CategoriesModule } from './../pages/categories/categories.module';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './layout.component';
 import { CheckoutComponent } from '../pages/all-pages/checkout/checkout.component';
 import { ShposComponent } from '../pages/shpos/shpos.component';
-import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { NotFoundComponent } from '../pages/not-found/not-found.component';
 
 const routes: Routes = [
   { path: 'checkout', component: CheckoutComponent },
-  // { path: 'checkout', component: ShoppingCartComponent },
-
   {
     path: '',
     component: LayoutComponent,
