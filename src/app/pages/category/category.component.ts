@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from 'src/app/model/category-data.model';
-import { CategoriesService } from 'src/app/service/categories.service';
 
 @Component({
   selector: 'app-category',
@@ -34,12 +33,7 @@ export class CategoryComponent {
   selectedProduct: any = null;
   showPopup = false;
 
-  constructor(
-    private route: ActivatedRoute,
-    private productDataService: CategoriesService,
-    private router: Router
-  ) {}
-  
+  constructor(private route: ActivatedRoute, private router: Router) {}
 
   data(event: Event, value: string): void {
     const inputElement = event.target as HTMLInputElement;
@@ -52,17 +46,33 @@ export class CategoryComponent {
   }
 
   private navigateWithSelectedValues(): void {
-    const categoriesArray = Array.from(this.selectedValues);
-    const categories = categoriesArray.join(',');
+    if (this.selectedValues.size === 0) {
+      this.router
+        .navigate([], {
+          relativeTo: this.route,
+          queryParams: { category: null },
+          queryParamsHandling: 'merge',
+        })
+        .catch((err) => {
+          console.error('Navigation error:', err);
+        });
+    } else {
+      const categoriesArray = Array.from(this.selectedValues);
+      const categories = categoriesArray.join(',');
+      this.router
+        .navigate([], {
+          relativeTo: this.route,
+          queryParams: { category: categories },
+          queryParamsHandling: 'merge',
+        })
+        .catch((err) => {
+          console.error('Navigation error:', err);
+        });
+    }
+  }
 
-    this.router
-      .navigate([], {
-        relativeTo: this.route,
-        queryParams: { category: categories },
-        queryParamsHandling: 'merge',
-      })
-      .catch((err) => {
-        console.error('Navigation error:', err);
-      });
+  removeCategory(category: string): void {
+    this.selectedValues.delete(category);
+    this.navigateWithSelectedValues();
   }
 }

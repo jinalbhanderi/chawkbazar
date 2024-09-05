@@ -1,5 +1,5 @@
 {
-  "bags": [
+  "fusion": [
     {
       "imageUrl": "assets/images/category/bags/1.webp",
       "productName": "Philip Lim Leather Shoulder Bag",
@@ -49,8 +49,7 @@
       "oldPrice": "$250.00"
     }
   ],
-
-  "men": [
+  "vintgae": [
     {
       "imageUrl": "assets/images/category/men/1.webp",
       "productName": "Nike Comfy Vapor Maxpro",
@@ -172,8 +171,7 @@
       "oldPrice": "$250.00"
     }
   ],
-
-  "women": [
+  "masteriod": [
     {
       "imageUrl": "assets/images/category/women/1.webp",
       "productName": "Zara Miss Chase",
@@ -337,8 +335,7 @@
       "oldPrice": "$250.00"
     }
   ],
-
-  "sneakers": [
+  "hoppister": [
     {
       "imageUrl": "assets/images/category/sneakers/1.webp",
       "productName": "Nike Aviator",
@@ -370,8 +367,7 @@
       "oldPrice": "$1,150.00"
     }
   ],
-
-  "sports": [
+  "klien-shoes": [
     {
       "imageUrl": "assets/images/category/sports/1.webp",
       "productName": "Nike Comfy Vapor Maxpro",
@@ -456,134 +452,6 @@
       "newPrice": "$950.00",
       "oldPrice": "$1,150.00"
     }
-  ],
+  ]
 
-  "watch": [
-    {
-      "imageUrl": "assets/images/category/watch/1.webp",
-      "productName": "The Horse Original",
-      "newPrice": "$220.00",
-      "oldPrice": "$250.00"
-    },
-    {
-      "imageUrl": "assets/images/category/watch/2.webp",
-      "productName": "Nike Car Wheel Watch",
-      "newPrice": "$100.00",
-      "oldPrice": "$120.00"
-    },
-    {
-      "imageUrl": "assets/images/category/watch/3.webp",
-      "productName": "Hermes Galaxy Watch 3",
-      "newPrice": "$75.00",
-      "oldPrice": "$90.00"
-    },
-    {
-      "imageUrl": "assets/images/category/watch/4.webp",
-      "productName": "Parmani Submariner",
-      "newPrice": "$75.00",
-      "oldPrice": "$90.00"
-    },
-    {
-      "imageUrl": "assets/images/category/watch/5.webp",
-      "productName": "Pucchi Fasion watch",
-      "newPrice": "$950.00",
-      "oldPrice": "$1,150.00"
-    },
-    {
-      "imageUrl": "assets/images/category/watch/6.webp",
-      "productName": "Pissot Super Dry",
-      "newPrice": "$220.00",
-      "oldPrice": "$250.00"
-    },
-    {
-      "imageUrl": "assets/images/category/watch/7.webp",
-      "productName": "Tippot Classic",
-      "newPrice": "$210.00",
-      "oldPrice": "$250.00"
-    }
-  ],
-  "kids": [
-    {
-      "productName": "Zara Monte Carlo",
-      "imageUrl": "assets/images/category/kids/1.webp",
-      "newPrice": "$80.00",
-      "oldPrice": "$100"
-    },
-    {
-      "imageUrl": "assets/images/category/kids/2.webp",
-      "productName": "Maniac Red Boys",
-      "newPrice": "$100.00",
-      "oldPrice": "$130.00"
-    },
-    {
-      "imageUrl": "assets/images/category/kids/3.webp",
-      "productName": "Hermes Grey",
-      "newPrice": "$220.00",
-      "oldPrice": "$300.00"
-    },
-    {
-      "imageUrl": "assets/images/category/kids/4.webp",
-      "productName": "H&M Boys Top",
-      "newPrice": "$350.00",
-      "oldPrice": "$1,000.00"
-    },
-    {
-      "imageUrl": "assets/images/category/kids/5.webp",
-      "productName": "Armani Checked Shirt",
-      "newPrice": "$500.00",
-      "oldPrice": "$900.00"
-    },
-    {
-      "imageUrl": "assets/images/category/kids/6.webp",
-      "productName": "Tay Ben Aviator",
-      "newPrice": "$220.00",
-      "oldPrice": "$250.00"
-    },
-    {
-      "imageUrl": "assets/images/category/kids/7.webp",
-      "productName": "Tuma Style Cap",
-      "newPrice": "$220.00",
-      "oldPrice": "$250.00"
-    }
-  ],
-  "sunglass": {
-    "items": [
-      {
-        "imageUrl": "assets/images/category/sunglass/1.webp",
-        "productName": "Reyban Havana Phantos Sunglasses",
-        "newPrice": "$80.00",
-        "oldPrice": "$100.00"
-      },
-      {
-        "imageUrl": "assets/images/category/sunglass/2.webp",
-        "productName": "Hipster Hexagonal Polarized Sunglasses",
-        "newPrice": "$279.00",
-        "oldPrice": "$300.00"
-      },
-      {
-        "imageUrl": "assets/images/category/sunglass/3.webp",
-        "productName": "Hermes179S Sunglasses",
-        "newPrice": "$230.00",
-        "oldPrice": "$250.00"
-      },
-      {
-        "imageUrl": "assets/images/category/sunglass/4.webp",
-        "productName": "Armani 269S Sunglasses",
-        "newPrice": "$80.00",
-        "oldPrice": "$120.00"
-      },
-      {
-        "imageUrl": "assets/images/category/sunglass/5.webp",
-        "productName": "Tay Ben Aviator",
-        "newPrice": "$1350.00",
-        "oldPrice": "$1500.00"
-      },
-      {
-        "imageUrl": "assets/images/category/sunglass/6.webp",
-        "productName": "Dido Pilot Glass",
-        "newPrice": "$300.00",
-        "oldPrice": "$350.00"
-      }
-    ]
-  }
 }
