@@ -1,6 +1,12 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from 'src/app/model/category-data.model';
+type FilterType = 'category' | 'brand';
+
+interface Filter {
+  value: string;
+  type: FilterType;
+}
 
 @Component({
   selector: 'app-category',
@@ -8,7 +14,6 @@ import { Product } from 'src/app/model/category-data.model';
   styleUrls: ['./category.component.css'],
 })
 export class CategoryComponent {
-  selectedValues: Set<string> = new Set<string>();
   categories = ['bags', 'kids', 'men', 'sneakers', 'sports'];
   brands = ['fusion', 'vintage', 'masteriod', 'hoppister', 'klien-shoes'];
   prices = [
@@ -28,51 +33,80 @@ export class CategoryComponent {
     { name: 'Yellow', colorCode: 'rgb(255, 255, 0)' },
   ];
 
+  selectedCategories = new Set<string>();
+  selectedBrands = new Set<string>();
   products: Product[] = [];
-  title: string = '';
+  title = '';
   selectedProduct: any = null;
   showPopup = false;
-
+  hasData: boolean = false;
   constructor(private route: ActivatedRoute, private router: Router) {}
 
-  data(event: Event, value: string): void {
+  ngOnInit(): void {
+    this.route.queryParams.subscribe((params) => {
+      // Extract categories and brands from URL query params
+      const categories = params['category']? params['category'].split(','): [];
+      const brands = params['brand'] ? params['brand'].split(',') : [];
+
+      // Set selected categories and brands based on query parameters
+      this.selectedCategories = new Set(categories);
+      this.selectedBrands = new Set(brands);
+    });
+  }
+
+  get selectedValues(): Filter[] {
+    const categoriesArray: Filter[] = Array.from(this.selectedCategories).map(
+      (value) => ({ value, type: 'category' })
+    );
+    const brandsArray: Filter[] = Array.from(this.selectedBrands).map(
+      (value) => ({ value, type: 'brand' })
+    );
+    return [...categoriesArray, ...brandsArray];
+  }
+
+  clearAll(): void {
+    this.selectedCategories.clear();
+    this.selectedBrands.clear();
+    this.updateQueryParams();
+  }
+
+  data(event: Event, value: string, type: 'category' | 'brand'): void {
     const inputElement = event.target as HTMLInputElement;
+    const set =
+      type === 'category' ? this.selectedCategories : this.selectedBrands;
+
     if (inputElement.checked) {
-      this.selectedValues.add(value);
+      set.add(value);
     } else {
-      this.selectedValues.delete(value);
+      set.delete(value);
     }
-    this.navigateWithSelectedValues();
+
+    this.updateQueryParams();
   }
 
-  private navigateWithSelectedValues(): void {
-    if (this.selectedValues.size === 0) {
-      this.router
-        .navigate([], {
-          relativeTo: this.route,
-          queryParams: { category: null },
-          queryParamsHandling: 'merge',
-        })
-        .catch((err) => {
-          console.error('Navigation error:', err);
-        });
-    } else {
-      const categoriesArray = Array.from(this.selectedValues);
-      const categories = categoriesArray.join(',');
-      this.router
-        .navigate([], {
-          relativeTo: this.route,
-          queryParams: { category: categories },
-          queryParamsHandling: 'merge',
-        })
-        .catch((err) => {
-          console.error('Navigation error:', err);
-        });
-    }
+  private updateQueryParams(): void {
+    const categoriesArray = Array.from(this.selectedCategories);
+    const brandsArray = Array.from(this.selectedBrands);
+
+    this.router
+      .navigate([], {
+        relativeTo: this.route,
+        queryParams: {
+          category: categoriesArray.length ? categoriesArray.join(',') : null,
+          brand: brandsArray.length ? brandsArray.join(',') : null,
+        },
+        queryParamsHandling: 'merge',
+      })
+      .catch((err) => console.error('Navigation error:', err));
   }
 
-  removeCategory(category: string): void {
-    this.selectedValues.delete(category);
-    this.navigateWithSelectedValues();
+  removeFilter(value: string, type: 'category' | 'brand'): void {
+    if (type === 'category') {
+      this.selectedCategories.delete(value);
+    } else {
+      this.selectedBrands.delete(value);
+    }
+    this.updateQueryParams();
   }
+
 }

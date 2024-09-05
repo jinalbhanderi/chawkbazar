@@ -4,7 +4,8 @@
       "imageUrl": "assets/images/category/bags/1.webp",
       "productName": "Philip Lim Leather Shoulder Bag",
       "newPrice": "$220.00",
-      "oldPrice": "$250.00"
+      "oldPrice": "$250.00",
+      "brand": "fusion"
     },
     {
       "imageUrl": "assets/images/category/bags/2.webp",
@@ -34,13 +35,15 @@
       "imageUrl": "assets/images/category/bags/6.webp",
       "productName": "Chevis Womens Bag",
       "newPrice": "$220.00",
-      "oldPrice": "$250.00"
+      "oldPrice": "$250.00",
+      "brand": "klien-shoes"
     },
     {
       "imageUrl": "assets/images/category/bags/7.webp",
       "productName": "Tuma Kidsa bag",
       "newPrice": "$220.00",
-      "oldPrice": "$250.00"
+      "oldPrice": "$250.00",
+      "brand": "masteriod"
     },
     {
       "imageUrl": "assets/images/category/bags/8.webp",
@@ -67,7 +70,8 @@
       "imageUrl": "assets/images/category/men/3.webp",
       "productName": "Louise Vutton Pure Black Shirt",
       "newPrice": "$75.00",
-      "oldPrice": "$90.00"
+      "oldPrice": "$90.00",
+      "brand": "fusion"
     },
     {
       "imageUrl": "assets/images/category/men/4.webp",
@@ -127,7 +131,8 @@
       "imageUrl": "assets/images/category/men/13.webp",
       "productName": "Pucchi Fasion watch",
       "newPrice": "$220.00",
-      "oldPrice": "$250.00"
+      "oldPrice": "$250.00",
+      "brand": "fusion"
     },
     {
       "imageUrl": "assets/images/category/men/14.webp",
@@ -178,13 +183,15 @@
       "imageUrl": "assets/images/category/women/1.webp",
       "productName": "Zara Miss Chase",
       "newPrice": "$220.00",
-      "oldPrice": "$250.00"
+      "oldPrice": "$250.00",
+      "brand": "vintgae"
     },
     {
       "imageUrl": "assets/images/category/women/2.webp",
       "productName": "White Oxford Shirt",
       "newPrice": "$100.00",
-      "oldPrice": "$120.00"
+      "oldPrice": "$120.00",
+      "brand": "fusion"
     },
     {
       "imageUrl": "assets/images/category/women/3.webp",
@@ -196,7 +203,8 @@
       "imageUrl": "assets/images/category/women/4.webp",
       "productName": "Nike Pro Mesh Top with Leggins",
       "newPrice": "$75.00",
-      "oldPrice": "$90.00"
+      "oldPrice": "$90.00",
+      "brand": "vintgae"
     },
     {
       "imageUrl": "assets/images/category/women/5.webp",
@@ -268,7 +276,8 @@
       "imageUrl": "assets/images/category/women/16.webp",
       "productName": "Black Crew V neck Tops",
       "newPrice": "$220.00",
-      "oldPrice": "$250.00"
+      "oldPrice": "$250.00",
+      "brand": "hoppister"
     },
     {
       "imageUrl": "assets/images/category/women/17.webp",
@@ -280,7 +289,8 @@
       "imageUrl": "assets/images/category/women/18.webp",
       "productName": "Neutral Scoop Neck Top",
       "newPrice": "$220.00",
-      "oldPrice": "$250.00"
+      "oldPrice": "$250.00",
+      "brand": "masteriod"
     },
     {
       "imageUrl": "assets/images/category/women/19.webp",
@@ -310,7 +320,8 @@
       "imageUrl": "assets/images/category/women/23.webp",
       "productName": "P & M Tokyo Talkies",
       "newPrice": "$220.00",
-      "oldPrice": "$250.00"
+      "oldPrice": "$250.00",
+      "brand": "masteriod"
     },
     {
       "imageUrl": "assets/images/category/women/24.webp",
@@ -463,7 +474,8 @@
       "imageUrl": "assets/images/category/watch/1.webp",
       "productName": "The Horse Original",
       "newPrice": "$220.00",
-      "oldPrice": "$250.00"
+      "oldPrice": "$250.00",
+      "brand": "hoppister"
     },
     {
       "imageUrl": "assets/images/category/watch/2.webp",
@@ -475,7 +487,8 @@
       "imageUrl": "assets/images/category/watch/3.webp",
       "productName": "Hermes Galaxy Watch 3",
       "newPrice": "$75.00",
-      "oldPrice": "$90.00"
+      "oldPrice": "$90.00",
+      "brand": "hoppister"
     },
     {
       "imageUrl": "assets/images/category/watch/4.webp",
@@ -499,7 +512,8 @@
       "imageUrl": "assets/images/category/watch/7.webp",
       "productName": "Tippot Classic",
       "newPrice": "$210.00",
-      "oldPrice": "$250.00"
+      "oldPrice": "$250.00",
+      "brand": "fusion"
     }
   ],
   "kids": [
@@ -513,7 +527,8 @@
       "imageUrl": "assets/images/category/kids/2.webp",
       "productName": "Maniac Red Boys",
       "newPrice": "$100.00",
-      "oldPrice": "$130.00"
+      "oldPrice": "$130.00",
+      "brand":"masteriod"
     },
     {
       "imageUrl": "assets/images/category/kids/3.webp",
@@ -537,7 +552,8 @@
       "imageUrl": "assets/images/category/kids/6.webp",
       "productName": "Tay Ben Aviator",
       "newPrice": "$220.00",
-      "oldPrice": "$250.00"
+      "oldPrice": "$250.00",
+      "brand": "masteriod"
     },
     {
       "imageUrl": "assets/images/category/kids/7.webp",
@@ -558,7 +574,8 @@
         "imageUrl": "assets/images/category/sunglass/2.webp",
         "productName": "Hipster Hexagonal Polarized Sunglasses",
         "newPrice": "$279.00",
-        "oldPrice": "$300.00"
+        "oldPrice": "$300.00",
+        "brand":"vintgae"
       },
       {
         "imageUrl": "assets/images/category/sunglass/3.webp",

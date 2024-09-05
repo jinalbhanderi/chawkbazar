@@ -12,12 +12,13 @@ export class CategoriesService {
   private productUrl = '../../assets/json/products.json';
   private brandUrl = '../../assets/json/brand.json';
   private cachedProducts: ProductData | null = null;
+  private cachedBrands: ProductData | null = null;
 
   constructor(private http: HttpClient) {}
 
   getCategories(): Observable<Categories> {
     return this.http.get<Categories>(this.dataUrl).pipe(
-      catchError(error => {
+      catchError((error) => {
         console.error('Error fetching categories', error);
         return of({} as Categories);
       })
@@ -29,27 +30,28 @@ export class CategoriesService {
       return of(this.cachedProducts);
     }
     return this.http.get<ProductData>(this.productUrl).pipe(
-      map(data => {
-        this.cachedProducts = data;
-        return data;
-      }),
-      catchError(error => {
-        console.error('Error fetching products', error);
-        return of({} as ProductData);
-      })
-    );
-  }
-  getBrand(): Observable<ProductData> {
-    if (this.cachedProducts) {
-      return of(this.cachedProducts);
-    }
-    return this.http.get<ProductData>(this.brandUrl).pipe(
       map((data) => {
         this.cachedProducts = data;
         return data;
       }),
       catchError((error) => {
         console.error('Error fetching products', error);
+        return of({} as ProductData);
+      })
+    );
+  }
+
+  getBrand(): Observable<ProductData> {
+    if (this.cachedBrands) {
+      return of(this.cachedBrands);
+    }
+    return this.http.get<ProductData>(this.brandUrl).pipe(
+      map((data) => {
+        this.cachedBrands = data;
+        return data;
+      }),
+      catchError((error) => {
+        console.error('Error fetching brands', error);
         return of({} as ProductData);
       })
     );
