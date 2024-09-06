@@ -49,7 +49,6 @@ export class ProductPopupComponent {
   quantity: number = 1;
   maxQuantity: number = 10; // Set a maximum quantity if needed
   increment() {
-    debugger;
     if (this.quantity < this.maxQuantity) {
       this.quantity++;
     }

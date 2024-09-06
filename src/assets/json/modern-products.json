@@ -236,102 +236,107 @@
 
   "topBrand": [
     {
-      "productName": "Fusion",
+      "productName": "HM Trades",
+      "imageUrl": "hm-trades-bg.jpg",
+      "logo": "hm-trades.png",
+      "link": "hm-trades"
+    },
+    {
+      "productName": "roseban",
+      "imageUrl": "roseban-bg.jpg",
+      "logo": "roseban.png",
+      "link": "roseban"
+    },
+    {
+      "productName": "vint-shoes",
+      "imageUrl": "vint-shoes-bg.jpg",
+      "logo": "vint-shoes.png",
+      "link": "vint-shoes"
+    },
+    {
+      "productName": "vintage-design",
+      "imageUrl": "vintage-design-bg.jpg",
+      "logo": "vintage-design.png",
+      "link": "vintage-design"
+    },
+
+    {
+      "productName": "t-fashion",
+      "imageUrl": "t-fashion-bg.jpg",
+      "logo": "t-fashion.png",
+      "link": "t-fashion"
+    },
+    {
+      "productName": "hairstore-vintage",
+      "imageUrl": "hairstore-vintage-bg.jpg",
+      "logo": "hairstore-vintage.png",
+      "link": "hairstore-vintage"
+    },
+    {
+      "productName": "fania-fashion",
+      "imageUrl": "fania-fashion-bg.jpg",
+      "logo": "fania-fashion.png",
+      "link": "fania-fashion"
+    },
+    {
+      "productName": "hipster",
+      "imageUrl": "hipster-bg.jpg",
+      "logo": "hipster.png",
+      "link": "hipster"
+    },
+
+    {
+      "productName": "phonix-bags",
+      "imageUrl": "phonix-bags-bg.jpg",
+      "logo": "phonix-bags.png",
+      "link": "phonix-bags"
+    },
+    {
+      "productName": "ab-shoes",
+      "imageUrl": "ab-shoes-bg.jpg",
+      "logo": "ab-shoes.png",
+      "link": "ab-shoes"
+    },
+    {
+      "productName": "ceseare",
+      "imageUrl": "ceseare-bg.jpg",
+      "logo": "ceseare.png",
+      "link": "ceseare"
+    },
+    {
+      "productName": "klien-shoes",
+      "imageUrl": "klien-shoes-bg.jpg",
+      "logo": "klien-shoes.png",
+      "link": "klien-shoes"
+    },
+
+
+    {
+      "productName": "hipster",
+      "imageUrl": "hipster-bg.jpg",
+      "logo": "hipster.png",
+      "link": "hipster"
+    },
+    {
+      "productName": "masteriod",
+      "imageUrl": "masteriod-bg.jpg",
+      "logo": "masteriod.png",
+      "link": "masteriod"
+    },
+    {
+      "productName": "vintgae",
+      "imageUrl": "vintgae-bg.jpg",
+      "logo": "vintgae.png",
+      "link": "vintgae"
+    },
+    {
+      "productName": "fusion",
       "imageUrl": "fusion-bg.jpg",
       "logo": "fusion.png",
-      "link": "/search?brand=fusion"
-    },
-    {
-      "productName": "Sholy",
-      "imageUrl": "sholy-bg.jpg",
-      "logo": "sholy.png",
-      "link": "/search?brand=sholy"
-    },
-    {
-      "productName": "Tyrant",
-      "imageUrl": "tyrant-bg.jpg",
-      "logo": "tyrant.png",
-      "link": "/search?brand=tyrant"
-    },
-    {
-      "productName": "Fashadil",
-      "imageUrl": "fashadil-bg.jpg",
-      "logo": "fashadil.png",
-      "link": "/search?brand=fashadil"
-    },
-    {
-      "productName": "clothingegy",
-      "imageUrl": "clothingegy-bg.jpg",
-      "logo": "clothingegy.png",
-      "link": "/search?brand=clothingegy"
-    },
-    {
-      "productName": "shosio",
-      "imageUrl": "shosio-bg.jpg",
-      "logo": "shosio.png",
-      "link": "/search?brand=shosio"
-    },
-    {
-      "productName": "club-shoes",
-      "imageUrl": "club-shoes-bg.jpg",
-      "logo": "club-shoes.png",
-      "link": "/search?brand=club-shoes"
-    },
-    {
-      "productName": "pop-clothing",
-      "imageUrl": "pop-clothing-bg.jpg",
-      "logo": "pop-clothing.png",
-      "link": "/search?brand=pop-clothing"
-    },
-    {
-      "productName": "hoppister",
-      "imageUrl": "hoppister-bg.jpg",
-      "logo": "hoppister.png",
-      "link": "/search?brand=hoppister"
-    },
-    {
-      "productName": "shovia",
-      "imageUrl": "shovia-bg.jpg",
-      "logo": "shovia.png",
-      "link": "/search?brand=shovia"
-    },
-    {
-      "productName": "shoozly",
-      "imageUrl": "shoozly-bg.jpg",
-      "logo": "shoozly.png",
-      "link": "/search?brand=shoozly"
-    },
-    {
-      "productName": "blaze-fashion",
-      "imageUrl": "blaze-fashion-bg.jpg",
-      "logo": "blaze-fashion.png",
-      "link": "/search?brand=blaze-fashion"
-    },
-    {
-      "productName": "elegance",
-      "imageUrl": "elegance-bg.jpg",
-      "logo": "elegance.png",
-      "link": "/search?brand=elegance"
-    },
-    {
-      "productName": "clothingtastic",
-      "imageUrl": "clothingtastic-bg.jpg",
-      "logo": "clothingtastic.png",
-      "link": "/search?brand=clothingtastic"
-    },
-    {
-      "productName": "fashnetic",
-      "imageUrl": "fashnetic-bg.jpg",
-      "logo": "fashnetic.png",
-      "link": "/search?brand=fashnetic"
-    },
-    {
-      "productName": "hunter-shoes",
-      "imageUrl": "hunter-shoes-bg.jpg",
-      "logo": "hunter-shoes.png",
-      "link": "/search?brand=hunter-shoes"
+      "link": "fusion"
     }
   ],
+  
   "fProducts": [
     {
       "productName": "Nike Bag",

@@ -15,8 +15,9 @@ export interface Product {
   productName: string;
   newPrice: string;
   oldPrice: string;
-  category?: string; // Optional category
-  brand?: string; // Optional brand
+  category?: string;
+  brand?: string;
+  variations?: string;
 }
 
 export interface ProductData {

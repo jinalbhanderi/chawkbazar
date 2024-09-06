@@ -1015,7 +1015,6 @@ export class OnSaleComponent {
   }
 
   openPopup(product: any): void {
-    debugger;
     this.selectedProduct = product;
     this.showPopup = true;
   }

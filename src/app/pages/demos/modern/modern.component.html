@@ -72,7 +72,7 @@
           </p>
           <div
             class="font-semibold text-sm sm:text-base mt-1.5 flex flex-wrap gap-x-2 sm:text-xl md:text-base lg:text-xl md:mt-2.5 2xl:mt-3 text-heading">
-            <span class="inline-block">{{ product.newprice }}</span>
+            <span class="inline-block">{{ product.newPrice }}</span>
             <del *ngIf="product.oldPrice" class="sm:text-base font-normal text-gray-800">{{
               product.oldPrice }}</del>
           </div>
@@ -106,6 +106,7 @@
           <img [src]="slide.src" [alt]="slide.title" class="" loading="lazy" />
           <div class="caption">
             <h5>{{slide.title}}</h5>
+
           </div>
         </div>
       </ng-template>
@@ -167,8 +168,8 @@
       </h3>
     </div>
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 md:gap-3 lg:gap-5 xl:gap-7">
-      <a *ngFor="let brand of topBrand"
-        class="group flex justify-center text-center relative overflow-hidden rounded-md" [routerLink]="brand.link">
+      <a *ngFor="let brand of topBrand" class="group flex justify-center text-center relative overflow-hidden rounded-md"
+        [routerLink]="['/search']" [queryParams]="{ brand: brand.link }">
         <span>
           <span>
             <img [alt]="brand.productName" aria-hidden="true" [src]="'/assets/images/brands/grid/' + brand.imageUrl" />
@@ -182,6 +183,7 @@
         </div>
       </a>
     </div>
+
   </div>
   <!-- product-list.component.html -->
   <div class="mx-auto mb-12 lg:mb-14 xl:mb-16 pb-0.5 lg:pb-1 xl:pb-0">

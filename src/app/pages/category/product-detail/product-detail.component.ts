@@ -40,7 +40,6 @@ export class ProductDetailComponent {
   quantity: number = 1;
   maxQuantity: number = 10;
   increment() {
-    debugger;
     if (this.quantity < this.maxQuantity) {
       this.quantity++;
     }

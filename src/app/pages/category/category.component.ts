@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from 'src/app/model/category-data.model';
-type FilterType = 'category' | 'brand';
+
+type FilterType = 'category' | 'brand' | 'price' | 'size';
 
 interface Filter {
   value: string;
@@ -13,7 +14,7 @@ interface Filter {
   templateUrl: './category.component.html',
   styleUrls: ['./category.component.css'],
 })
-export class CategoryComponent {
+export class CategoryComponent implements OnInit {
   categories = ['bags', 'kids', 'men', 'sneakers', 'sports'];
   brands = ['fusion', 'vintage', 'masteriod', 'hoppister', 'klien-shoes'];
   prices = [
@@ -35,22 +36,35 @@ export class CategoryComponent {
 
   selectedCategories = new Set<string>();
   selectedBrands = new Set<string>();
+  selectedPrices = new Set<string>();
+  selectedSizes = new Set<string>();
+  selectedColors = new Set<string>();
   products: Product[] = [];
   title = '';
   selectedProduct: any = null;
   showPopup = false;
   hasData: boolean = false;
+
   constructor(private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void {
     this.route.queryParams.subscribe((params) => {
-      // Extract categories and brands from URL query params
-      const categories = params['category']? params['category'].split(','): [];
-      const brands = params['brand'] ? params['brand'].split(',') : [];
-
-      // Set selected categories and brands based on query parameters
-      this.selectedCategories = new Set(categories);
-      this.selectedBrands = new Set(brands);
+      // Extract filters from URL query params
+      this.selectedCategories = new Set(
+        params['category'] ? params['category'].split(',') : []
+      );
+      this.selectedBrands = new Set(
+        params['brand'] ? params['brand'].split(',') : []
+      );
+      this.selectedPrices = new Set(
+        params['price'] ? params['price'].split(',') : []
+      );
+      this.selectedSizes = new Set(
+        params['size'] ? params['size'].split(',') : []
+      );
+      this.selectedColors = new Set(
+        params['color'] ? params['color'].split(',') : []
+      );
     });
   }
 
@@ -61,19 +75,40 @@ export class CategoryComponent {
     const brandsArray: Filter[] = Array.from(this.selectedBrands).map(
       (value) => ({ value, type: 'brand' })
     );
-    return [...categoriesArray, ...brandsArray];
+    const pricesArray: Filter[] = Array.from(this.selectedPrices).map(
+      (value) => ({ value, type: 'price' })
+    );
+    const sizeArray: Filter[] = Array.from(this.selectedSizes).map((value) => ({
+      value,
+      type: 'size',
+    }));
+    return [...categoriesArray, ...brandsArray, ...pricesArray, ...sizeArray];
   }
 
   clearAll(): void {
     this.selectedCategories.clear();
     this.selectedBrands.clear();
+    this.selectedPrices.clear();
+    this.selectedSizes.clear();
+    this.selectedColors.clear();
     this.updateQueryParams();
   }
 
-  data(event: Event, value: string, type: 'category' | 'brand'): void {
+  data(event: Event, value: any, type: FilterType): void {
     const inputElement = event.target as HTMLInputElement;
-    const set =
-      type === 'category' ? this.selectedCategories : this.selectedBrands;
+    let set: Set<string> = new Set();
+
+    if (type === 'category') {
+      set = this.selectedCategories;
+    } else if (type === 'brand') {
+      set = this.selectedBrands;
+    } else if (type === 'price') {
+      set = this.selectedPrices;
+    } else if (type === 'size') {
+      set = this.selectedSizes;
+    } else if (type === 'color') {
+      set = this.selectedColors;
+    }
 
     if (inputElement.checked) {
       set.add(value);
@@ -85,28 +120,52 @@ export class CategoryComponent {
   }
 
   private updateQueryParams(): void {
-    const categoriesArray = Array.from(this.selectedCategories);
-    const brandsArray = Array.from(this.selectedBrands);
-
     this.router
       .navigate([], {
         relativeTo: this.route,
         queryParams: {
-          category: categoriesArray.length ? categoriesArray.join(',') : null,
-          brand: brandsArray.length ? brandsArray.join(',') : null,
+          category: this.selectedCategories.size
+            ? Array.from(this.selectedCategories).join(',')
+            : null,
+          brand: this.selectedBrands.size
+            ? Array.from(this.selectedBrands).join(',')
+            : null,
+          price: this.selectedPrices.size
+            ? Array.from(this.selectedPrices).join(',')
+            : null,
+          size: this.selectedSizes.size
+            ? Array.from(this.selectedSizes).join(',')
+            : null,
+          color: this.selectedColors.size
+            ? Array.from(this.selectedColors).join(',')
+            : null,
         },
         queryParamsHandling: 'merge',
       })
       .catch((err) => console.error('Navigation error:', err));
   }
 
-  removeFilter(value: string, type: 'category' | 'brand'): void {
+  removeFilter(value: string, type: FilterType): void {
     if (type === 'category') {
       this.selectedCategories.delete(value);
-    } else {
+    } else if (type === 'brand') {
       this.selectedBrands.delete(value);
+    } else if (type === 'price') {
+      this.selectedPrices.delete(value);
+    } else if (type === 'size') {
+      this.selectedSizes.delete(value);
+    } else if (type === 'color') {
+      this.selectedColors.delete(value);
     }
     this.updateQueryParams();
   }
 
+  openPopup(product: Product): void {
+    this.selectedProduct = product;
+    this.showPopup = true;
+  }
+
+  closePopup(): void {
+    this.showPopup = false;
+  }
 }

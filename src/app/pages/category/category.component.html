@@ -83,7 +83,7 @@
             <h3 class="text-heading text-sm md:text-base font-semibold mb-7">Price</h3>
             <div class="mt-2 flex flex-col space-y-4">
               <label class="group flex items-center text-heading text-sm cursor-pointer" *ngFor="let price of prices">
-                <input type="checkbox"
+                <input type="checkbox"  (change)="data($event, price.value, 'price')" [checked]="selectedPrices.has(price.value)"
                   class="form-checkbox w-5 h-5 border border-gray-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 text-heading hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading"
                   [name]="price.name" [value]="price.value">
                 <span class="ms-3">{{ price.name }}</span>
@@ -92,11 +92,11 @@
           </div>
 
           <!-- Size Filter -->
-          <div class="block border-b border-gray-300 pb-7 mb-7">
+          <div class="block border-b border-gray-300 pb-7 mb-7">  
             <h3 class="text-heading text-sm md:text-base font-semibold mb-7">Size</h3>
             <div class="mt-2 flex flex-col space-y-4">
               <label class="group flex items-center text-heading text-sm cursor-pointer" *ngFor="let size of sizes">
-                <input type="checkbox"
+                <input type="checkbox" (change)="data($event, size, 'size')" [checked]="selectedSizes.has(size)"
                   class="form-checkbox w-5 h-5 border border-gray-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 text-heading hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading"
                   [name]="size" [value]="size">
                 <span class="ms-3">{{ size | titlecase }}</span>
