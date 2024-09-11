@@ -336,7 +336,7 @@
       "link": "fusion"
     }
   ],
-  
+
   "fProducts": [
     {
       "productName": "Nike Bag",
@@ -381,36 +381,44 @@
   ],
   "slides": [
     {
-      "src": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F33%2Fwomen.png&w=1920&q=100",
-      "productName": "Women"
+      "src": "assets/images/category/woman.jpg",
+      "productName": "Women",
+      "link":"women"
     },
     {
-      "src": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F32%2Fwatch.png&w=1920&q=100",
-      "productName": "Watch"
+      "src": "assets/images/category/watch.jpg",
+      "productName": "Watch",
+      "link":"watch"
     },
     {
-      "src": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F31%2Fsunglass.png&w=1920&q=100",
-      "productName": "Sunglass"
+      "src": "assets/images/category/sunglass.jpg",
+      "productName": "Sunglass",
+      "link":"sunglass"
     },
     {
-      "src": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F30%2Fsports.png&w=1920&q=100",
-      "productName": "Sports"
+      "src": "assets/images/category/sports.jpg",
+      "productName": "Sports",
+      "link":"sports"
     },
     {
-      "src": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F29%2Fsneekers.png&w=1920&q=100",
-      "productName": "Sneekers"
+      "src": "assets/images/category/sneakers.jpg",
+      "productName": "Sneekers",
+      "link":"sneekers"
     },
     {
-      "src": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F28%2Fmen.png&w=1920&q=100",
-      "productName": "Men"
+      "src": "assets/images/category/man.jpg",
+      "productName": "Men",
+      "link":"men"
     },
     {
-      "src": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F27%2Fkids.png&w=1920&q=100",
-      "productName": "Kids"
+      "src": "assets/images/category/kid.jpg",
+      "productName": "Kids",
+      "link": "kids"
     },
     {
-      "src": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F26%2Fbags.png&w=1920&q=100",
-      "productName": "Bags"
+      "src": "assets/images/category/bags.jpg",
+      "productName": "Bags",
+      "link": "bags"
     }
   ],
   "slides2": [

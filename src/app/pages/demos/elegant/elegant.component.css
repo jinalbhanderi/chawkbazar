@@ -26,8 +26,8 @@
 }
 
 .bg-gray-100:hover .icon-overlay {
-  opacity: 1;
-  transform: scale(1.1);
+    display: block; /* Show icon on hover */
+
 }
 
 .carousel-caption {

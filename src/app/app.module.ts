@@ -8,7 +8,8 @@ import { CollectionsComponent } from './pages/collections/collections.component'
 import { CategoriesComponent } from './pages/categories/categories.component';
 import { DemosModule } from "./pages/demos/demos.module";
 import { HttpClientModule } from '@angular/common/http';
-// import { NewsLatterComponent } from './pages/news-latter/news-latter.component';
+import { LayoutModule } from "./layout/layout.module";
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,14 @@ import { HttpClientModule } from '@angular/common/http';
     CollectionsComponent,
     CategoriesComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, DemosModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    DemosModule,
+    HttpClientModule,
+    LayoutModule,
+    SharedModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

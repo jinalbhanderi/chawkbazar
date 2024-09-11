@@ -7,11 +7,11 @@ import { ModernService } from 'src/app/service/modern.service';
   styleUrls: ['./vintage.component.css'],
 })
 export class VintageComponent {
-
   categories: any[] = [];
   slides2: any[] = [];
   slides3: any[] = [];
   slides4: any[] = [];
+  slides5: any[] = [];
   items: any[] = [];
   images: any[] = [];
   products: any[] = [];
@@ -27,11 +27,11 @@ export class VintageComponent {
       this.slides2 = data.slides2;
       this.slides3 = data.slides3;
       this.slides4 = data.slides4;
+      this.slides5 = data.slides5;
       this.items = data.items;
       this.images = data.images;
       this.products = data.products;
       this.flashSale = data.flashSale;
-
     });
   }
 

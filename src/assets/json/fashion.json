@@ -336,13 +336,13 @@
     },
     {
       "productName": "Zara Miss Chase",
-      "imageUrl": "https://chawkbazarlaravel.s3.ap-southeast-1.amazonaws.com/234/Chawkbazar1.png",
+      "imageUrl": "assets/images/category/women/1.webp",
       "newPrice": "$90.00",
       "oldPrice": "$100.00"
     },
     {
       "productName": "White Oxford Shirt",
-      "imageUrl": "https://chawkbazarlaravel.s3.ap-southeast-1.amazonaws.com/232/Casual-Wear-1-1.jpg",
+      "imageUrl": "assets/images/category/women/2.webp",
       "newPrice": "$10.00",
       "oldPrice": "$40.00"
     },
@@ -354,7 +354,7 @@
     },
     {
       "productName": "Roadster Women Round Neck",
-      "imageUrl": "https://chawkbazarlaravel.s3.ap-southeast-1.amazonaws.com/228/Chawkbazar22.png",
+      "imageUrl": "assets/images/category/women/3.webp",
       "newPrice": "$30.00",
       "oldPrice": "$50.00"
     },
@@ -372,13 +372,13 @@
     },
     {
       "productName": "Nike Pro Mesh Top with Leggins",
-      "imageUrl": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F223%2FCasual-Wear-4-1.jpg&w=1920&q=100",
+      "imageUrl": "assets/images/category/women/4.webp",
       "newPrice": "$30.00",
       "oldPrice": "$35.00"
     },
     {
       "productName": "Nike Comfy Vapor Maxpro",
-      "imageUrl": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F321%2FFootwear-1.png&w=1920&q=100",
+      "imageUrl": "assets/images/category/men/1.webp",
       "newPrice": "$220.00",
       "oldPrice": "$250.00"
     },

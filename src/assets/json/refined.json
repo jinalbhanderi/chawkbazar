@@ -66,56 +66,39 @@
       "link": "/collections/gift-collection"
     }
   ],
-  "slides3": [
-    {
-      "imageUrl": "/assets/images/brands/fusion.png"
-    },
-    {
-      "imageUrl": "/assets/images/brands/blaze-fashion.png"
-    },
-    {
-      "imageUrl": "/assets/images/brands/club-shoes.png"
-    },
-    {
-      "imageUrl": "/assets/images/brands/elegance.png"
-    },
-    {
-      "imageUrl": "/assets/images/brands/fashadil.png"
-    },
-    {
-      "imageUrl": "/assets/images/brands/hoppister.png"
-    },
-    {
-      "imageUrl": "/assets/images/brands/hunter-shoes.png"
-    },
-    {
-      "imageUrl": "/assets/images/brands/shovia.png"
-    }
-  ],
+
   "slides2": [
     {
-      "imageUrl": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F29%2Fsneekers.png&w=1920&q=100"
+      "imageUrl": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F29%2Fsneekers.png&w=1920&q=100",
+      "link": "/category/sneakers"
     },
     {
-      "imageUrl": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F32%2Fwatch.png&w=1920&q=100"
+      "imageUrl": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F32%2Fwatch.png&w=1920&q=100",
+      "link": "/category/watch"
     },
     {
-      "imageUrl": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F31%2Fsunglass.png&w=1920&q=100"
+      "imageUrl": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F31%2Fsunglass.png&w=1920&q=100",
+      "link": "/category/sunglass"
     },
     {
-      "imageUrl": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F30%2Fsports.png&w=1920&q=100"
+      "imageUrl": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F30%2Fsports.png&w=1920&q=100",
+      "link": "/category/sports"
     },
     {
-      "imageUrl": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F28%2Fmen.png&w=1920&q=100"
+      "imageUrl": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F28%2Fmen.png&w=1920&q=100",
+      "link": "/category/men"
     },
     {
-      "imageUrl": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F27%2Fkids.png&w=1920&q=100"
+      "imageUrl": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F27%2Fkids.png&w=1920&q=100",
+      "link": "/category/kids"
     },
     {
-      "imageUrl": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F26%2Fbags.png&w=1920&q=100"
+      "imageUrl": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F26%2Fbags.png&w=1920&q=100",
+      "link": "/category/bags"
     },
     {
-      "imageUrl": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F33%2Fwomen.png&w=1920&q=100"
+      "imageUrl": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F33%2Fwomen.png&w=1920&q=100",
+      "link": "/category/women"
     }
   ],
   "fimages": [
@@ -173,13 +156,13 @@
     },
     {
       "productName": "Zara Miss Chase",
-      "imageUrl": "https://chawkbazarlaravel.s3.ap-southeast-1.amazonaws.com/234/Chawkbazar1.png",
+      "imageUrl": "assets/images/category/women/1.webp",
       "newPrice": "$90.00",
       "oldPrice": "$100.00"
     },
     {
       "productName": "White Oxford Shirt",
-      "imageUrl": "https://chawkbazarlaravel.s3.ap-southeast-1.amazonaws.com/232/Casual-Wear-1-1.jpg",
+      "imageUrl": "assets/images/category/women/2.webp",
       "newPrice": "$10.00",
       "oldPrice": "$40.00"
     },
@@ -191,7 +174,7 @@
     },
     {
       "productName": "Roadster Women Round Neck",
-      "imageUrl": "https://chawkbazarlaravel.s3.ap-southeast-1.amazonaws.com/228/Chawkbazar22.png",
+      "imageUrl": "assets/images/category/women/3.webp",
       "newPrice": "$30.00",
       "oldPrice": "$50.00"
     },
@@ -209,13 +192,13 @@
     },
     {
       "productName": "Nike Pro Mesh Top with Leggins",
-      "imageUrl": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F223%2FCasual-Wear-4-1.jpg&w=1920&q=100",
+      "imageUrl": "assets/images/category/women/4.webp",
       "newPrice": "$30.00",
       "oldPrice": "$35.00"
     },
     {
       "productName": "Nike Comfy Vapor Maxpro",
-      "imageUrl": "https://chawkbazar.redq.io/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F321%2FFootwear-1.png&w=1920&q=100",
+      "imageUrl": "assets/images/category/men/1.webp",
       "newPrice": "$220.00",
       "oldPrice": "$250.00"
     },
@@ -297,13 +280,13 @@
     },
     {
       "productName": "Zara Miss Chase",
-      "imageUrl": "https://chawkbazarlaravel.s3.ap-southeast-1.amazonaws.com/234/Chawkbazar1.png",
+      "imageUrl": "assets/images/category/women/1.webp",
       "newPrice": "$90.00",
       "oldPrice": "$100.00"
     },
     {
       "productName": "White Oxford Shirt",
-      "imageUrl": "https://chawkbazarlaravel.s3.ap-southeast-1.amazonaws.com/232/Casual-Wear-1-1.jpg",
+      "imageUrl": "assets/images/category/women/2.webp",
       "newPrice": "$10.00",
       "oldPrice": "$40.00"
     },
@@ -315,7 +298,7 @@
     },
     {
       "productName": "Roadster Women Round Neck",
-      "imageUrl": "https://chawkbazarlaravel.s3.ap-southeast-1.amazonaws.com/228/Chawkbazar22.png",
+      "imageUrl": "assets/images/category/women/3.webp",
       "newPrice": "$30.00",
       "oldPrice": "$50.00"
     },
@@ -354,6 +337,48 @@
       "imageUrl": "/assets/images/products/sel-product/4.webp",
       "oldPrice": 650.0,
       "newPrice": 550.0
+    }
+  ],
+   "slides3": [
+    {
+      "src": "/assets/images/brands/fusion.png",
+      "brand":"fusion",
+      "link":"fusion"
+    },
+    {
+      "src": "/assets/images/brands/blaze-fashion.png",
+      "brand":"blaze-fashion",
+      "link":"roseban"
+    },
+    {
+      "src": "/assets/images/brands/club-shoes.png",
+      "brand":"club-shoes",
+      "link":"ab-shoes"
+    },
+    {
+      "src": "/assets/images/brands/elegance.png",
+      "brand":"elegance",
+      "link":"fania-fashion"
+    },
+    {
+      "src": "/assets/images/brands/fashadil.png",
+      "brand":"vint-shoes",
+      "link":"vint-shoes"
+    },
+    {
+      "src": "/assets/images/brands/hoppister.png",
+      "brand":"hipster",
+      "link":"hipster"
+    },
+    {
+      "src": "/assets/images/brands/hunter-shoes.png",
+      "brand":"ceseare",
+      "link":"ceseare"
+    },
+    {
+      "src": "/assets/images/brands/shovia.png",
+      "brand":"masteriod",
+      "link":"masteriod"
     }
   ]
 }

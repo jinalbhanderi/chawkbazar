@@ -6,6 +6,8 @@ import { MyAccountComponent } from './my-account/my-account.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from "../../../shared/shared.module";
 
 
 @NgModule({
@@ -13,11 +15,8 @@ import { ForgetPasswordComponent } from './forget-password/forget-password.compo
     MyAccountComponent,
     SignInComponent,
     SignUpComponent,
-    ForgetPasswordComponent
+    ForgetPasswordComponent,
   ],
-  imports: [
-    CommonModule,
-    UserRoutingModule
-  ]
+  imports: [CommonModule, UserRoutingModule, ReactiveFormsModule, SharedModule],
 })
-export class UserModule { }
+export class UserModule {}

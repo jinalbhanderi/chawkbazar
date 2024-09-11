@@ -90,23 +90,23 @@
                ltr:rounded-l-md rtl:rounded-r-md ltr:mr-4 ltr:lg:mr-6 ltr:xl:mr-0 rtl:ml-4 rtl:lg:ml-6 rtl:xl:ml-0
                xl:rounded-tr-md xl:rounded-br-md">
 
-        <p-carousel [value]="slides4" [numVisible]="1" [circular]="true" [autoplayInterval]="5000"
-          [showIndicators]="true" [showNavigators]="true">
+        <p-carousel [value]="items" [numVisible]="1" [circular]="true" [autoplayInterval]="5000" [showIndicators]="true"
+          [showNavigators]="true">
           <ng-template pTemplate="item" let-slide>
             <div>
-              <div class="bg-gray-300">
-                <img [src]="slide.src" [alt]="slide.title"
+              <div class="bg-gray-300" (click)="openPopup(slide)">
+                <img [src]="slide.imageUrl" [alt]="slide.productName"
                   class="w-full h-64 object-cover transition-transform duration-150 ease-linear transform group-hover:scale-105"
                   loading="lazy" style="height: 315px;" />
               </div>
-              <h2 class="mt-4 text-lg font-semibold text-gray-800">{{ slide.title }}</h2>
+              <h2 class="mt-4 text-lg font-semibold text-gray-800">{{ slide.productName }}</h2>
               <div
                 class="text-heading font-semibold text-sm sm:text-base mt-1.5 space-x-1 rtl:space-x-reverse sm:text-lg md:text-base 3xl:text-xl md:mt-2.5 2xl:mt-3">
-                <span class="inline-block">${{ slide.price }}</span><del
-                  class="font-normal text-gray-800 sm:text-base ltr:pl-1 rtl:pr-1">${{ slide.originalPrice }}</del>
+                <span class="inline-block">${{ slide.newPrice }}</span><del
+                  class="font-normal text-gray-800 sm:text-base ltr:pl-1 rtl:pr-1">${{ slide.oldPrice }}</del>
               </div>
             </div>
-            <div>
+            <div class="pt-4">
               <div class="flex justify-between items-center mb-2.5 md:mb-3 xl:mb-2.5 2xl:mb-4">
                 <div class="text-body text-xs md:text-sm leading-6 md:leading-7">Sold :&nbsp;<span
                     class="text-heading">0</span>
@@ -120,7 +120,6 @@
             </div>
           </ng-template>
         </p-carousel>
-
       </div>
 
     </div>
@@ -300,12 +299,14 @@
     <p-carousel [value]="slides3" [numVisible]="8" [circular]="true" [autoplayInterval]="5000" [showIndicators]="true"
       [showNavigators]="true">
       <ng-template pTemplate="item" let-slide>
-        <div class="">
-          <img [src]="slide.src" [alt]="slide.title" class="" loading="lazy" />
-          <div class="carousel-caption">
-            <h3>{{slide.title}}</h3>
+        <a [routerLink]="['/search']" [queryParams]="{ brand: slide.link }">
+          <div class="">
+            <img [src]="slide.src" [alt]="slide.title" class="" loading="lazy" />
+            <div class="caption text-center pt-2">
+              <h5>{{slide.brand}}</h5>
+            </div>
           </div>
-        </div>
+        </a>
       </ng-template>
     </p-carousel>
   </div>
@@ -595,31 +596,7 @@
       </svg>
     </button>
   </div>
-  <div
-    class="px-5 bg-linen sm:px-8 md:px-16 2xl:px-24 flex flex-col xl:flex-row justify-center xl:justify-between items-center rounded-lg bg-gray-200 py-10 md:py-14 lg:py-16">
-    <div class="lg:-mt-2 xl:-mt-0.5 text-left ltr:xl:text-left rtl:xl:text-right mb-7 md:mb-8 lg:mb-9 xl:mb-0">
-      <h3
-        class="text-lg md:text-xl lg:text-2xl 2xl:text-3xl xl:leading-10 font-bold text-heading sm:mb-0 md:mb-2.5 lg:mb-3 xl:mb-3.5">
-        Get Expert Tips In Your Inbox
-      </h3>
-      <p class="text-body text-xs md:text-sm leading-6 md:leading-7">
-        Subscribe to our newsletter and stay updated.
-      </p>
-    </div>
-    <form class="flex-shrink-0 w-full sm:w-96 md:w-[545px]" novalidate="">
-      <div class="flex flex-col sm:flex-row items-start justify-end">
-        <div class="w-full mr-2">
-          <input id="subscription_email" name="subscription_email" type="email" placeholder="Write your email here"
-            class="py-2 px-4 md:px-5 w-full appearance-none transition duration-150 ease-in-out border text-input text-xs lg:text-sm font-body placeholder-body min-h-12 transition duration-200 ease-in-out bg-white border-gray-300 focus:outline-none focus:border-heading h-11 md:h-12 px-4 lg:px-7 h-12 lg:h-14 text-center ltr:sm:text-left rtl:sm:text-right bg-white rounded-md"
-            autocomplete="off" spellcheck="false" aria-invalid="false" />
-        </div>
-        <button data-variant="flat"
-          class="text-[13px] md:text-sm leading-4 inline-flex items-center cursor-pointer transition ease-in-out duration-300 font-semibold font-body text-center justify-center border-0 border-transparent placeholder-white focus-visible:outline-none focus:outline-none rounded-md bg-heading text-white px-5 md:px-6 lg:px-8 md:py-3.5 lg:py-4 hover:text-white hover:bg-gray-600 hover:shadow-cart  sm:mt-0 w-full sm:w-auto ltr:sm:ml-2 rtl:sm:ml-2 md:h-full flex-shrink-0">
-          <span class="lg:py-0.5">Subscribe</span>
-        </button>
-      </div>
-    </form>
-  </div>
+  <app-news-latter containerClass="bg-gray-200"></app-news-latter>
 </div>
 <app-product-detail [isOpen]="showPopup" [title]="selectedProduct?.productName"
   [description]="selectedProduct?.description" [newPrice]="selectedProduct?.newPrice"

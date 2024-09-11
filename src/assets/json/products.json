@@ -174,8 +174,8 @@
     {
       "imageUrl": "assets/images/category/men/18.webp",
       "productName": "Tay Ben Aviator",
-      "newPrice": "$220.00",
-      "oldPrice": "$250.00"
+      "newPrice": "$22.00",
+      "oldPrice": "$25.00"
     },
     {
       "imageUrl": "assets/images/category/men/19.webp",
@@ -186,8 +186,8 @@
     {
       "imageUrl": "assets/images/category/men/20.webp",
       "productName": "Pike Green Thunder",
-      "newPrice": "$220.00",
-      "oldPrice": "$250.00"
+      "newPrice": "$2200.00", 
+      "oldPrice": "$2500.00"
     }
   ],
 

@@ -6,7 +6,7 @@
         [showNavigators]="true">
         <ng-template pTemplate="item" let-slide>
           <div class="">
-           <a  [routerLink]="slide.link"><img [src]="slide.src" [alt]="slide.title" class="" loading="lazy" /></a>
+            <a [routerLink]="slide.link"><img [src]="slide.src" [alt]="slide.title" class="" loading="lazy" /></a>
             <div class="carousel-caption">
               <h3>{{slide.title}}</h3>
             </div>
@@ -33,6 +33,58 @@
           Flash Sale
         </h3>
       </div>
+
+
+      <div class="relative mb-3 md:mb-3.5 w-full rounded-md overflow-hidden flex-shrink-0
+        ltr:rounded-l-md rtl:rounded-r-md ltr:mr-4 ltr:lg:mr-6 ltr:xl:mr-0 rtl:ml-4 rtl:lg:ml-6 rtl:xl:ml-0
+        xl:rounded-tr-md xl:rounded-br-md">
+
+        <p-carousel [value]="products" [numVisible]="1" [circular]="true" [showIndicators]="true"
+          [showNavigators]="true">
+          <ng-template pTemplate="item" let-slide>
+            <div class="flex items-stretch space-x-0">
+
+              <!-- Image Section -->
+              <div class="flex-shrink-0 bg-gray-300" style="width: 50%; height: 315px;">
+                <img [src]="slide.imageUrl" [alt]="slide.productName" (click)="openPopup(slide)"
+                  class="w-full h-full object-cover transition-transform duration-150 ease-linear transform group-hover:scale-105"
+                  loading="lazy" />
+              </div>
+
+              <!-- Text Section -->
+              <div class="flex-shrink-0 p-4"
+                style="width: 50%; height: 315px; background-color: rgb(249 249 249); box-sizing: border-box;">
+                <h2
+                  class="text-heading font-semibold truncate mb-1 text-sm sm:text-base md:text-sm lg:text-base xl:text-lg md:mb-1.5">
+                  {{slide.productName}}</h2>
+                <div
+                  class="text-heading font-semibold text-sm sm:text-base mt-1.5 space-x-1 rtl:space-x-reverse sm:text-lg md:text-base 3xl:text-xl md:mt-2.5 2xl:mt-3">
+                  <span class="inline-block">{{slide.newPrice}}</span><span> - </span><span
+                    class="inline-block">{{slide.oldPrice}}</span>
+                </div>
+
+              </div>
+
+            </div>
+          </ng-template>
+        </p-carousel>
+        <div class="flex justify-between items-center mb-2.5 md:mb-3 xl:mb-2.5 2xl:mb-4">
+          <div class="text-body text-xs md:text-sm leading-6 md:leading-7">
+            Sold :&nbsp;<span class="text-heading">0</span>
+          </div>
+          <div class="text-body text-xs md:text-sm leading-6 md:leading-7">
+            Available :&nbsp;<span class="text-heading">500</span>
+          </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="relative w-full h-2.5 lg:h-3 2xl:h-4 bg-gray-100 rounded-full overflow-hidden">
+          <div class="absolute h-full bg-heading" style="width: 0%;"></div>
+        </div>
+
+      </div>
+
+
     </div>
   </div>
   <div class="mb-12 md:mb-12 lg:mb-14 pb-0.5 xl:pb-1.5">
@@ -40,10 +92,10 @@
       [showNavigators]="true">
       <ng-template pTemplate="item" let-slide>
         <div class="" style="width: 573px;">
-         <a [routerLink]="slide.link">
+          <a [routerLink]="slide.link">
 
-           <img [src]="slide.src" [alt]="slide.title" class="" loading="lazy" />
-         </a>
+            <img [src]="slide.src" [alt]="slide.title" class="" loading="lazy" />
+          </a>
           <div class="carousel-caption">
             <h3>{{slide.title}}</h3>
           </div>
@@ -53,7 +105,38 @@
     </p-carousel>
   </div>
 
+<div class="mb-12 md:mb-14 xl:mb-16">
+  <div class="flex items-center justify-between -mt-2 lg:-mt-2.5 pb-0.5 mb-4 md:mb-5 lg:mb-6 2xl:mb-7 3xl:mb-8">
+    <h3 class="text-heading text-lg md:text-xl lg:text-2xl 2xl:text-3xl xl:leading-10 font-bold">Shop By Category</h3>
+  </div>
 
+  <p-carousel [value]="slides1" [numVisible]="8" [numScroll]="5" [circular]="true" [showIndicators]="true"
+    [showNavigators]="true">
+    <ng-template pTemplate="item" let-slide>
+      <div class="">
+        <a [routerLink]="['/category', slide.link]" class="image-link">
+          <div class="image-container">
+            <img [src]="slide.src" [alt]="slide.title" class="carousel-image" loading="lazy" />
+            <div class="icon-overlay">
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="icon"
+                height="2em" width="2em" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z">
+                </path>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <div class="caption">
+          <h5>{{slide.title}}</h5>
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
+
+
+
+</div>
 
   <div class="mb-9 md:mb-10 xl:mb-12">
     <div class="flex items-center justify-between -mt-2 pb-0.5 mb-4 md:mb-5 lg:mb-6 2xl:mb-7 3xl:mb-8">
@@ -64,9 +147,9 @@
       class="grid gap-x-3 md:gap-x-5 xl:gap-x-7 gap-y-3 xl:gap-y-5 2xl:gap-y-8 bg-white grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-5">
       <div *ngFor="let product of products"
         class="group box-border overflow-hidden flex rounded-md cursor-pointer ltr:pr-0 rtl:pl-0 pb-2 lg:pb-3 flex-col items-start transition duration-200 ease-in-out transform hover:-translate-y-1 md:hover:-translate-y-1.5 hover:shadow-product bg-white"
-        role="button" [title]="product.name">
+        role="button" [title]="product.productName">
         <div class="flex mb-3 md:mb-3.5">
-          <img [src]="product.imageUrl" alt="{{ product.name }}" (click)="openPopup(product)"
+          <img [src]="product.imageUrl" alt="{{ product.productName }}" (click)="openPopup(product)"
             class="bg-gray-300 object-cover rounded-s-md w-full transition duration-200 ease-in rounded-md group-hover:rounded-b-none">
         </div>
         <div class="w-full overflow-hidden p-2 md:px-2.5 xl:px-4">
@@ -100,13 +183,13 @@
       class="grid gap-x-3 md:gap-x-5 xl:gap-x-7 gap-y-3 xl:gap-y-5 2xl:gap-y-8 bg-white grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-5">
       <div *ngFor="let product of arrivalsProducts"
         class="group box-border overflow-hidden flex rounded-md cursor-pointer ltr:pr-0 rtl:pl-0 pb-2 lg:pb-3 flex-col items-start transition duration-200 ease-in-out transform hover:-translate-y-1 md:hover:-translate-y-1.5 hover:shadow-product bg-white"
-        role="button" [title]="product.name">
+        role="button" [title]="product.productName">
         <div class="flex mb-3 md:mb-3.5">
-          <img [src]="product.imageUrl" alt="{{ product.name }}"(click)="openPopup(product)"
+          <img [src]="product.imageUrl" alt="{{ product.productName }}" (click)="openPopup(product)"
             class="bg-gray-300 object-cover rounded-s-md w-full transition duration-200 ease-in rounded-md group-hover:rounded-b-none">
         </div>
         <div class="w-full overflow-hidden p-2 md:px-2.5 xl:px-4">
-          <h2 class="truncate mb-1 text-sm md:text-base font-semibold text-heading">{{ product.name }}</h2>
+          <h2 class="truncate mb-1 text-sm md:text-base font-semibold text-heading">{{ product.productName }}</h2>
           <p class="text-body text-xs lg:text-sm leading-normal xl:leading-relaxed max-w-[250px] truncate">{{
             product.description }}</p>
           <div
@@ -128,12 +211,16 @@
     <p-carousel [value]="slides3" [numVisible]="7" [circular]="true" [autoplayInterval]="5000" [showIndicators]="true"
       [showNavigators]="true">
       <ng-template pTemplate="item" let-slide>
-        <div class="">
-          <img [src]="slide.src" [alt]="slide.title" class="" loading="lazy" />
-          <div class="carousel-caption">
-            <h3>{{slide.title}}</h3>
+        <a [routerLink]="['/search']"
+        [queryParams]="{ brand: slide.link }">
+          <div class="">
+            <img [src]="slide.src" [alt]="slide.title" class="" loading="lazy" />
           </div>
-        </div>
+          <div class="caption text-center p-2">
+            <h5>{{slide.brand}}</h5>
+          </div>
+
+        </a>
       </ng-template>
     </p-carousel>
   </div>
@@ -411,31 +498,7 @@
       </svg>
     </button>
   </div>
-  <div
-    class="px-5 bg-linen sm:px-8 md:px-16 2xl:px-24 flex flex-col xl:flex-row justify-center xl:justify-between items-center rounded-lg bg-gray-200 py-10 md:py-14 lg:py-16">
-    <div class="lg:-mt-2 xl:-mt-0.5 text-left ltr:xl:text-left rtl:xl:text-right mb-7 md:mb-8 lg:mb-9 xl:mb-0">
-      <h3
-        class="text-lg md:text-xl lg:text-2xl 2xl:text-3xl xl:leading-10 font-bold text-heading sm:mb-0 md:mb-2.5 lg:mb-3 xl:mb-3.5">
-        Get Expert Tips In Your Inbox
-      </h3>
-      <p class="text-body text-xs md:text-sm leading-6 md:leading-7">
-        Subscribe to our newsletter and stay updated.
-      </p>
-    </div>
-    <form class="flex-shrink-0 w-full sm:w-96 md:w-[545px]" novalidate="">
-      <div class="flex flex-col sm:flex-row items-start justify-end">
-        <div class="w-full mr-2">
-          <input id="subscription_email" name="subscription_email" type="email" placeholder="Write your email here"
-            class="py-2 px-4 md:px-5 w-full appearance-none transition duration-150 ease-in-out border text-input text-xs lg:text-sm font-body placeholder-body min-h-12 transition duration-200 ease-in-out bg-white border-gray-300 focus:outline-none focus:border-heading h-11 md:h-12 px-4 lg:px-7 h-12 lg:h-14 text-center ltr:sm:text-left rtl:sm:text-right bg-white rounded-md"
-            autocomplete="off" spellcheck="false" aria-invalid="false" />
-        </div>
-        <button data-variant="flat"
-          class="text-[13px] md:text-sm leading-4 inline-flex items-center cursor-pointer transition ease-in-out duration-300 font-semibold font-body text-center justify-center border-0 border-transparent placeholder-white focus-visible:outline-none focus:outline-none rounded-md bg-heading text-white px-5 md:px-6 lg:px-8 md:py-3.5 lg:py-4 hover:text-white hover:bg-gray-600 hover:shadow-cart  sm:mt-0 w-full sm:w-auto ltr:sm:ml-2 rtl:sm:ml-2 md:h-full flex-shrink-0">
-          <span class="lg:py-0.5">Subscribe</span>
-        </button>
-      </div>
-    </form>
-  </div>
+  <app-news-latter containerClass="bg-linen"></app-news-latter>
 </div>
 <div class="Toastify"></div>
 <app-product-detail [isOpen]="showPopup" [title]="selectedProduct?.productName"

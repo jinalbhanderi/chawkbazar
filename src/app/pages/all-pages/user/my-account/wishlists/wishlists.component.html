@@ -1,0 +1,51 @@
+<!-- wishlist.component.html -->
+<div class="flex w-full flex-col h-full">
+  <div class="mb-8 flex items-center">
+    <h2 class="text-lg md:text-xl xl:text-2xl font-bold text-heading">My Wishlists</h2>
+  </div>
+  <div class="h-full overflow-x-hidden overflow-y-scroll relative">
+    <div class="divide-y divide-solid divide-[#E6E6E6] space-y-8 group">
+      <div *ngFor="let item of wishlistItems" class="flex gap-6 first:pt-0 pt-8">
+        <div
+          class="w-32 h-32 rounded-lg relative overflow-hidden shrink-0 hover:opacity-75 transition-opacity duration-300">
+          <a class="h-full w-full block" [href]="item.productLink">
+            <img alt="text" loading="lazy" width="128" height="128" decoding="async" data-nimg="1"
+              class="object-cover block" [src]="item.imageUrl" style="color: transparent;">
+          </a>
+        </div>
+        <div class="w-full flex justify-between items-center md:flex-nowrap flex-wrap gap-3 md:gap-0">
+          <div class="flex-1">
+            <h2
+              class="md:text-2xl text-lg mb-2 font-semibold text-heading tracking-[-0.18px] hover:text-opacity-80 transition-colors duration-300">
+              <a [href]="item.productLink">{{ item.productName }}</a>
+            </h2>
+            <div class="mb-4 text-xl flex items-center font-bold gap-2 text-black tracking-[-0.24px] leading-none">
+              <span>{{ item.price }}</span>
+              <ng-container *ngIf="item.oldPrice">
+                <del class="text-base self-end font-normal opacity-30">{{ item.oldPrice }}</del>
+              </ng-container>
+            </div>
+            <a class="text-[#666] text-sm tracking-[-0.14px] border-b border-current leading-none hover:text-opacity-80 transition-colors duration-300"
+              [href]="item.productLink">See Details</a>
+          </div>
+          <div class="flex items-center gap-8 pr-2 w-full md:w-auto">
+            <button data-variant="text"
+              class="text-[13px] leading-4 items-center cursor-pointer ease-in-out font-body text-center justify-center border-0 border-transparent
+               placeholder-white focus-visible:outline-none focus:outline-none focus:bg-opacity-80 rounded-lg bg-black text-white px-[1.375rem]
+                py-[0.6875rem] inline-flex md:text-base font-semibold hover:bg-opacity-80 transition-colors duration-300">
+              Add To Cart
+            </button>
+            <button
+              class="text-2xl p-2 hover:bg-red-600 hover:text-white transition-colors duration-300 cursor-pointer text-[#929292] rounded-full">
+              <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19.281 18.22a.75.75 0 11-1.061 1.061L12 13.061l-6.219 6.22A.75.75 0 114.72 18.22L10.94 12 4.72 5.781A.75.75 0 115.78 4.72l6.22 6.22 6.219-6.22A.75.75 0 1119.28 5.78l-6.22 6.22 6.22 6.219z"
+                  fill="currentColor"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

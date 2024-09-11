@@ -10,6 +10,7 @@ export class StandardComponent {
   products: any[] = [];
   arrivalsProducts: any[] = [];
   slides: any[] = [];
+  slides1: any[] = [];
   slides2: any[] = [];
   slides3: any[] = [];
   collectionItems: any[] = [];
@@ -27,6 +28,7 @@ export class StandardComponent {
       this.slides = data.slides;
       this.slides2 = data.slides2;
       this.slides3 = data.slides3;
+      this.slides1 = data.slides1;
       this.collectionItems = data.collectionItems;
       this.featureItems = data.featureItems;
     });

@@ -17,7 +17,7 @@ export class AllCatComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private productDataService: CategoriesService
+    private productDataService: CategoriesService,
   ) {}
 
   ngOnInit(): void {
@@ -28,52 +28,61 @@ export class AllCatComponent implements OnInit {
           : [];
         const brands = params['brand'] ? params['brand'].split(',') : [];
         const sizes = params['size'] ? params['size'].split(',') : [];
+        const priceRanges = params['price'] ? params['price'].split(',') : [];
 
         this.productDataService.getProducts().subscribe({
           next: (productData) => {
             let filteredProducts: Product[] = [];
 
-            const categoryProducts = categories.flatMap(
-              (category: string | number) => productData[category] || []
-            );
-            const brandProducts = brands.flatMap((brand: string | undefined) =>
-              Object.values(productData)
-                .flat()
-                .filter((product) => product.brand === brand)
-            );
-            const sizeProducts = sizes.flatMap((size: string | undefined) =>
-              Object.values(productData)
-                .flat()
-                .filter((product) => product.variations === size)
-            );
-
-            // Combine filters: category, brand, size
-            if (categories.length && brands.length && sizes.length) {
-              filteredProducts = categoryProducts.filter(
-                (product: any) =>
-                  brandProducts.includes(product) &&
-                  sizeProducts.includes(product)
-              );
-            } else if (categories.length && brands.length) {
-              filteredProducts = categoryProducts.filter((product: any) =>
-                brandProducts.includes(product)
-              );
-            } else if (categories.length && sizes.length) {
-              filteredProducts = categoryProducts.filter((product: any) =>
-                sizeProducts.includes(product)
-              );
-            } else if (brands.length && sizes.length) {
-              filteredProducts = brandProducts.filter((product: any) =>
-                sizeProducts.includes(product)
-              );
-            } else if (categories.length) {
-              filteredProducts = categoryProducts;
-            } else if (brands.length) {
-              filteredProducts = brandProducts;
-            } else if (sizes.length) {
-              filteredProducts = sizeProducts;
-            } else {
+            // Check if any filters are applied
+            if (
+              categories.length === 0 &&
+              brands.length === 0 &&
+              sizes.length === 0 &&
+              priceRanges.length === 0
+            ) {
+              // No filters applied, show all products
               filteredProducts = Object.values(productData).flat();
+            } else {
+              // Filter products based on categories, brands, sizes, and prices
+              const categoryProducts = categories.flatMap(
+                (category: string) => productData[category] || []
+              );
+              const brandProducts = brands.flatMap((brand: string) =>
+                Object.values(productData)
+                  .flat()
+                  .filter((product) => product.brand === brand)
+              );
+              const sizeProducts = sizes.flatMap((size: string) =>
+                Object.values(productData)
+                  .flat()
+                  .filter((product) => product.variations === size)
+              );
+              const priceProducts = priceRanges.flatMap((priceRange: string) =>
+                Object.values(productData)
+                  .flat()
+                  .filter((product) =>
+                    product.newPrice
+                      ? this.isPriceInRange(
+                          this.parsePrice(product.newPrice),
+                          priceRange
+                        )
+                      : false
+                  )
+              );
+
+              // Combine filters: category, brand, size, price
+              filteredProducts = Object.values(productData)
+                .flat()
+                .filter(
+                  (product: Product) =>
+                    (categories.length === 0 ||
+                      categoryProducts.includes(product)) &&
+                    (brands.length === 0 || brandProducts.includes(product)) &&
+                    (sizes.length === 0 || sizeProducts.includes(product)) &&
+                    (priceRanges.length === 0 ||
+                      priceProducts.includes(product))
+                );
             }
 
             this.products = filteredProducts;
@@ -108,12 +117,29 @@ export class AllCatComponent implements OnInit {
     return parseFloat(price.replace('$', '').replace(',', ''));
   }
 
+  isPriceInRange(price: number, range: string): boolean {
+    if (range === '1000+') {
+      return price >= 1000;
+    }
+    const [min, max] = range.split('-').map(Number);
+    if (!isNaN(min) && isNaN(max)) {
+      return price >= min;
+    }
+    if (isNaN(min) && !isNaN(max)) {
+      return price <= max;
+    }
+    if (!isNaN(min) && !isNaN(max)) {
+      return price >= min && price <= max;
+    }
+    return false;
+  }
+
   closePopup(): void {
     this.showPopup = false;
     this.selectedProduct = null;
   }
 
-  openPopup(product: any): void {
+  openPopup(product: Product): void {
     this.selectedProduct = product;
     this.showPopup = true;
   }

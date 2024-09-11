@@ -1,70 +1,70 @@
 {
   "products": [
     {
-      "name": "Nike Black",
+      "productName": "Nike Black",
       "description": "Casual wear (casual attire or clothing) may be a Western code that’s relaxed, occasional, spontaneous and fitted to everyday use.",
       "newPrice": "$11.00",
       "oldPrice": "$15.00",
       "imageUrl": "/assets/images/products/p-1.png"
     },
     {
-      "name": "Hermes Carlton London",
+      "productName": "Hermes Carlton London",
       "description": "Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem",
       "newPrice": "$12.30",
       "oldPrice": "$16.38",
       "imageUrl": "/assets/images/products/p-2.png"
     },
     {
-      "name": "Hermes Carlton London",
+      "productName": "Hermes Carlton London",
       "description": "Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem",
       "newPrice": "$12.30",
       "oldPrice": "$16.38",
       "imageUrl": "/assets/images/products/p-3.png"
     },
     {
-      "name": "Hermes Carlton London",
+      "productName": "Hermes Carlton London",
       "description": "Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem",
       "newPrice": "$12.30",
       "oldPrice": "$16.38",
       "imageUrl": "/assets/images/products/p-4.png"
     },
     {
-      "name": "Hermes Carlton London",
+      "productName": "Hermes Carlton London",
       "description": "Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem",
       "newPrice": "$12.30",
       "oldPrice": "$16.38",
       "imageUrl": "/assets/images/products/p-5.png"
     },
     {
-      "name": "Hermes Carlton London",
+      "productName": "Hermes Carlton London",
       "description": "Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem",
       "newPrice": "$12.30",
       "oldPrice": "$16.38",
       "imageUrl": "/assets/images/products/p-6.png"
     },
     {
-      "name": "Hermes Carlton London",
+      "productName": "Hermes Carlton London",
       "description": "Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem",
       "newPrice": "$12.30",
       "oldPrice": "$16.38",
       "imageUrl": "/assets/images/products/p-7.png"
     },
     {
-      "name": "Hermes Carlton London",
+      "productName": "Hermes Carlton London",
       "description": "Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem",
       "newPrice": "$12.30",
       "oldPrice": "$16.38",
       "imageUrl": "/assets/images/products/p-8.png"
     },
     {
-      "name": "Hermes Carlton London",
+      "productName": "Hermes Carlton London",
       "description": "Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem",
       "newPrice": "$12.30",
       "oldPrice": "$16.38",
       "imageUrl": "/assets/images/products/p-9.png"
     },
     {
-      "name": "Hermes Carlton London",
+      "productName": "Hermes Carlton London",
       "description": "Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem",
       "newPrice": "$12.30",
       "oldPrice": "$16.38",
@@ -73,70 +73,70 @@
   ],
   "arrivalsProducts": [
     {
-      "name": "Nike Black",
+      "productName": "Nike Black",
       "description": "Casual wear (casual attire or clothing) may be a Western code that’s relaxed, occasional, spontaneous and fitted to everyday use.",
       "newPrice": "$11.00",
       "oldPrice": "$15.00",
       "imageUrl": "/assets/images/products/p-1.png"
     },
     {
-      "name": "Hermes Carlton London",
+      "productName": "Hermes Carlton London",
       "description": "Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem",
       "newPrice": "$12.30",
       "oldPrice": "$16.38",
       "imageUrl": "/assets/images/products/p-2.png"
     },
     {
-      "name": "Hermes Carlton London",
+      "productName": "Hermes Carlton London",
       "description": "Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem",
       "newPrice": "$12.30",
       "oldPrice": "$16.38",
       "imageUrl": "/assets/images/products/p-3.png"
     },
     {
-      "name": "Hermes Carlton London",
+      "productName": "Hermes Carlton London",
       "description": "Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem",
       "newPrice": "$12.30",
       "oldPrice": "$16.38",
       "imageUrl": "/assets/images/products/p-4.png"
     },
     {
-      "name": "Hermes Carlton London",
+      "productName": "Hermes Carlton London",
       "description": "Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem",
       "newPrice": "$12.30",
       "oldPrice": "$16.38",
       "imageUrl": "/assets/images/products/p-5.png"
     },
     {
-      "name": "Hermes Carlton London",
+      "productName": "Hermes Carlton London",
       "description": "Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem",
       "newPrice": "$12.30",
       "oldPrice": "$16.38",
       "imageUrl": "/assets/images/products/p-6.png"
     },
     {
-      "name": "Hermes Carlton London",
+      "productName": "Hermes Carlton London",
       "description": "Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem",
       "newPrice": "$12.30",
       "oldPrice": "$16.38",
       "imageUrl": "/assets/images/products/p-7.png"
     },
     {
-      "name": "Hermes Carlton London",
+      "productName": "Hermes Carlton London",
       "description": "Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem",
       "newPrice": "$12.30",
       "oldPrice": "$16.38",
       "imageUrl": "/assets/images/products/p-8.png"
     },
     {
-      "name": "Hermes Carlton London",
+      "productName": "Hermes Carlton London",
       "description": "Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem",
       "newPrice": "$12.30",
       "oldPrice": "$16.38",
       "imageUrl": "/assets/images/products/p-9.png"
     },
     {
-      "name": "Hermes Carlton London",
+      "productName": "Hermes Carlton London",
       "description": "Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem",
       "newPrice": "$12.30",
       "oldPrice": "$16.38",
@@ -171,32 +171,8 @@
       "link": "collections/kids-collection"
     }
   ],
-  "slides3": [
-    {
-      "src": "/assets/images/brands/fusion.png"
-    },
-    {
-      "src": "/assets/images/brands/blaze-fashion.png"
-    },
-    {
-      "src": "/assets/images/brands/club-shoes.png"
-    },
-    {
-      "src": "/assets/images/brands/elegance.png"
-    },
-    {
-      "src": "/assets/images/brands/fashadil.png"
-    },
-    {
-      "src": "/assets/images/brands/hoppister.png"
-    },
-    {
-      "src": "/assets/images/brands/hunter-shoes.png"
-    },
-    {
-      "src": "/assets/images/brands/shovia.png"
-    }
-  ],
+ 
+
   "collectionItems": [
     {
       "title": "New Spring Knits",
@@ -237,6 +213,48 @@
       "title": "1000+ products priced at cost",
       "description": "If you don’t make your membership fee in savings, we’ll refund the difference",
       "image": "/assets/images/feature/product.svg"
+    }
+  ],
+  "slides1": [
+    {
+      "src": "assets/images/category/woman.jpg",
+      "productName": "Women",
+      "link": "women"
+    },
+    {
+      "src": "assets/images/category/watch.jpg",
+      "productName": "Watch",
+      "link": "watch"
+    },
+    {
+      "src": "assets/images/category/sunglass.jpg",
+      "productName": "Sunglass",
+      "link": "sunglass"
+    },
+    {
+      "src": "assets/images/category/sports.jpg",
+      "productName": "Sports",
+      "link": "sports"
+    },
+    {
+      "src": "assets/images/category/sneakers.jpg",
+      "productName": "Sneekers",
+      "link": "sneekers"
+    },
+    {
+      "src": "assets/images/category/man.jpg",
+      "productName": "Men",
+      "link": "men"
+    },
+    {
+      "src": "assets/images/category/kid.jpg",
+      "productName": "Kids",
+      "link": "kids"
+    },
+    {
+      "src": "assets/images/category/bags.jpg",
+      "productName": "Bags",
+      "link": "bags"
     }
   ]
 }

@@ -13,6 +13,7 @@ import { RefinedComponent } from './refined/refined.component';
 import { StandardComponent } from './standard/standard.component';
 import { TrendyComponent } from './trendy/trendy.component';
 import { VintageComponent } from './vintage/vintage.component';
+import { SharedModule } from "../../shared/shared.module";
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { VintageComponent } from './vintage/vintage.component';
     FashionComponent,
     ProductDetailComponent,
   ],
-  imports: [CommonModule, DemosRoutingModule, CarouselModule],
+  imports: [CommonModule, DemosRoutingModule, CarouselModule, SharedModule],
   exports: [ProductDetailComponent],
 })
 export class DemosModule {}

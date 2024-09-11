@@ -1,102 +1,130 @@
-<div id="__next">
-  <div class="relative flex justify-center w-full py-5 md:py-8">
+<main class="relative flex-grow" style="min-height: -webkit-fill-available;">
+  <div class="flex justify-center p-6 md:p-10 2xl:p-8 relative bg-no-repeat bg-center bg-cover"
+    style="background-image: url(&quot;/assets/images/page-header.jpg&quot;);">
+    <div
+      class="absolute top-0 ltr:left-0 rtl:right-0 bg-black w-full h-full opacity-50 transition-opacity duration-500 group-hover:opacity-80">
+    </div>
+    <div class="w-full flex items-center justify-center relative z-10 py-10 md:py-14 lg:py-20 xl:py-24 2xl:py-32">
+      <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-white text-center"><span
+          class="font-satisfy block font-normal mb-3">explore</span>My Account</h2>
+    </div>
+  </div>
+  <div class="mx-auto max-w-[1920px] md:px-8 2xl:px-16">
+    <div class="flex w-full py-16 2xl:py-20 md:flex-row relative">
+      <div class="flex flex-col w-full 2xl:flex-row 2xl:gap-32">
+        <div class="2xl:hidden">
+          <div class="relative w-full font-body"><button
+              class="relative w-full p-4 md:p-5 ltr:text-left rtl:text-right rounded focus:outline-none cursor-pointer border border-gray-300 bg-gray-200 flex items-center"
+              id="headlessui-listbox-button-:rt:" type="button" aria-haspopup="listbox" aria-expanded="false"
+              data-headlessui-state=""><svg width="1em" height="1em" viewBox="0 0 16 17" fill="none"
+                xmlns="http://www.w3.org/2000/svg" class="text-lg md:text-xl">
+                <path
+                  d="M15.096 7.108L8.846 1.21a1.25 1.25 0 00-1.69-.009l-.01.009L.905 7.108a1.25 1.25 0 00-.404.92v7.223a1.25 1.25 0 001.25 1.25H5.5a1.25 1.25 0 001.25-1.25V11.5h2.5v3.75a1.25 1.25 0 001.25 1.25h3.75a1.25 1.25 0 001.25-1.25V8.028a1.25 1.25 0 00-.404-.92zm-.846 8.143H10.5V11.5a1.25 1.25 0 00-1.25-1.25h-2.5A1.25 1.25 0 005.5 11.5v3.75H1.75V8.028l.009-.008L8 2.126l6.242 5.893.009.007-.001 7.225z"
+                  fill="currentColor"></path>
+              </svg><span
+                class="flex truncate items-center text-sm md:text-[15px] ltr:pl-2.5 rtl:pr-2.5 relative text-heading font-semibold">Dashboard</span><span
+                class="absolute inset-y-0 ltr:right-4 ltr:md:right-5 rtl:left-4 rtl:md:left-5 flex items-center pointer-events-none"><svg
+                  stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512"
+                  class="w-3 md:w-3.5 h-3 md:h-3.5 text-base text-opacity-70" aria-hidden="true" height="1em"
+                  width="1em" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z">
+                  </path>
+                </svg></span></button></div>
+        </div>
+        <div class="flex-shrink-0 hidden pb-2 2xl:block 2xl:pb-0 w-[16.75rem] sticky top-0 left-0">
+          <div class="relative h-full">
+            <nav class="flex flex-col justify-between h-full">
+              <div class="space-y-2">
+                <a class="text-base font-normal flex items-center py-[0.8125rem] rounded-lg px-4 gap-3"
+                  routerLinkActive="bg-black text-white font-semibold" routerLink="/my-account/dashboard"><svg
+                    width="1em" height="1em" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="text-lg md:text-xl">
+                    <path
+                      d="M15.096 7.108L8.846 1.21a1.25 1.25 0 00-1.69-.009l-.01.009L.905 7.108a1.25 1.25 0 00-.404.92v7.223a1.25 1.25 0 001.25 1.25H5.5a1.25 1.25 0 001.25-1.25V11.5h2.5v3.75a1.25 1.25 0 001.25 1.25h3.75a1.25 1.25 0 001.25-1.25V8.028a1.25 1.25 0 00-.404-.92zm-.846 8.143H10.5V11.5a1.25 1.25 0 00-1.25-1.25h-2.5A1.25 1.25 0 005.5 11.5v3.75H1.75V8.028l.009-.008L8 2.126l6.242 5.893.009.007-.001 7.225z"
+                      fill="currentColor"></path>
+                  </svg>
+                  <span class="leading-none">Dashboard</span>
+                </a>
 
-    <div class="py-16 lg:py-24">
-      <div
-        class="w-full px-5 py-5 mx-auto overflow-hidden bg-white border border-gray-300 rounded-lg sm:w-96 md:w-450px sm:px-8">
-        <div class="text-center mb-6 pt-2.5">
-          <div>
-            <a class="inline-flex focus:outline-none shrink-0" href="/"><img alt="ChawkBazar" loading="eager" width="95"
-                height="30" decoding="async" data-nimg="1" sizes="(max-width: 768px) 100vw"
-                src="/assets/images/logo.svg"
-                style="color: transparent" /></a>
-          </div>
-          <p class="mt-2 mb-8 text-sm md:text-base text-body sm:mb-10">
-            Login with your email &amp; password
-          </p>
-        </div>
-        <form class="flex flex-col justify-center" novalidate="">
-          <div class="flex flex-col space-y-3.5">
-            <div class="block">
-              <label for="email"
-                class="block text-gray-600 font-semibold text-sm leading-none mb-3 cursor-pointer">Email *</label><input
-                id="email" name="email" type="email" placeholder=""
-                class="py-2 px-4 md:px-5 w-full appearance-none border text-input text-xs md:text-[13px] lg:text-sm font-body rounded-md placeholder-body min-h-12 transition duration-200 ease-in-out bg-white border-gray-300 focus:outline-none focus:border-heading h-11 md:h-12"
-                autocomplete="off" spellcheck="false" aria-invalid="false" />
-            </div>
-            <div class="block">
-              <label for="password"
-                class="block text-gray-600 font-semibold text-sm leading-none mb-3 cursor-pointer">Password*</label>
-              <div class="relative">
-                <input id="password" name="password" type="password"
-                  class="py-2 px-4 md:px-5 w-full appearance-none transition duration-150 ease-in-out border border-gray-500 text-input text-xs lg:text-sm font-body rounded-md placeholder-gray-600 transition duration-200 ease-in-out bg-white border border-gray-100 focus:outline-none focus:border-heading h-11 md:h-12"
-                  autocomplete="off" autocapitalize="off" spellcheck="false" /><label for="password"
-                  class="absolute ltr:right-4 rtl:left-4 top-5 -mt-2 text-gray-500 cursor-pointer"><svg
-                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                    class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                <a class="text-base font-normal flex items-center py-[0.8125rem] rounded-lg px-4 gap-3 text-heading"
+                  routerLinkActive=" bg-black text-white font-semibold" routerLink="/my-account/contact-number"><svg
+                    width="1em" height="1em" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                    class="text-lg md:text-xl">
+                    <path
+                      d="M7 7.886c-4.207 0-6.523 1.99-6.523 5.603 0 .282.228.511.51.511h12.025a.51.51 0 00.51-.51c0-3.614-2.316-5.604-6.522-5.604zm-5.483 5.092C1.718 10.277 3.56 8.908 7 8.908c3.44 0 5.281 1.369 5.482 4.07H1.518zM7 0C5.067 0 3.61 1.486 3.61 3.457c0 2.029 1.52 3.68 3.39 3.68 1.868 0 3.389-1.651 3.389-3.68C10.389 1.487 8.932 0 6.999 0zm0 6.114c-1.306 0-2.368-1.192-2.368-2.657 0-1.41.996-2.435 2.368-2.435 1.35 0 2.367 1.047 2.367 2.435 0 1.465-1.062 2.657-2.367 2.657z">
                     </path>
-                  </svg></label>
+                  </svg><span class="leading-none">Profile</span></a>
+                <a class="text-base font-normal flex items-center py-[0.8125rem] rounded-lg px-4 gap-3 text-heading"
+                  routerLinkActive=" bg-black text-white font-semibold" routerLink="/my-account/orders"><svg width="1em"
+                    height="1em" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="text-lg md:text-xl">
+                    <path
+                      d="M17.355 4.6a.626.626 0 00-.48-.225H4.272L3.89 2.277A1.25 1.25 0 002.66 1.25H1.25a.625.625 0 000 1.25h1.406l1.997 10.96c.059.325.203.629.417.88a2.188 2.188 0 103.468.66h3.549a2.187 2.187 0 101.976-1.25H6.497a.625.625 0 01-.615-.513l-.248-1.362h9.063a1.875 1.875 0 001.844-1.54l.95-5.223a.624.624 0 00-.137-.513zM7.5 15.937a.937.937 0 11-1.874 0 .937.937 0 011.874 0zm7.5 0a.937.937 0 11-1.875 0 .937.937 0 011.875 0zm.313-5.826a.625.625 0 01-.618.513H5.408l-.909-5h11.627l-.814 4.487z"
+                      fill="currentColor"></path>
+                  </svg><span class="leading-none">Orders</span></a><a
+                  class="text-base font-normal flex items-center py-[0.8125rem] rounded-lg px-4 gap-3 text-heading"
+                  routerLinkActive=" bg-black text-white font-semibold" routerLink="/my-account/downloads"><svg
+                    width="1em" height="1em" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="text-lg md:text-xl">
+                    <path
+                      d="M17.96 12.063a.625.625 0 00-.626.624v2.135a1.897 1.897 0 01-1.897 1.897H4.562a1.897 1.897 0 01-1.896-1.897v-2.134a.625.625 0 10-1.25 0v2.134a3.15 3.15 0 003.146 3.147h10.875a3.15 3.15 0 003.147-3.147v-2.134a.625.625 0 00-.625-.626z"
+                      fill="currentColor"></path>
+                    <path
+                      d="M9.556 13.887a.624.624 0 00.887 0L14 10.331a.625.625 0 00-.875-.884l-2.5 2.5v-9.29a.625.625 0 00-1.25 0v9.28l-2.5-2.5a.625.625 0 10-.885.885l3.566 3.566z"
+                      fill="currentColor"></path>
+                  </svg><span class="leading-none">Downloads</span></a><a
+                  class="text-base font-normal flex items-center py-[0.8125rem] rounded-lg px-4 gap-3 text-heading"
+                  routerLinkActive=" bg-black text-white font-semibold" routerLink="/my-account/wishlists"><svg
+                    width="1em" height="1em" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="text-lg md:text-xl">
+                    <path
+                      d="M14.375 2.5h-8.75a1.25 1.25 0 00-1.25 1.25V17.5a.625.625 0 00.956.53L10 15.112l4.67 2.918a.625.625 0 00.955-.53V3.75a1.25 1.25 0 00-1.25-1.25zm0 13.873l-4.044-2.528a.625.625 0 00-.663 0l-4.043 2.528V3.75h8.75v12.623z"
+                      fill="currentColor"></path>
+                  </svg><span class="leading-none">Wishlist</span></a><a
+                  class="text-base font-normal flex items-center py-[0.8125rem] rounded-lg px-4 gap-3 text-heading"
+                  routerLinkActive=" bg-black text-white font-semibold" routerLink="/my-account/cards"><svg width="1em"
+                    height="1em" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="text-lg md:text-xl">
+                    <path
+                      d="M17.5 3.75h-15A1.25 1.25 0 001.25 5v10a1.25 1.25 0 001.25 1.25h15A1.25 1.25 0 0018.75 15V5a1.25 1.25 0 00-1.25-1.25zm0 1.25v1.875h-15V5h15zm0 10h-15V8.125h15V15zm-1.25-1.875a.624.624 0 01-.625.625h-2.5a.624.624 0 110-1.25h2.5a.624.624 0 01.625.625zm-5 0a.624.624 0 01-.625.625h-1.25a.625.625 0 110-1.25h1.25a.624.624 0 01.625.625z"
+                      fill="currentColor"></path>
+                  </svg><span class="leading-none">My Cards</span></a><a
+                  class="text-base font-normal flex items-center py-[0.8125rem] rounded-lg px-4 gap-3 text-heading"
+                  routerLinkActive=" bg-black text-white font-semibold" routerLink="/my-account/address"><svg
+                    width="1em" height="1em" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="text-lg md:text-xl">
+                    <path
+                      d="M10 1.875A8.125 8.125 0 1018.125 10 8.133 8.133 0 0010 1.875zM5.787 15.43a5 5 0 018.425 0 6.862 6.862 0 01-8.425 0zM7.5 9.375a2.5 2.5 0 115 0 2.5 2.5 0 01-5 0zm7.637 5.188a6.223 6.223 0 00-2.817-2.246 3.75 3.75 0 10-4.64 0 6.223 6.223 0 00-2.817 2.246 6.875 6.875 0 1110.274 0z"
+                      fill="currentColor"></path>
+                  </svg><span class="leading-none">Address</span></a><a
+                  class="text-base font-normal flex items-center py-[0.8125rem] rounded-lg px-4 gap-3 text-heading"
+                  routerLinkActive=" bg-black text-white font-semibold" routerLink="/my-account/change-password"><svg
+                    width="1em" height="1em" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="text-lg md:text-xl">
+                    <path
+                      d="M12.5 1.25a6.255 6.255 0 00-5.945 8.186l-4.497 4.497a.625.625 0 00-.183.442V17.5a.625.625 0 00.625.625h3.125a.625.625 0 00.625-.625v-1.25H7.5a.625.625 0 00.625-.625v-1.25h1.25a.624.624 0 00.442-.183l.747-.748A6.25 6.25 0 1012.5 1.25zm0 11.25a4.977 4.977 0 01-1.848-.352.624.624 0 00-.69.13l-.846.847H7.5a.625.625 0 00-.625.625V15h-1.25a.625.625 0 00-.625.625v1.25H3.125v-2.241l4.596-4.596a.625.625 0 00.131-.69A5 5 0 1112.5 12.5zM15 5.937a.938.938 0 11-1.875 0 .938.938 0 011.875 0z"
+                      fill="currentColor"></path>
+                  </svg><span class="leading-none">Change Password</span></a><a
+                  class="text-base font-normal flex items-center py-[0.8125rem] rounded-lg px-4 gap-3 text-heading"
+                  routerLinkActive=" bg-black text-white font-semibold" routerLink="/logout"><svg width="1em"
+                    height="1em" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="text-lg md:text-xl">
+                    <path
+                      d="M8.75 16.875a.625.625 0 01-.625.625H3.75a1.25 1.25 0 01-1.25-1.25V3.75A1.25 1.25 0 013.75 2.5h4.375a.625.625 0 010 1.25H3.75v12.5h4.375a.625.625 0 01.625.625zm8.567-7.317l-3.125-3.125a.625.625 0 00-.884.884l2.058 2.058H8.125a.625.625 0 000 1.25h7.241l-2.058 2.058a.625.625 0 00.884.884l3.125-3.125a.627.627 0 000-.884z"
+                      fill="currentColor"></path>
+                  </svg><span class="leading-none">Logout</span></a>
               </div>
-            </div>
-            <div class="flex items-center justify-center justify-between">
-              <div class="flex items-center flex-shrink-0">
-                <label class="relative inline-block w-10 cursor-pointer switch"><input id="remember" type="checkbox"
-                    class="w-0 h-0 opacity-0" name="remember_me" /><span
-                    class="absolute inset-0 transition-all duration-300 ease-in bg-gray-500 slider round"></span></label><label
-                  for="remember" class=" ms-2 flex-shrink-0 text-sm cursor-pointer text-heading ltr:pl-3 rtl:pr-3">Remember
-                  me</label>
-              </div>
-              <div class="flex ltr:ml-auto rtl:mr-auto">
-                <button type="button"
-                  class="text-sm underline ltr:text-right rtl:text-left text-heading ltr:pl-3 rtl:pr-3 hover:no-underline focus:no-underline focus:outline-none">
-                  Forgot password?
-                </button>
-              </div>
-            </div>
-            <div class="relative">
-              <button data-variant="flat"
-                class="text-[13px] md:text-sm leading-4 inline-flex items-center cursor-pointer transition ease-in-out duration-300 font-semibold font-body text-center justify-center border-0 border-transparent rounded-md placeholder-white focus-visible:outline-none focus:outline-none focus:bg-opacity-80 bg-heading text-white px-5 md:px-6 lg:px-8 py-4 md:py-3.5 lg:py-4 hover:text-white hover:bg-gray-600 hover:shadow-cart h-11 md:h-12 w-full mt-1.5"
-                type="submit">
-                Login
-              </button>
-            </div>
+            </nav>
+            <div class="absolute top-0 -right-16 w-px h-full bg-[#E6E6E6]"></div>
           </div>
-        </form>
-        <div class="flex flex-col items-center justify-center relative text-sm text-heading mt-6 mb-3.5">
-          <!-- <hr class="w-full border-gray-300" /> -->
-          <span class="absolute -top-2.5 px-2 bg-white">Or</span>
         </div>
-        <div class="grid grid-cols-1 gap-4 mt-2">
-          <button data-variant="flat"
-            class="text-[13px] md:text-sm leading-4 inline-flex items-center cursor-pointer transition ease-in-out duration-300 font-semibold font-body text-center justify-center border-0 border-transparent rounded-md placeholder-white focus-visible:outline-none focus:outline-none focus:bg-opacity-80 text-white px-5 md:px-6 lg:px-8 py-4 md:py-3.5 lg:py-4 hover:text-white hover:shadow-cart h-11 md:h-12 w-full mt-2.5 bg-google hover:bg-googleHover">
-            <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" viewBox="0 0 16 16"
-              class="text-sm sm:text-base ltr:mr-1.5 rtl:ml-1.5" height="1em" width="1em"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M14.5 0h-13c-0.825 0-1.5 0.675-1.5 1.5v13c0 0.825 0.675 1.5 1.5 1.5h6.5v-7h-2v-2h2v-1c0-1.653 1.347-3 3-3h2v2h-2c-0.55 0-1 0.45-1 1v1h3l-0.5 2h-2.5v7h4.5c0.825 0 1.5-0.675 1.5-1.5v-13c0-0.825-0.675-1.5-1.5-1.5z">
-              </path>
-            </svg>Login With Facebook</button><button data-variant="flat"
-            class="text-[13px] md:text-sm leading-4 inline-flex items-center cursor-pointer transition ease-in-out duration-300 font-semibold font-body text-center justify-center border-0 border-transparent rounded-md placeholder-white focus-visible:outline-none focus:outline-none focus:bg-opacity-80 bg-heading text-white px-5 md:px-6 lg:px-8 py-4 md:py-3.5 lg:py-4 hover:text-white hover:bg-gray-600 hover:shadow-cart h-11 md:h-12 w-full mt-1.5">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.442 27.442" class="h-5 ltr:mr-2 rtl:ml-2 text-light"
-              fill="currentColor">
-              <path
-                d="M19.494 0H7.948a1.997 1.997 0 00-1.997 1.999v23.446c0 1.102.892 1.997 1.997 1.997h11.546a1.998 1.998 0 001.997-1.997V1.999A1.999 1.999 0 0019.494 0zm-8.622 1.214h5.7c.144 0 .261.215.261.481s-.117.482-.261.482h-5.7c-.145 0-.26-.216-.26-.482s.115-.481.26-.481zm2.85 24.255a1.275 1.275 0 110-2.55 1.275 1.275 0 010 2.55zm6.273-4.369H7.448V3.373h12.547V21.1z">
-              </path>
-            </svg>Login with Mobile Number
-          </button>
-        </div>
-        <div class="mt-5 mb-1 text-sm text-center sm:text-base text-body">
-          Don't have any account?
-          <button type="button"
-            class="text-sm font-bold underline sm:text-base text-heading hover:no-underline focus:no-underline focus:outline-none">
-            Register
-          </button>
+        <div class="mt-6 2xl:mt-0 w-full h-full">
+          <router-outlet></router-outlet>
         </div>
       </div>
     </div>
+
+    <app-news-latter containerClass="bg-gray-200"></app-news-latter>
   </div>
-</div>
+</main>
